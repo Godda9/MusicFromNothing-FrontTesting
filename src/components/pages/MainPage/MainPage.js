@@ -1,7 +1,7 @@
-import Topbar from "../../topbar/Topbar";
-import Leftbar from "../../leftbar/Leftbar";
-import Rightbar from "../../rightbar/Rightbar";
-import PostView from "../../posts-view/PostsView";
+import Topbar from "../../top-bar/Topbar";
+import Leftbar from "../../left-bar/Leftbar";
+import Rightbar from "../../right-bar/Rightbar";
+import PostsView from "../../posts-view/PostsView";
 
 import './MainPage.css'
 
@@ -15,7 +15,7 @@ const MainPage = (props) => {
             
             <Rightbar/>       
 
-            <PostView/>
+            <PostsView/>
         </>
     );
 }

@@ -1,1 +1,33 @@
-/*# sourceMappingURL=PostItem.css.map */
+.track-author-dt {
+  display: flex;
+  justify-content: space-between;
+}
+
+.track-image {
+  float: left;
+  width: 120px;
+  height: 120px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  box-shadow: 4px 4px 10px rgb(210, 210, 210);
+}
+
+.bordered {
+  border-radius: 15px;
+}
+
+.likes-dislikes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 16px;
+}
+
+.icon-likes-dislikes {
+  margin-left: 2px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  width: 2em;
+  height: 2em;
+}/*# sourceMappingURL=PostItem.css.map */
