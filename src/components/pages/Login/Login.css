@@ -1,0 +1,64 @@
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-flow: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  html, body, .container {
+    height: 100%;
+    width: 100%;
+  }
+  html #m, body #m, .container #m {
+    color: #1BA39C;
+  }
+  html #f, body #f, .container #f {
+    color: #333333;
+  }
+  html p, body p, .container p {
+    font-size: 35px;
+  }
+  html a, body a, .container a {
+    color: #1BA39C;
+  }
+  html h1, body h1, .container h1 {
+    font-size: 100px;
+    font-weight: bold;
+  }
+  html .logo, body .logo, .container .logo {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  html .logo img, body .logo img, .container .logo img {
+    width: 100%;
+  }
+  html .login-form, body .login-form, .container .login-form {
+    align-items: center;
+    justify-content: center;
+  }
+  html .login-form .btn-primary, body .login-form .btn-primary, .container .login-form .btn-primary {
+    background-color: #1BA39C;
+    border-color: #1BA39C;
+    box-shadow: 4px 4px 15px rgb(210, 210, 210);
+  }
+  .form-control {
+    border-color: #1BA39C;
+    box-shadow: 4px 4px 10px rgb(210, 210, 210);
+  }
+  html .login-form-all, body .login-form-all, .container .login-form-all {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  html .login-form-all p, body .login-form-all p, .container .login-form-all p {
+    text-align: center;
+    margin: 0 15%;
+  }
+  html .login-form-all .reg-link, body .login-form-all .reg-link, .container .login-form-all .reg-link {
+    font-size: 18px;
+  }
