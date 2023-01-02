@@ -1,1 +1,4 @@
-/*# sourceMappingURL=MainPage.css.map */
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}/*# sourceMappingURL=MainPage.css.map */

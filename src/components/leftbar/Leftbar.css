@@ -2,7 +2,6 @@
   z-index: 1;
   overflow-y: scroll;
   height: 92%;
-  position: fixed;
 }
 
 .search-box {

@@ -5,7 +5,7 @@ import * as Icon from 'react-bootstrap-icons';
 
 const Leftbar = (props) => {
     return (
-        <div className="leftbar d-flex flex-column align-items-stretch flex-shrink-0 bg-white" style={{width: '300px'}}>
+        <div className="leftbar float-start d-flex flex-column align-items-stretch flex-shrink-0 bg-white" style={{width: '300px'}}>
             <div className="m-3 search-box">
                 <Icon.Search width='1.8em' height='1.8em' style={{marginRight: '0.5em'}}/>
                 <input className="form-control rounded" type="text" placeholder='Tracks' />       
