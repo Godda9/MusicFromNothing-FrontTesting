@@ -1,4 +1,4 @@
-import logoImg from '../Images/mainlogo.png';
+import logoImg from '../Images/logo.png';
 import './Register.css'
 import RegisterForm from '../../forms/RegisterForm';
 

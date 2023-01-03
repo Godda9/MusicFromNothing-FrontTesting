@@ -1,5 +1,5 @@
 import './Login.css';
-import logoImg from '../Images/mainlogo.png';
+import logoImg from '../Images/logo.png';
 import LoginForm from '../../forms/LoginForm';
 
 

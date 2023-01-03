@@ -17,11 +17,11 @@
 }
 
 .likes-dislikes{
-    display: flex;
-    flex-direction: column;
+    //display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-left: 16px;
+    
 }
 
 .icon-likes-dislikes {

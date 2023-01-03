@@ -1,5 +1,5 @@
 import * as Icon from 'react-bootstrap-icons';
-import logoImg from '../pages/Images/mainlogo.png';
+import logoImg from '../pages/Images/logo.png';
 import userImg from '../pages/Images/user_logo.png';
 import { Link, NavLink } from 'react-router-dom';
 
