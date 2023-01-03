@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"messages-view.css"}
+{"version":3,"sources":["messages-view.scss","messages-view.css"],"names":[],"mappings":"AAAA;EACI,kBAAA;EACA,kBAAA;EACA,WAAA;EACA,aAAA;EACA,sBAAA;ACCJ","file":"messages-view.css"}
