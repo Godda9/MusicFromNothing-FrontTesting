@@ -2,7 +2,7 @@ import AudioPlayer, { RHAP_UI } from 'react-h5-audio-player';
 import audioFile from './audio.mp3'
 import * as Icon from 'react-bootstrap-icons';
 
-import './PostItem.css'
+import './post-item.css'
 import './PlayerStyles.css'
 import { useState } from 'react';
 
@@ -28,13 +28,33 @@ const PostItem = (props) => {
                             </div>
 
                             <div className='d-flex'>
-                                <div class="dropdown">
+                                <div className="dropdown">
                                     <Icon.ThreeDots className='icon-likes-dislikes mx-2 align-items-center dropdown-toggle' type="button" data-bs-toggle="dropdown" aria-expanded="false"/>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                        <li><button class="dropdown-item" type="button">Save</button></li>
-                                        <li><button class="dropdown-item" type="button">Share</button></li>
-                                        <li><button class="dropdown-item" type="button">Download</button></li>
-                                        <li><button class="dropdown-item" type="button">Report</button></li>
+                                    <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                        <li>
+                                            <button className="dropdown-item d-flex align-items-center" type="button">
+                                                <Icon.Bookmark width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
+                                                <span>Save</span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button className="dropdown-item d-flex align-items-center" type="button">
+                                                <Icon.Link45deg width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
+                                                <span>Share</span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button className="dropdown-item d-flex align-items-center" type="button">
+                                                <Icon.Download width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
+                                                <span>Download</span>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button className="dropdown-item d-flex align-items-center" type="button">
+                                                <Icon.Tornado width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
+                                                <span>Report</span>
+                                            </button>
+                                        </li>
                                     </ul>
                                 </div>
                                 
@@ -63,7 +83,7 @@ const PostItem = (props) => {
                             <AudioPlayer
                                 autoPlay={false}
                                 src={audioFile}
-                                volume={1}
+                                volume={0.3}
                                 onPlay={(e) => console.log("onPlay")}
 
                                 customControlsSection={

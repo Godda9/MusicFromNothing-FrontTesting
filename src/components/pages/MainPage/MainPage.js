@@ -1,10 +1,10 @@
-import Topbar from "../../top-bar/Topbar";
-import Leftbar from "../../left-bar/Leftbar";
-import Rightbar from "../../right-bar/Rightbar";
-import PostsView from "../../posts-view/PostsView";
+import Topbar from "../../top-bar/top-bar";
+import Leftbar from "../../left-bar/left-bar";
+import Rightbar from "../../right-bar/right-bar";
+import PostsView from "../../posts-view/posts-view";
 
 
-import './MainPage.css'
+import './MainPage.css';
 
 
 const MainPage = (props) => {

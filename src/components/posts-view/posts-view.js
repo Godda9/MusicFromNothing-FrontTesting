@@ -1,5 +1,5 @@
-import './PostsView.css'
-import PostItem from '../post-item/PostItem';
+import './posts-view.css'
+import PostItem from '../post-item/post-item';
 
 const PostsView = (props) => {
     return (

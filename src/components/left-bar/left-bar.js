@@ -1,5 +1,5 @@
-import './Leftbar.css'
-import LeftBarItem from './leftBarItem/LeftBarItem';
+import './left-bar.css'
+import LeftBarItem from './left-bar-item/left-bar-item';
 import * as Icon from 'react-bootstrap-icons';
 
 

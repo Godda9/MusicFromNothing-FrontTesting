@@ -1,8 +1,7 @@
-.rightbar {
+.leftbar {
   z-index: 0;
   overflow-y: scroll;
-  height: 91.5%;
-  direction: rtl;
+  height: 92%;
 }
 
 .search-box {
@@ -12,13 +11,12 @@
   align-items: center;
   justify-content: space-between;
   top: 16px;
-  z-index: 1;
-  direction: ltr;
+  z-index: 10;
 }
 
 /* width */
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 10px;
 }
 
 /* Track */
@@ -36,4 +34,4 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #1BA39C;
-}/*# sourceMappingURL=Rightbar.css.map */
+}/*# sourceMappingURL=left-bar-chats.css.map */

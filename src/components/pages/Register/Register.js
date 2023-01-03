@@ -1,6 +1,6 @@
 import logoImg from '../Images/logo.png';
 import './Register.css'
-import RegisterForm from '../../forms/RegisterForm';
+import RegisterForm from '../../forms/register-form';
 
 
 const Register = () => {

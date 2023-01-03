@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Login, Register, NotFound404, MainPage } from './components/pages/pages';
+import { Login, Register, NotFound404, MainPage, Chats } from './components/pages/pages';
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
           <Route path='/login' element={<Login/>} />
           <Route path='/register' element={<Register/>} />
           <Route path='/feed' element={<MainPage/>} />
+          <Route path='/chats' element={<Chats/>} />
           <Route path='*' element={<NotFound404/>} />
         </Routes>
     </Router>

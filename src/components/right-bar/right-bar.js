@@ -1,5 +1,5 @@
-import './Rightbar.css'
-import RightBarItem from './rightBarItem/RightBarItem';
+import './right-bar.css'
+import RightBarItem from './right-bar-item/right-bar-item';
 import * as Icon from 'react-bootstrap-icons';
 
 const Rightbar = (props) => {

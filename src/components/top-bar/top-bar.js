@@ -3,7 +3,7 @@ import logoImg from '../pages/Images/logo.png';
 import userImg from '../pages/Images/user_logo.png';
 import { Link, NavLink } from 'react-router-dom';
 
-import './Topbar.css'
+import './top-bar.css'
 
 const Topbar = (props) => {
     const {text, username, where} = props;
@@ -51,15 +51,38 @@ const Topbar = (props) => {
                                 <span className="fs-4">{username}</span>
                                 <img src={userImg} style={{width: 2.5 + 'em', borderRadius: '50%'}} alt="userLogo" className='dropdown-toggle' type="button" data-bs-toggle="dropdown" aria-expanded="false"></img>
 
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                        <li><button class="dropdown-item" type="button">Profile</button></li>
-                                        <li><button class="dropdown-item" type="button">Edit Profile</button></li>
-                                        <li><button class="dropdown-item" type="button">Saved Posts</button></li>
-                                        <li><button class="dropdown-item" type="button">Settings</button></li>
-                                        <li><button class="dropdown-item" type="button">Support</button></li>
-                                        <li><button class="dropdown-item" type="button">Logout</button></li>
-                                    </ul>
-                        
+                                <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                    <li>
+                                        <button className="dropdown-item d-flex align-items-center" type="button">
+                                            <Icon.Person width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
+                                            <span>Profile</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button className="dropdown-item d-flex align-items-center" type="button">
+                                            <Icon.Gear width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
+                                            <span>Edit Profile</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button className="dropdown-item d-flex align-items-center" type="button">
+                                            <Icon.Bookmarks width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
+                                            <span>Saved Posts</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button className="dropdown-item d-flex align-items-center" type="button">
+                                            <Icon.Diamond width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
+                                            <span>Support</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button className="dropdown-item d-flex align-items-center" type="button">
+                                            <Icon.DoorOpen width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
+                                            <span>Logout</span>
+                                        </button>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
