@@ -47,10 +47,20 @@ const Topbar = (props) => {
                         </div>
 
                         <div>
-                            <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none special-link-right">
+                            <div className="d-flex dropdown align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none special-link-right">
                                 <span className="fs-4">{username}</span>
-                                <img src={userImg} style={{width: 2.5 + 'em', borderRadius: '50%'}} alt="userLogo"></img>
-                            </a>
+                                <img src={userImg} style={{width: 2.5 + 'em', borderRadius: '50%'}} alt="userLogo" className='dropdown-toggle' type="button" data-bs-toggle="dropdown" aria-expanded="false"></img>
+
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                        <li><button class="dropdown-item" type="button">Profile</button></li>
+                                        <li><button class="dropdown-item" type="button">Edit Profile</button></li>
+                                        <li><button class="dropdown-item" type="button">Saved Posts</button></li>
+                                        <li><button class="dropdown-item" type="button">Settings</button></li>
+                                        <li><button class="dropdown-item" type="button">Support</button></li>
+                                        <li><button class="dropdown-item" type="button">Logout</button></li>
+                                    </ul>
+                        
+                            </div>
                         </div>
                     </div>
                 </header>

@@ -28,17 +28,26 @@ const PostItem = (props) => {
                             </div>
 
                             <div className='d-flex'>
-                                <Icon.ThreeDots className='icon-likes-dislikes mx-2 align-items-center'/>
+                                <div class="dropdown">
+                                    <Icon.ThreeDots className='icon-likes-dislikes mx-2 align-items-center dropdown-toggle' type="button" data-bs-toggle="dropdown" aria-expanded="false"/>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                        <li><button class="dropdown-item" type="button">Save</button></li>
+                                        <li><button class="dropdown-item" type="button">Share</button></li>
+                                        <li><button class="dropdown-item" type="button">Download</button></li>
+                                        <li><button class="dropdown-item" type="button">Report</button></li>
+                                    </ul>
+                                </div>
+                                
 
                                 <div className='d-flex flex-column mx-2 align-items-center'>
-                                    <Icon.ChatDots className='icon-likes-dislikes'/>
+                                    <Icon.ChatDots className='icon-likes-dislikes' type="button"/>
                                     <span className='text-muted'>{comments}</span>
                                 </div>
 
                                 <div className='d-flex flex-column ml-2 align-items-center'>
                                     { 
-                                        liked ? <Icon.HeartFill className='icon-likes-dislikes' color='red' onClick={(e) => setLiked(!liked)}/> 
-                                            : <Icon.Heart className='icon-likes-dislikes' onClick={(e) => setLiked(!liked)}/> 
+                                        liked ? <Icon.HeartFill className='icon-likes-dislikes' type="button" color='red' onClick={(e) => setLiked(!liked)}/> 
+                                            : <Icon.Heart className='icon-likes-dislikes' type="button" onClick={(e) => setLiked(!liked)}/> 
                                     }
                                     <span className='text-muted'>{likes}</span>
                                 </div>
