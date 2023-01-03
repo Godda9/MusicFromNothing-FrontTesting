@@ -1,0 +1,35 @@
+.rightbar {
+  z-index: 0;
+  overflow-y: scroll;
+  height: 91.5%;
+  direction: rtl;
+}
+
+.image-user-right-bar-messages {
+  width: 15em;
+  height: 15em;
+  border-radius: 50%;
+  box-shadow: 4px 4px 10px rgb(210, 210, 210);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white;
+  border-radius: 15px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(185, 185, 185);
+  border-radius: 15px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #1BA39C;
+}/*# sourceMappingURL=right-bar-user-info.css.map */
