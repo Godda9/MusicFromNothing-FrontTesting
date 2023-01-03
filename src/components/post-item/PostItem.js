@@ -17,13 +17,15 @@ const PostItem = (props) => {
                 <div className="bordered row g-0 border overflow-hidden flex-md-row mb-1 position-relative">
                     <div className="col p-4 d-flex flex-column position-static">
                         <div className='track-author-dt'>
-                            <div>
-                                <strong className="d-inline-block mb-2 text-primary">{user}</strong>
-                                <h3 className="mb-1">{title}</h3>
+                            <div className='mb-3'>
+                                <div className='d-flex align-items-center'>
+                                    <img src={img} className="track-author-image" alt='userAvatar'></img>
+                                    <strong className="d-inline-block  text-primary">{user}</strong>
+                                </div>
+                                <h3 className="mb-2 mt-2">{title}</h3>
                                 <h5 className="mb-2">{description}</h5>
                             </div>
-
-                            <div className="mb-1 text-muted">{datetime}</div>
+                            <div className="mb-2 mt-1 text-muted">{datetime}</div>
                         </div>
 
                         <div className='track-author-dt'>
@@ -38,7 +40,6 @@ const PostItem = (props) => {
                                 volume={0.5}
                                 onPlay={(e) => console.log("onPlay")}
                             />
-
                             <div className='likes-dislikes'>
                                 <Icon.ChatDots className='icon-likes-dislikes'/>
                                 <span className='text-muted'>{comments}</span>

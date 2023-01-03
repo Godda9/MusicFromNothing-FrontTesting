@@ -3,12 +3,15 @@
     top: 0;
     position: sticky;
     z-index: 0;
+    padding-left: 1%;
+    padding-right: 1%;
 }
 
 .top-bar-flex {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .special-link-left {
@@ -31,6 +34,12 @@
     align-items: center;
     padding-left: 0.2em;
     padding-right: 0.2em;
+}
+
+.nav-link:hover {
+    background-color: #1BA39C;
+    color: white;
+    box-shadow: 4px 4px 15px rgb(210, 210, 210);
 }
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {

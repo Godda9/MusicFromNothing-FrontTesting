@@ -3,6 +3,7 @@ import Leftbar from "../../left-bar/Leftbar";
 import Rightbar from "../../right-bar/Rightbar";
 import PostsView from "../../posts-view/PostsView";
 
+
 import './MainPage.css'
 
 
@@ -13,9 +14,10 @@ const MainPage = (props) => {
             
             <Leftbar/>
             
-            <Rightbar/>       
+            <Rightbar/> 
 
             <PostsView/>
+
         </>
     );
 }
