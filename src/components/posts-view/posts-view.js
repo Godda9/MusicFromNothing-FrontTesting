@@ -3,7 +3,7 @@ import PostItem from '../post-item/post-item';
 const PostsView = (props) => {
     return (
         <>
-            <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 m-2" style={{maxHeight: '90vh'}}>
+            <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 m-2">
                 <PostItem 
                     user="UserName" 
                     datetime="01.01.23" 

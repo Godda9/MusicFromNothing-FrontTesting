@@ -14,13 +14,13 @@ const MainPage = (props) => {
                     <Topbar text="Music From Nothing" username="UserName" where="feed"/>
                 </div>
                 <div className="row">
-                    <div className="col overflow-auto p-0">
+                    <div className="col overflow-auto p-0" style={{maxHeight: '93vh'}}>
                         <Leftbar/>
                     </div>
-                    <div className="col-8 overflow-auto p-0">
+                    <div className="col-8 overflow-auto p-0" style={{maxHeight: '93vh'}}>
                         <PostsView/>
                     </div>
-                    <div className="col overflow-auto p-0">
+                    <div className="col overflow-auto p-0" style={{maxHeight: '93vh'}}>
                         <Rightbar/>
                     </div>
                 </div>  
