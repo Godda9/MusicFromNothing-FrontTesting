@@ -11,8 +11,9 @@ const ProfileCardEdit = (props) => {
                     <div className="list-group-item list-group-item-action py-3 lh-tight" aria-current="true">
                         <div className='d-flex align-items-center justify-content-center'>
                             <img alt='userAvatar' 
-                                className='rounded-circle shadow w-25 h-25 m-3' 
-                                src='https://secure.gravatar.com/avatar/4c2d5681a4633a173c20e74c3641e637?s=500&d=mm&r=g'></img>
+                                className='rounded-circle shadow m-3' 
+                                src='https://secure.gravatar.com/avatar/4c2d5681a4633a173c20e74c3641e637?s=500&d=mm&r=g'
+                                style={{width: '25vh', height: '25vh'}}></img>
                             <div className="mx-3 w-100 align-items-center justify-content-between">
                                 <strong className="mb-1 fs-1">UserName</strong>
                                 <div className="col-10 mb-1 small fs-4">Description</div>
