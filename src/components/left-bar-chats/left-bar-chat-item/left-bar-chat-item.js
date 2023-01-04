@@ -1,4 +1,4 @@
-import './left-bar-chat-item.css'
+
 import * as Icon from 'react-bootstrap-icons';
 
 const LeftBarChatItem = (props) => {
@@ -7,13 +7,13 @@ const LeftBarChatItem = (props) => {
     // can be active in className (color blue)
     return (
         <a href={link} className="list-group-item list-group-item-action py-3 lh-tight" aria-current="true">
-            <div className='flex-description'>
+            <div className='d-flex'>
                 <div className="w-100 align-items-center justify-content-between">
                     <strong className="mb-1">{heading}</strong>
                     <div className="col-10 mb-1 small">{placeholder}</div>
                 </div>
 
-                <img className='image-chat-user' src={image}></img>
+                <img className='rounded-circle shadow w-25 h-25' src={image}></img>
             </div>
         </a>
     );

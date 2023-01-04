@@ -10,8 +10,7 @@ const Topbar = (props) => {
 
     return (
         <>
-            <div className="top-bar">
-                <header className="d-flex flex-wrap justify-content-center border-bottom py-3">
+                <header className="top-bar d-flex flex-wrap justify-content-center border-bottom py-3">
                     <div className='top-bar-flex'>
                         <div className='d-flex'>
                             <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none special-link-left">
@@ -87,7 +86,6 @@ const Topbar = (props) => {
                         </div>
                     </div>
                 </header>
-            </div>
         </>
     );
 }

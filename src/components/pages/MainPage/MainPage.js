@@ -3,21 +3,28 @@ import Leftbar from "../../left-bar/left-bar";
 import Rightbar from "../../right-bar/right-bar";
 import PostsView from "../../posts-view/posts-view";
 
-
-import './MainPage.css';
+import '../scroll-bar.css'
 
 
 const MainPage = (props) => {
     return (
         <>
-            <Topbar text="Music From Nothing" username="UserName" where="feed"/>
-            
-            <Leftbar/>
-            
-            <Rightbar/> 
-
-            <PostsView/>
-
+            <div className="container-fluid position-fixed">
+                <div className="row">
+                    <Topbar text="Music From Nothing" username="UserName" where="feed"/>
+                </div>
+                <div className="row">
+                    <div className="col overflow-auto p-0">
+                        <Leftbar/>
+                    </div>
+                    <div className="col-8 overflow-auto p-0">
+                        <PostsView/>
+                    </div>
+                    <div className="col overflow-auto p-0">
+                        <Rightbar/>
+                    </div>
+                </div>  
+            </div>
         </>
     );
 }

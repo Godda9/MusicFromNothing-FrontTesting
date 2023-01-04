@@ -1,4 +1,3 @@
-import './left-bar-item.css'
 import * as Icon from 'react-bootstrap-icons';
 
 const LeftBarItem = (props) => {
@@ -7,13 +6,13 @@ const LeftBarItem = (props) => {
     // can be active in className (color blue)
     return (
         <a href={link} className="list-group-item list-group-item-action py-3 lh-tight" aria-current="true">
-            <div className='flex-description'>
+            <div className='d-flex'>
                 <div className="w-100 align-items-center justify-content-between">
                     <strong className="mb-1">{heading}</strong>
                     <div className="col-10 mb-1 small">{placeholder}</div>
                 </div>
 
-                <img className='image' src={image}></img>
+                <img className='rounded-3 shadow w-25 h-25' src={image}></img>
             </div>
         </a>
     );
