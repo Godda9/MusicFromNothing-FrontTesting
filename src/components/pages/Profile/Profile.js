@@ -17,8 +17,8 @@ const Profile = (props) => {
                         <Leftbar/>
                     </div>
                     <div className="col-8 overflow-auto p-0" style={{maxHeight: '93vh'}}>
-                            <ProfileCard id='0'/>
-                            <PostsView/>
+                        <ProfileCard id='0'/>
+                        <PostsView/>
                     </div>
                     <div className="col overflow-auto p-0" style={{maxHeight: '93vh'}}>
                         <Rightbar/>
