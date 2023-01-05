@@ -25,7 +25,7 @@ const ProfileEdit = (props) => {
                     </div>
                     <div className="col overflow-auto p-0">
                         <FormProfileEdit title="Phone" current="+38 XXXXX 009" />
-                    </div>
+                    </div>    
                 </div>
             </div>
         </>

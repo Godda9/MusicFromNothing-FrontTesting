@@ -5,6 +5,6 @@ import MainPage from "./MainPage/MainPage";
 import Chats from "./Chats/Chats";
 import Profile from "./Profile/Profile";
 import ProfileEdit from "./ProfileEdit/ProfileEdit";
+import Battles from "./Battles/Battles";
 
-
-export {Login, Register, NotFound404, MainPage, Chats, Profile, ProfileEdit};
+export {Login, Register, NotFound404, MainPage, Chats, Profile, ProfileEdit, Battles};
