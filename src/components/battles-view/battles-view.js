@@ -1,4 +1,4 @@
-import PostItemBattles from "../post-item-battles/post-item-battles";
+import PostItem from "../post-item/post-item";
 import BattleContainer from "../battle-container/batlle-container";
 
 const BattlesView = (props) => {
@@ -9,7 +9,7 @@ const BattlesView = (props) => {
             </div>
             <BattleContainer 
                     post1={
-                    <PostItemBattles
+                    <PostItem
                         user="UserName" 
                         datetime="01.01.23" 
                         title="Track title" 
@@ -20,7 +20,7 @@ const BattlesView = (props) => {
                         status="inbattle"
                     />}
                     post2={
-                    <PostItemBattles
+                    <PostItem
                         user="UserName" 
                         datetime="01.01.23" 
                         title="Track title" 
@@ -35,7 +35,7 @@ const BattlesView = (props) => {
 
             <BattleContainer 
                     post1={
-                    <PostItemBattles
+                    <PostItem
                         user="UserName" 
                         datetime="01.01.23" 
                         title="Track title" 
@@ -46,7 +46,7 @@ const BattlesView = (props) => {
                         status="win"
                     />}
                     post2={
-                    <PostItemBattles
+                    <PostItem
                         user="UserName" 
                         datetime="01.01.23" 
                         title="Track title" 
