@@ -7,7 +7,7 @@ const FormProfileEdit = (props) => {
 
     return (
         <>
-        <div className="bordered row border overflow-hidden d-flex justify-content-center align-items-center m-3 p-3">
+        <div className="bordered row border overflow-hidden d-flex justify-content-center align-items-center m-3 p-3 shadow-sm">
             <span className="fs-4 my-3">{title}</span>
             <form onSubmit={handleSubmit(onSubmit)}>
                 { title === "Password" ? <Password register={register} errors={errors}/> : null }
@@ -28,7 +28,7 @@ const Password = (props) => {
     return (
         <>
             <div className="mb-3">
-                <label htmlFor="inputPassword" className="form-label">Old</label>
+                <label htmlFor="inputPassword" className="form-label"><b>Old</b></label>
                 <input 
                     className="form-control rounded"
                     type="password"
@@ -43,7 +43,7 @@ const Password = (props) => {
             </div>
 
             <div className="mb-3">
-                <label htmlFor="inputPassword" className="form-label">New</label>
+                <label htmlFor="inputPassword" className="form-label"><b>New</b></label>
                 <input 
                     className="form-control rounded"
                     type="password"
@@ -66,7 +66,7 @@ const Nickname = (props) => {
     return (
         <>
             <div className="mb-3">
-                <label htmlFor="inputNickname" className="form-label">New</label>
+                <label htmlFor="inputNickname" className="form-label"><b>New</b></label>
                 <input 
                     className="form-control rounded"
                     type="text"
@@ -89,7 +89,7 @@ const Email = (props) => {
     return (
         <>
             <div className="mb-3">
-                <label htmlFor="inputOldEmal" className="form-label">Current email: {current}</label>
+                <label htmlFor="inputOldEmal" className="form-label"><b>Current email: {current}</b></label>
                 <input 
                     className="form-control rounded"
                     type="text"
@@ -103,7 +103,7 @@ const Email = (props) => {
             </div>
 
             <div className="mb-3">
-                <label htmlFor="inputNewEmal" className="form-label">New</label>
+                <label htmlFor="inputNewEmal" className="form-label"><b>New</b></label>
                 <input 
                     className="form-control rounded"
                     type="text"
@@ -125,7 +125,7 @@ const Phone = (props) => {
     return (
         <>
             <div className="mb-3">
-                <label htmlFor="inputOldPhone" className="form-label">Current phone: {current}</label>
+                <label htmlFor="inputOldPhone" className="form-label"><b>Current phone: {current}</b></label>
                 <input 
                     className="form-control rounded"
                     type="text"
@@ -139,7 +139,7 @@ const Phone = (props) => {
             </div>
 
             <div className="mb-3">
-                <label htmlFor="inputNewPhone" className="form-label">New</label>
+                <label htmlFor="inputNewPhone" className="form-label"><b>New</b></label>
                 <input 
                     className="form-control rounded"
                     type="text"

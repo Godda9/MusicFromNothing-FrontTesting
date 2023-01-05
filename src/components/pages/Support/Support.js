@@ -9,13 +9,15 @@ const Support = (props) => {
                 <div className="row">
                     <Topbar text="Support" username="UserName" where="support"/>
                 </div>
-                <div style={{height: '93vh'}}>
-                    <div className="row d-flex justify-content-center align-items-center">
-                        <span className="text-center">We are ready to get in contact, please provide us with information below</span>
-                    </div>
-                    <div className="col overflow-auto p-0 d-flex justify-content-center align-items-center p-5 h-50" style={{maxHeight: '93vh'}}>
-                        <img style={{width: '40vh', height: '40vh', marginLeft: '10vh'}} src={logoSupoort}></img>
-                        <FormSupportContact/>
+                <div className="d-flex justify-content-center align-items-center">
+                    <div>
+                        <div className="row d-flex justify-content-center align-items-center m-5">
+                            <h2><span className="text-center fs-1">We are ready to get in contact, please provide us with information below:</span></h2>
+                        </div>
+                        <div className="col d-flex justify-content-center align-items-center h-50 m-5" style={{maxHeight: '93vh'}}>
+                            <img style={{width: '35vh', height: '35vh'}} className="rounded-circle shadow w-25 h-25" src={logoSupoort}></img>
+                            <FormSupportContact/>
+                        </div>
                     </div>
                 </div>
             </div>

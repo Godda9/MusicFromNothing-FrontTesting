@@ -7,7 +7,7 @@ const ProfileCardEdit = (props) => {
     return (
         <>
             <div className="col pt-3 px-3">
-                <div className="bordered row g-0 border overflow-hidden flex-md-row mb-1 position-relative d-flex justify-content-center align-items-center">
+                <div className="shadow-sm bordered row g-0 border overflow-hidden flex-md-row mb-1 position-relative d-flex justify-content-center align-items-center">
                     <div className="list-group-item list-group-item-action py-3 lh-tight" aria-current="true">
                         <div className='d-flex align-items-center justify-content-center'>
                             <img alt='userAvatar' 
@@ -18,7 +18,7 @@ const ProfileCardEdit = (props) => {
                                 <strong className="mb-1 fs-1">UserName</strong>
                                 <div className="col-10 mb-1 small fs-4">Description</div>
                                 <div className='pt-3 w-50'>
-                                    <label htmlFor="formFile" className="form-label">Avatar:</label>
+                                    <label htmlFor="formFile" className="form-label"><b>Avatar:</b></label>
                                     <input className="form-control" type="file" id="formFile"/>
                                 </div>
                             </div>
@@ -27,7 +27,7 @@ const ProfileCardEdit = (props) => {
                             </div>
                         </div>
                         <div className='p-2'>
-                            <label htmlFor="formFile" className="form-label">Background image:</label>
+                            <label htmlFor="formFile" className="form-label"><b>Background image:</b></label>
                             <input className="form-control" type="file" id="formFile"/>
                         </div>
                     </div>

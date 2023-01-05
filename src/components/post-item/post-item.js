@@ -7,8 +7,14 @@ import './PlayerStyles.css'
 import { useState } from 'react';
 
 const PostItem = (props) => {
-    const {user, datetime, img, title, description, likes, comments, status} = props;
-    const [liked, setLiked] = useState(false);
+    const {user, datetime, img, title, description, likes, isLiked, comments, status} = props;
+    const [liked, setLiked] = useState(isLiked);
+    const [likesAmount, setLikesAmount] = useState(likes);
+
+    const onLikesChanged = (e, value) => {
+        setLikesAmount(likesAmount + value);
+        setLiked(!liked);
+    }
     
     return (
         <>
@@ -70,10 +76,10 @@ const PostItem = (props) => {
 
                                 <div className='d-flex flex-column ml-2 align-items-center'>
                                     { 
-                                        liked ? <Icon.HeartFill className='icon-likes-dislikes' type="button" color='red' onClick={(e) => setLiked(!liked)}/> 
-                                            : <Icon.Heart className='icon-likes-dislikes' type="button" onClick={(e) => setLiked(!liked)}/> 
+                                        liked ? <Icon.HeartFill className='icon-likes-dislikes' type="button" color='red' onClick={(e) => onLikesChanged(e, -1)}/> 
+                                            : <Icon.Heart className='icon-likes-dislikes' type="button" onClick={(e) => onLikesChanged(e, 1)}/> 
                                     }
-                                    <span className='text-muted'>{likes}</span>
+                                    <span className='text-muted'>{likesAmount}</span>
                                 </div>
                             </div>
                         </div>
