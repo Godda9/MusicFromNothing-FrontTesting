@@ -13,7 +13,7 @@ function App() {
           <Route path='/profile'      element={<Profile/>}     />
           <Route path='/profile-edit' element={<ProfileEdit/>} />
           <Route path='/battles'      element={<Battles/>}     />
-          <Route path='/faq'          element={<FAQ/>}         />
+          <Route path='/f.a.q'        element={<FAQ/>}         />
           <Route path='*'             element={<NotFound404/>} />
         </Routes>
     </Router>
