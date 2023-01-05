@@ -15,7 +15,7 @@ const FormProfileEdit = (props) => {
                 { title === "Email"    ? <Email    register={register} errors={errors} current={current}/> : null }
                 { title === "Phone"    ? <Phone    register={register} errors={errors} current={current}/> : null }
 
-                <button type="button" className="btn btn-primary mt-3">Submit</button>
+                <button type="submit" className="btn btn-primary mt-3">Submit</button>
             </form>
         </div>
         </>
