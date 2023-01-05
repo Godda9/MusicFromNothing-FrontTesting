@@ -12,6 +12,7 @@ const PostsView = (props) => {
                     img="https://iso.500px.com/wp-content/uploads/2017/10/500px_Golden_Hour_Quest_winner-1500x1000.jpg"
                     likes={120}
                     comments={53}
+                    status={null}
                 />
                 <PostItem 
                     user="UserName" 
@@ -21,6 +22,7 @@ const PostsView = (props) => {
                     img="https://iso.500px.com/wp-content/uploads/2017/10/500px_Golden_Hour_Quest_winner-1500x1000.jpg"
                     likes={120}
                     comments={53}
+                    status={null}
                 />
                 <PostItem 
                     user="UserName" 
@@ -30,6 +32,7 @@ const PostsView = (props) => {
                     img="https://iso.500px.com/wp-content/uploads/2017/10/500px_Golden_Hour_Quest_winner-1500x1000.jpg"
                     likes={120}
                     comments={53}
+                    status={null}
                 />
                 <PostItem 
                     user="UserName" 
@@ -39,16 +42,7 @@ const PostsView = (props) => {
                     img="https://iso.500px.com/wp-content/uploads/2017/10/500px_Golden_Hour_Quest_winner-1500x1000.jpg"
                     likes={120}
                     comments={53}
-                />
-
-                <PostItem 
-                    user="UserName" 
-                    datetime="01.01.23" 
-                    title="Track title" 
-                    description="Track description..."
-                    img="https://iso.500px.com/wp-content/uploads/2017/10/500px_Golden_Hour_Quest_winner-1500x1000.jpg"
-                    likes={120}
-                    comments={53}
+                    status={null}
                 />
 
                 <PostItem 
@@ -59,6 +53,7 @@ const PostsView = (props) => {
                     img="https://iso.500px.com/wp-content/uploads/2017/10/500px_Golden_Hour_Quest_winner-1500x1000.jpg"
                     likes={120}
                     comments={53}
+                    status={null}
                 />
 
                 <PostItem 
@@ -69,6 +64,18 @@ const PostsView = (props) => {
                     img="https://iso.500px.com/wp-content/uploads/2017/10/500px_Golden_Hour_Quest_winner-1500x1000.jpg"
                     likes={120}
                     comments={53}
+                    status={null}
+                />
+
+                <PostItem 
+                    user="UserName" 
+                    datetime="01.01.23" 
+                    title="Track title" 
+                    description="Track description..."
+                    img="https://iso.500px.com/wp-content/uploads/2017/10/500px_Golden_Hour_Quest_winner-1500x1000.jpg"
+                    likes={120}
+                    comments={53}
+                    status={null}
                 />
             </div>
         </>

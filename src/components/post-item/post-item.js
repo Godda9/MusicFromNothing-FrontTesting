@@ -7,13 +7,17 @@ import './PlayerStyles.css'
 import { useState } from 'react';
 
 const PostItem = (props) => {
-    const {user, datetime, img, title, description, likes, comments} = props;
+    const {user, datetime, img, title, description, likes, comments, status} = props;
     const [liked, setLiked] = useState(false);
     
     return (
         <>
             <div className="col-md-6">
                 <div className="bordered row g-0 border overflow-hidden flex-md-row mb-1 position-relative">
+                    {status === 'inbattle' ? <button className='btn btn-secondary'>Support</button> : null}
+                    {status === 'win' ? <button className='btn btn-success disabled'>Win</button> : null}
+                    {status === 'lose' ? <button className='btn btn-danger disabled'>Lose</button> : null}
+
                     <div className="col p-4 d-flex flex-column position-static">
                         <div className='track-author-dt'>
                             <div className='mb-3'>

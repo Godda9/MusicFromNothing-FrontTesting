@@ -10,15 +10,15 @@ const Profile = (props) => {
         <>
             <div className="container-fluid position-fixed">
                 <div className="row">
-                    <Topbar text="Music From Nothing" username="UserName" where="feed"/>
+                    <Topbar text="Profile View" username="UserName" where="feed"/>
                 </div>
                 <div className="row">
                     <div className="col overflow-auto p-0" style={{maxHeight: '93vh'}}>
                         <Leftbar/>
                     </div>
                     <div className="col-8 overflow-auto p-0" style={{maxHeight: '93vh'}}>
-                            <ProfileCard id='0'/>
-                            <PostsView/>
+                        <ProfileCard id='0'/>
+                        <PostsView/>
                     </div>
                     <div className="col overflow-auto p-0" style={{maxHeight: '93vh'}}>
                         <Rightbar/>
