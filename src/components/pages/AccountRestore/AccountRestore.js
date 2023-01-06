@@ -7,17 +7,18 @@ import AccountRestoreForm from '../../forms/account-restore-form'
 const AccountRestore = (props)=>{
     return(
         <>
-            <div className="container-fluid position-fixed">
-                <div className="row">
+            <div className="container-fluid">
+                <div className="row position-sticky top-0">
                     <Topbar text="Support" username="UserName" where="support"/>
                 </div>
-                <div className="d-flex justify-content-center align-items-center">
-                    <div>
-                        <div className="row d-flex justify-content-center align-items-center m-5">
-                            <h1 style={{'text-align': 'center'}}><span style={{'color': '#1BA39C'}}>A</span>ccount restore</h1>
-                            <span className="text-center fs-1">Account AccountName is ready to be restored, please fill in the form below:</span>
-                        </div>
-                        <div className="col d-flex justify-content-center align-items-center h-50 m-5" style={{maxHeight: '93vh'}}>
+
+                <div className="col overflow-y-auto" style={{maxHeight: '93vh'}}>
+                    <div className="row d-flex justify-content-center align-items-center">
+                        <h1 style={{'text-align': 'center'}}><span style={{'color': '#1BA39C'}}>A</span>ccount restore</h1>
+                        <span className="text-center fs-1">Account AccountName is ready to be restored, please fill in the form below:</span>
+                    </div>
+                    <div className="row">
+                        <div className="col p-3 d-flex justify-content-center align-items-center h-50 m-5">
                             <img style={{width: '35vh', height: '35vh'}} className="rounded-circle shadow w-25 h-25" src={logoSupport}></img>
                             <AccountRestoreForm/>
                         </div>
