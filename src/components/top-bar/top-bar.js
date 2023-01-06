@@ -46,7 +46,6 @@ const Topbar = (props) => {
                                 </li>
                             </ul>
                         </div>
-                        
                     }
                     
                     {
