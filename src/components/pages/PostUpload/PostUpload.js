@@ -1,10 +1,11 @@
 import Topbar from "../../top-bar/top-bar";
 import PostUploadForm from "../../forms/post-upload-form";
+import PostItem from "../../post-item/post-item";
 
 const PostUpload = (props) => {
     return (
         <>
-            <div className="container-fluid position-fixed">
+            <div className="container-fluid position-sticky">
                 <div className="row">
                     <Topbar text="Post Upload" username="UserName" where="post-upload"/>
                 </div>
@@ -15,9 +16,6 @@ const PostUpload = (props) => {
                             <div>
                                 <PostUploadForm/>
                             </div>
-                        </div>
-                        <div className="col d-flex justify-content-center align-items-center h-50 m-5" style={{maxHeight: '93vh'}}>
-                            PREVIEW
                         </div>
                     </div>
                 </div> 
