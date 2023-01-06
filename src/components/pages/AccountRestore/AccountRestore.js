@@ -1,10 +1,37 @@
 import Topbar from '../../top-bar/top-bar'
-import logotup from '../Images/logo.png'
+import logoSupport from '../Images/logo_support.png'
 import './AccountRestore.css'
 import AccountRestoreForm from '../../forms/account-restore-form'
 
+
 const AccountRestore = (props)=>{
     return(
+        <>
+            <div className="container-fluid position-fixed">
+                <div className="row">
+                    <Topbar text="Support" username="UserName" where="support"/>
+                </div>
+                <div className="d-flex justify-content-center align-items-center">
+                    <div>
+                        <div className="row d-flex justify-content-center align-items-center m-5">
+                            <h1 style={{'text-align': 'center'}}><span style={{'color': '#1BA39C'}}>A</span>ccount restore</h1>
+                            <span className="text-center fs-1">Account AccountName is ready to be restored, please fill in the form below:</span>
+                        </div>
+                        <div className="col d-flex justify-content-center align-items-center h-50 m-5" style={{maxHeight: '93vh'}}>
+                            <img style={{width: '35vh', height: '35vh'}} className="rounded-circle shadow w-25 h-25" src={logoSupport}></img>
+                            <AccountRestoreForm/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </>
+    );
+}
+
+export default AccountRestore;
+
+
+/*
         <>
             <div className="container-fluid position-sticky">
                 <div className="row mb-5">
@@ -24,7 +51,4 @@ const AccountRestore = (props)=>{
                 </div>
             </div>
         </>
-    );
-}
-
-export default AccountRestore;
+*/

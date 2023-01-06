@@ -4,12 +4,3 @@
 .second-first-letter {
     color: #333333;
 }
-html h1, body h1, .container h1 {
-    font-size: 100px;
-    font-weight: bold;
-}
-
-.hs{
-    font-size: 35px;
-    text-align: center;
-}

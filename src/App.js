@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Login, Register, NotFound404, MainPage, Chats, Profile, ProfileEdit, Battles, Support, FAQ, AccountRestore} from './components/pages/pages';
+import { Login, Register, NotFound404, MainPage, Chats, Profile, ProfileEdit, Battles, Support, FAQ, AccountRestore, PostUpload} from './components/pages/pages';
 
 
 function App() {
@@ -17,6 +17,7 @@ function App() {
           <Route path='/battles'         element={<Battles/>}        />
           <Route path='/support'         element={<Support/>}        />
           <Route path='/f.a.q'           element={<FAQ/>}            />
+          <Route path='/post-upload'     element={<PostUpload/>}     />
           <Route path='*'                element={<NotFound404/>}    />
         </Routes>
     </Router>
