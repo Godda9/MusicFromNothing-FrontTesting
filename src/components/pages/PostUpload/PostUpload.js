@@ -1,5 +1,5 @@
 import Topbar from "../../top-bar/top-bar";
-
+import PostUploadForm from "../../forms/post-upload-form";
 
 const PostUpload = (props) => {
     return (
@@ -12,6 +12,9 @@ const PostUpload = (props) => {
                     <div>
                         <div className="row d-flex justify-content-center align-items-center m-5">
                             FORM
+                            <div>
+                                <PostUploadForm/>
+                            </div>
                         </div>
                         <div className="col d-flex justify-content-center align-items-center h-50 m-5" style={{maxHeight: '93vh'}}>
                             PREVIEW
