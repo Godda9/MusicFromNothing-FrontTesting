@@ -1,4 +1,6 @@
 import PostItem from '../post-item/post-item';
+import PostItemSkeleton from '../post-item/skeleton/post-item-skeleton';
+
 
 const PostsView = (props) => {
     return (
@@ -15,7 +17,7 @@ const PostsView = (props) => {
                     comments={53}
                     status={null}
                 />
-                <PostItem 
+                <PostItemSkeleton 
                     user="UserName" 
                     datetime="01.01.23" 
                     title="Track title" 

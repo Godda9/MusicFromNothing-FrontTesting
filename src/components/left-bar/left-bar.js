@@ -1,4 +1,5 @@
 import LeftBarItem from './left-bar-item/left-bar-item';
+import LeftBarItemSkeleton from './left-bar-item/skeleton/left-bar-item-skeleton';
 import * as Icon from 'react-bootstrap-icons';
 import { useEffect, useState, useTransition } from 'react';
 
@@ -52,6 +53,7 @@ const Leftbar = (props) => {
                             );
                         })         
                     }
+                    <LeftBarItemSkeleton/>
             </div>
         </div>
     );
