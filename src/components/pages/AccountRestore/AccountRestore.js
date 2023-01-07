@@ -1,5 +1,5 @@
 import Topbar from '../../top-bar/top-bar'
-import logoSupport from '../Images/logo_support.png'
+import logoRestore from '../Images/logo_restore.png'
 import './AccountRestore.css'
 import AccountRestoreForm from '../../forms/account-restore-form'
 
@@ -19,7 +19,7 @@ const AccountRestore = (props)=>{
                     </div>
                     <div className="row">
                         <div className="col p-3 d-flex justify-content-center align-items-center h-50 m-5">
-                            <img style={{width: '35vh', height: '35vh'}} className="rounded-circle shadow w-25 h-25" src={logoSupport}></img>
+                            <img style={{width: '35vh', height: '35vh'}} className="rounded-circle shadow w-25 h-25" src={logoRestore}></img>
                             <AccountRestoreForm/>
                         </div>
                     </div>

@@ -1,8 +1,22 @@
 import Topbar from "../../top-bar/top-bar";
 import PostUploadForm from "../../forms/post-upload-form";
 import PostItemDynamicPreview from "../../post-item-dynamic-preview/post-item-dynamic-preview";
+import { useMemo, useState } from "react";
+
 
 const PostUpload = (props) => {
+    // states
+    const [title, setTitle] = useState('Title');
+    const [descr, setDescr] = useState('Track description');
+    const [picture, setPicture] = useState([]);
+    const [audio, setAudio] = useState([]);
+    
+    // handlers
+    const handleTitle = (text) => text.length === 0 ? setTitle('Title') : setTitle(text);
+    const handleDescr = (text) => text.length === 0 ? setDescr('Track description') : setDescr(text);
+    const handlePicture = (file) => setPicture(file);
+    const handleAudio = (file) => setAudio(file);
+
     return (
         <>
             <div className="container-fluid">
@@ -14,21 +28,16 @@ const PostUpload = (props) => {
                         <h1 style={{textAlign: 'center'}}><span style={{'color': '#1BA39C'}}>P</span>ost upload</h1>
                         <span className="text-center fs-1">Set up your post using super-form below:</span>
                     </div>
-                    <div className="row">
-                        <div className="col p-3 d-flex justify-content-center align-items-center h-50 mx-5">
-                            <PostUploadForm/>
-                            <PostItemDynamicPreview 
-                                user="UserName"
-                                datetime="01.01.23"
-                                title="Track title"
-                                description="Track description..."
-                                isLiked={true}
-                                img="https://iso.500px.com/wp-content/uploads/2017/10/500px_Golden_Hour_Quest_winner-1500x1000.jpg"
-                                likes={120}
-                                comments={53}
-                                status={null}
-                            />
-                        </div>
+                    <div className="d-flex justify-content-center align-items-center">
+                        <PostUploadForm handleTitle={handleTitle} handleDescr={handleDescr} handlePicture={handlePicture} handleAudio={handleAudio}/>
+                        <PostItemDynamicPreview 
+                            user="UserName"
+                            title={title}
+                            description={descr}
+                            isLiked={false}
+                            img={picture.length !== 0 ? URL.createObjectURL(picture) : null}
+                            audio={audio.length !== 0 ? URL.createObjectURL(audio) : null}
+                        />
                     </div>
                 </div>
             </div>
