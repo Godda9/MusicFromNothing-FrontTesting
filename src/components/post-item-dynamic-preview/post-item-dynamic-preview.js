@@ -27,7 +27,7 @@ const PostItemDynamicPreview = (props) => {
                             </div>  
                             
                             <h3 className="mb-2 mt-2">{title.charAt(0).toUpperCase() + title.slice(1)}</h3>
-                            <h5 className="mb-2">{description.charAt(0).toUpperCase() + title.slice(1)}</h5>
+                            <h5 className="mb-2">{description.charAt(0).toUpperCase() + description.slice(1)}</h5>
                         </div>
 
                         <div className='d-flex'>
