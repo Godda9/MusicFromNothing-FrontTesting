@@ -8,14 +8,18 @@ const PostUpload = (props) => {
     // states
     const [title, setTitle] = useState('Title');
     const [descr, setDescr] = useState('Track description');
-    const [picture, setPicture] = useState([]);
-    const [audio, setAudio] = useState([]);
+    const [picture, setPicture] = useState(null);
+    const [audio, setAudio] = useState(null);
     
     // handlers
     const handleTitle = (text) => text.length === 0 ? setTitle('Title') : setTitle(text);
     const handleDescr = (text) => text.length === 0 ? setDescr('Track description') : setDescr(text);
-    const handlePicture = (file) => setPicture(file);
-    const handleAudio = (file) => setAudio(file);
+    const handlePicture = (file) => { 
+        if (file !== null) setPicture(file) 
+    };
+    const handleAudio = (file) => { 
+        if (file !== null) setAudio(file); 
+    };
 
     return (
         <>
@@ -35,8 +39,8 @@ const PostUpload = (props) => {
                             title={title}
                             description={descr}
                             isLiked={false}
-                            img={picture.length !== 0 ? URL.createObjectURL(picture) : null}
-                            audio={audio.length !== 0 ? URL.createObjectURL(audio) : null}
+                            img={picture !== null ? URL.createObjectURL(picture) : null}
+                            audio={audio !== null ? URL.createObjectURL(audio) : null}
                         />
                     </div>
                 </div>

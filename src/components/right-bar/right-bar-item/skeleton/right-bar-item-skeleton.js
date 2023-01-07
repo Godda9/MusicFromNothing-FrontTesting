@@ -1,6 +1,6 @@
 import { Skeleton } from "react-skeleton-generator";
 
-const LeftBarItemSkeleton = (ptops) => {
+const RightBarItemSkeleton = (ptops) => {
     return (
         <a href="" className="list-group-item list-group-item-action py-3 lh-tight" aria-current="true">
             <div className='d-flex'>
@@ -11,11 +11,11 @@ const LeftBarItemSkeleton = (ptops) => {
                     </Skeleton.SkeletonThemeProvider>
                 </div>
                 <Skeleton.SkeletonThemeProvider>
-                    <div className='w-25 h-100'><Skeleton width="3.8vw" height="3.8vw"/></div>
+                    <div className='w-25 h-100'><Skeleton width="3.8vw" height="3.8vw" borderRadius="50%"/></div>
                 </Skeleton.SkeletonThemeProvider>
             </div>
         </a>
     );
 }
 
-export default LeftBarItemSkeleton;
+export default RightBarItemSkeleton;

@@ -28,7 +28,7 @@ const PostItemSkeleton = (props) => {
                                 <Skeleton.SkeletonThemeProvider>
                                     <div className='d-flex align-items-center'>
                                         <div className="track-author-image"><Skeleton width="35px" height="35px" borderRadius="50%" /></div>
-                                        <div className="d-inline-block text-primary"><Skeleton width="5vw" height="2vh" /></div>
+                                        <div className="d-inline-block text-primary"><Skeleton width="5vw" height="1.5vh" /></div>
                                         <div className="mx-2 text-muted"><Skeleton width="3vw" height="2vh" /></div>
                                     </div> 
                                     <div className="mt-3">

@@ -1,4 +1,5 @@
 import RightBarItem from './right-bar-item/right-bar-item';
+import RightBarItemSkeleton from './right-bar-item/skeleton/right-bar-item-skeleton';
 import * as Icon from 'react-bootstrap-icons';
 import {useState, useTransition, useEffect} from "react";
 
@@ -51,6 +52,7 @@ const Rightbar = (props) => {
                         );
                     })
                 }
+                <RightBarItemSkeleton/> 
                 
             </div>
         </div>

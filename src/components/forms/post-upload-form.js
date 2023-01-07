@@ -22,7 +22,7 @@ const PostUploadForm = (props)=> {
                             className="form-control rounded"
                             type="text" 
                             placeholder="Title"
-                            onInput={e => handleTitle(e.target.value)}
+                            onInput={e => handleTitle(e.target.value || "")}
                             {...register("Title", {
                                 maxLength: 10,
                                 minLength: 4,
@@ -38,7 +38,7 @@ const PostUploadForm = (props)=> {
                             className="form-control rounded"
                             type="text" 
                             placeholder="ShortDescription"
-                            onInput={e => handleDescr(e.target.value)}
+                            onInput={e => handleDescr(e.target.value || "")}
                             {...register("ShortDesc", {
                                 maxLength: 20,
                                 minLength: 4,
@@ -70,7 +70,7 @@ const PostUploadForm = (props)=> {
                             className="form-control"
                             type="file" 
                             placeholder="Upload"
-                            onInput={e => handlePicture(e.target.files[0])}
+                            onInput={e => handlePicture(e.target.files[0] || null)}
                             
                             {...register("Image", {
                                 required: true,
@@ -85,7 +85,7 @@ const PostUploadForm = (props)=> {
                             className="form-control"
                             type="file" 
                             placeholder="Upload"
-                            onInput={e => handleAudio(e.target.files[0])}
+                            onInput={e => handleAudio(e.target.files[0] || null)}
                             {...register("Audio", {
                                 required: true,
                             })} 
