@@ -4,9 +4,20 @@ import Rightbar from "../../right-bar/right-bar";
 import PostsView from "../../posts-view/posts-view";
 
 import '../scroll-bar.css'
+import { useState } from "react";
 
 
 const MainPage = (props) => {
+    const [dataType, setDataType] = useState("posts");
+    const [commentsId, setCommentsId] = useState(null);
+
+    const onDataChanged = (id) => {
+        switchDataType();
+        setCommentsId(id);
+    }
+
+    const switchDataType = () => { dataType === "posts" ? setDataType("comments") : setDataType("posts") }
+    
     return (
         <>
             <div className="container-fluid position-fixed">
@@ -18,7 +29,7 @@ const MainPage = (props) => {
                         <Leftbar/>
                     </div>
                     <div className="col-8 overflow-auto p-0" style={{maxHeight: '93vh'}}>
-                        <PostsView/>
+                        <PostsView what={dataType} onDataChanged={onDataChanged} commentsId={commentsId} switchDataType={switchDataType}/>
                     </div>
                     <div className="col overflow-auto p-0" style={{maxHeight: '93vh'}}>
                         <Rightbar/>

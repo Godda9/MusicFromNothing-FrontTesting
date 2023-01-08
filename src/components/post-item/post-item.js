@@ -6,8 +6,10 @@ import './post-item.css'
 import './PlayerStyles.css'
 import { useState } from 'react';
 
+
+
 const PostItem = (props) => {
-    const {user, datetime, img, title, description, likes, isLiked, comments, status} = props;
+    const {user, datetime, img, title, description, likes, isLiked, comments, status, onCommentsClick} = props;
     const [liked, setLiked] = useState(isLiked);
     const [likesAmount, setLikesAmount] = useState(likes);
 
@@ -68,17 +70,20 @@ const PostItem = (props) => {
                                     </ul>
                                 </div>
                                 
-
                                 <div className='d-flex flex-column mx-2 align-items-center'>
-                                    <Icon.ChatDots className='icon-likes-dislikes' type="button"/>
+                                    <button className='p-0 m-0' style={{borderWidth: 0, backgroundColor: 'transparent'}} onClick={e => onCommentsClick("[DB_POST_ID]")}>
+                                        <Icon.ChatDots className='icon-likes-dislikes' type="button"/>
+                                    </button>
                                     <span className='text-muted'>{comments}</span>
                                 </div>
 
                                 <div className='d-flex flex-column ml-2 align-items-center'>
-                                    { 
-                                        liked ? <Icon.HeartFill className='icon-likes-dislikes' type="button" color='red' onClick={(e) => onLikesChanged(e, -1)}/> 
-                                            : <Icon.Heart className='icon-likes-dislikes' type="button" onClick={(e) => onLikesChanged(e, 1)}/> 
-                                    }
+                                    <button className='p-0 m-0' style={{borderWidth: 0, backgroundColor: 'transparent'}}>
+                                        {
+                                            liked ? <Icon.HeartFill className='icon-likes-dislikes' type="button" color='red' onClick={(e) => onLikesChanged(e, -1)}/> 
+                                                : <Icon.Heart className='icon-likes-dislikes' type="button" onClick={(e) => onLikesChanged(e, 1)}/> 
+                                        }
+                                    </button>
                                     <span className='text-muted'>{likesAmount}</span>
                                 </div>
                             </div>
