@@ -20,13 +20,13 @@ const PostItem = (props) => {
     
     return (
         <>
-            <div className="col-md-6">
-                <div className="bordered row g-0 border overflow-hidden flex-md-row mb-1 position-relative">
+            <div className="col-md-12">
+                <div className=" bordered shadow row g-0 border mb-4 position-relative overflow-hidden mx-2">
                     {status === 'inbattle' ? <button className='btn btn-secondary'>Support</button> : null}
                     {status === 'win' ? <button className='btn btn-success disabled'>Win</button> : null}
                     {status === 'lose' ? <button className='btn btn-danger disabled'>Lose</button> : null}
 
-                    <div className="col p-4 d-flex flex-column position-static">
+                    <div className="col p-4 d-flex flex-column">
                         <div className='track-author-dt'>
                             <div className='mb-3'>
                                 <div className='d-flex align-items-center'>
