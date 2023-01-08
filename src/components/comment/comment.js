@@ -12,7 +12,7 @@ const Comment = (props) => {
 
     return (
         <>
-            <div className="grid-item card-body shadow m-3" style={{borderRadius: '15px'}}>
+            <div className="card-body shadow m-3" style={{borderRadius: '15px'}}>
                 <div className="d-flex justify-content-between">
                     <div>
                         <div className='d-flex align-items-center mb-3'>

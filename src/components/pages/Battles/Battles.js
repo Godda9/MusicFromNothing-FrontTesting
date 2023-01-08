@@ -6,7 +6,7 @@ const Battles = (props) => {
         <>
             <div className="container-fluid position-fixed">
                 <div className="row">
-                    <Topbar text="Battles" username="UserName" where="feed"/>
+                    <Topbar text="Battles" username="UserName" where="battles"/>
                 </div>
                 <div className="row">
                     <div className="col overflow-auto p-0" style={{maxHeight: '93vh'}}>

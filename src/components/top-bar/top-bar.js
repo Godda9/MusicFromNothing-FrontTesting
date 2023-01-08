@@ -2,6 +2,7 @@ import * as Icon from 'react-bootstrap-icons';
 import logoImg from '../pages/Images/logo.png';
 import userImg from '../pages/Images/user_logo.png';
 import { Link, NavLink } from 'react-router-dom';
+import NavigationButton from '../navigation-button/navigation-button';
 
 import './top-bar.css'
 
@@ -18,39 +19,46 @@ const Topbar = (props) => {
                             <span className="fs-4">{text}</span>
                         </a>
                     </div>
-                    {
-                        where === 'account-restore' ? 
-                        <></> :
-                        <div>
-                            <ul className="nav nav-pills">
-                                <li className="nav-item">
-                                    <NavLink to="/feed" className={({isActive}) => isActive ? "nav-link active" : "nav-link"}>
-                                        <div className='nav-item'>
-                                            <Icon.House width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/> Home
-                                        </div>
-                                    </NavLink>
-                                </li>
-                                <li className="nav-item">
-                                    <NavLink to="/battles" className={({isActive}) => isActive ? "nav-link active" : "nav-link"}>
-                                        <div className='nav-item'>
-                                            <Icon.ClockHistory width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/> Battles
-                                        </div>
-                                    </NavLink>
-                                </li>
-                                <li className="nav-item">
-                                    <NavLink to="/chats" className={({isActive}) => isActive ? "nav-link active" : "nav-link"}>
-                                        <div className='nav-item'> 
-                                            <Icon.Chat width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/> Chats
-                                        </div>
-                                    </NavLink>
-                                </li>
-                            </ul>
-                        </div>
-                    }
+
+                    <div>
+                        {
+                            where === 'feed' || where === 'profile' || where === 'battles' || where === 'chats'
+                            ? 
+                                <ul className="nav nav-pills">
+                                    <li className="nav-item"><NavigationButton to="/feed" text="Home"/></li>
+                                    <li className="nav-item"><NavigationButton to="/battles" text="Battles"/></li>
+                                    <li className="nav-item"><NavigationButton to="/chats" text="Chats"/></li>
+                                </ul>
+                            :
+                            null
+                        }
+                        {
+                            where === 'profile-edit' || where === 'post-upload'
+                            ?
+                                <ul className="nav nav-pills">
+                                    <li className='nav-item'><NavigationButton to="/profile" text="Back to profile"/></li>
+                                </ul>
+                            :
+                            null
+                        }
+                        {
+                            where === 'support'
+                            ?
+                                <ul className="nav nav-pills">
+                                    <li className="nav-item"><NavigationButton to="/feed" text="Home"/></li>
+                                    <li className="nav-item"><NavigationButton to="/battles" text="Battles"/></li>
+                                    <li className="nav-item"><NavigationButton to="/chats" text="Chats"/></li>
+                                    <li className='nav-item'><NavigationButton to="/f.a.q" text="FAQ"/></li>
+                                </ul>
+                            :
+                            null
+                        }
+
+                    </div>
                     
                     {
-                        where === 'account-restore'?
-                        <></> :
+                        where !== 'account-restore' 
+                        ?
                         <div>
                             <div className="d-flex dropdown align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none special-link-right">
                                 <span className="fs-4">{username}</span>
@@ -90,6 +98,8 @@ const Topbar = (props) => {
                                 </ul>
                             </div>
                         </div>
+                        :
+                        null
                     }
                     
                 </div>

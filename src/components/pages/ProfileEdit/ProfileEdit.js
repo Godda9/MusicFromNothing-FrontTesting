@@ -8,7 +8,7 @@ const ProfileEdit = (props) => {
         <>
             <div className="container-fluid">
                 <div className="row position-sticky top-0" style={{zIndex: 2}}>
-                    <Topbar text="Edit Profile" username="UserName" where="chats"/>
+                    <Topbar text="Edit Profile" username="UserName" where="profile-edit"/>
                 </div>
                 <div className="col overflow-y-auto" style={{maxHeight: '93vh'}}>
                     <div className="row">

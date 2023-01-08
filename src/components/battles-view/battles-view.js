@@ -4,7 +4,7 @@ import BattleContainer from "../battle-container/batlle-container";
 const BattlesView = (props) => {
     return (
         <>
-            <div className="d-flex justify-content-center mt-3">
+            <div className="d-flex justify-content-center m-3">
                 <span className="fs-4">All battles are ending in: 00.00.00</span>
             </div>
             <BattleContainer 

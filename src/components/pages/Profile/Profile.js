@@ -10,7 +10,7 @@ const Profile = (props) => {
         <>
             <div className="container-fluid position-fixed">
                 <div className="row">
-                    <Topbar text="Profile View" username="UserName" where="feed"/>
+                    <Topbar text="Profile View" username="UserName" where="profile"/>
                 </div>
                 <div className="row">
                     <div className="col overflow-auto p-0" style={{maxHeight: '93vh'}}>
