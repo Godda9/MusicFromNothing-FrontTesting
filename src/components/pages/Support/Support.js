@@ -1,23 +1,31 @@
 import Topbar from "../../top-bar/top-bar";
 import FormSupportContact from "../../forms/form-support-contact";
 import logoSupport from '../Images/logo_support.png'
+import { useLayoutEffect } from "react";
+import { gsap } from "gsap";
 
 const Support = (props) => {
+    useLayoutEffect(() => {
+        gsap.fromTo('.anim0', {y: 500}, { duration: 1, ease: "expo.out", y: 0 });
+        gsap.fromTo('.anim1', {y: 500}, { duration: 1, ease: "expo.out", y: 0 });
+        gsap.fromTo('.anim2', {y: 500}, { duration: 2, ease: "expo.out", y: 0 });
+    })
+
     return (
         <>
             <div className="container-fluid">
-                <div className="row position-sticky top-0">
+                <div className="row position-sticky top-0" style={{zIndex: 1}}>
                     <Topbar text="Support" username="UserName" where="support"/>
                 </div>
 
-                <div className="col overflow-y-auto" style={{maxHeight: '93vh'}}>
+                <div className="col overflow-y-auto pt-5" style={{maxHeight: '93vh'}}>
                     <div className="row d-flex justify-content-center align-items-center">
-                        <h1 style={{textAlign: 'center'}}><span style={{'color': '#1BA39C'}}>S</span>upport</h1>
-                        <span className="text-center fs-1">We are ready to get in contact, please provide us with information below:</span>
+                        <h1 className="anim0" style={{textAlign: 'center'}}><span style={{'color': '#1BA39C'}}>S</span>upport</h1>
+                        <span className="anim1 text-center fs-1">We are ready to get in contact, please provide us with information below:</span>
                     </div>
                     <div className="row">
-                        <div className="col p-3 d-flex justify-content-center align-items-center h-50 m-5">
-                            <img style={{width: '35vh', height: '35vh'}} className="rounded-circle shadow w-25 h-25" src={logoSupport}></img>
+                        <div className="anim2 col p-3 d-flex justify-content-center align-items-center h-50 m-5">
+                            <img style={{width: '30vh', height: '30vh'}} className="rounded-circle shadow" src={logoSupport}></img>
                             <FormSupportContact/>
                         </div>
                     </div>

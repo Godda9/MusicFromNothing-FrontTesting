@@ -17,7 +17,7 @@ const PostItem = (props) => {
         setLikesAmount(likesAmount + value);
         setLiked(!liked);
     }
-    
+
     return (
         <>
             <div className="col-md-12">
@@ -71,7 +71,11 @@ const PostItem = (props) => {
                                 </div>
                                 
                                 <div className='d-flex flex-column mx-2 align-items-center'>
-                                    <button className='p-0 m-0' style={{borderWidth: 0, backgroundColor: 'transparent'}} onClick={e => onCommentsClick("[DB_POST_ID]")}>
+                                    <button 
+                                        className='p-0 m-0' 
+                                        style={{borderWidth: 0, backgroundColor: 'transparent'}} 
+                                        onClick={e => onCommentsClick("[DB_POST_ID]")}
+                                        >
                                         <Icon.ChatDots className='icon-likes-dislikes' type="button"/>
                                     </button>
                                     <span className='text-muted'>{comments}</span>
@@ -80,7 +84,7 @@ const PostItem = (props) => {
                                 <div className='d-flex flex-column ml-2 align-items-center'>
                                     <button className='p-0 m-0' style={{borderWidth: 0, backgroundColor: 'transparent'}}>
                                         {
-                                            liked ? <Icon.HeartFill className='icon-likes-dislikes' type="button" color='red' onClick={(e) => onLikesChanged(e, -1)}/> 
+                                            liked ? <Icon.HeartFill className='icon-likes-dislikes'  type="button" color='red' onClick={(e) => onLikesChanged(e, -1)} /> 
                                                 : <Icon.Heart className='icon-likes-dislikes' type="button" onClick={(e) => onLikesChanged(e, 1)}/> 
                                         }
                                     </button>

@@ -4,10 +4,17 @@ import Rightbar from "../../right-bar/right-bar";
 import PostsView from "../../posts-view/posts-view";
 
 import '../scroll-bar.css'
-import { useState } from "react";
+import { useState, useLayoutEffect } from "react";
+import { gsap } from 'gsap';
 
 
 const MainPage = (props) => {
+    // animations
+    useLayoutEffect(() => {
+        gsap.fromTo('.anim0', {y: 10000}, { duration: 2, ease: "power4.out", y: 0 });
+    })
+
+
     const [dataType, setDataType] = useState("posts");
     const [commentsId, setCommentsId] = useState(null);
 
@@ -28,7 +35,7 @@ const MainPage = (props) => {
                     <div className="col overflow-auto p-0" style={{maxHeight: '93vh'}}>
                         <Leftbar/>
                     </div>
-                    <div className="col-8 overflow-auto p-0" style={{maxHeight: '93vh'}}>
+                    <div className="anim0 col-8 overflow-auto p-0" style={{maxHeight: '93vh'}}>
                         <PostsView what={dataType} onDataChanged={onDataChanged} commentsId={commentsId} switchDataType={switchDataType}/>
                     </div>
                     <div className="col overflow-auto p-0" style={{maxHeight: '93vh'}}>

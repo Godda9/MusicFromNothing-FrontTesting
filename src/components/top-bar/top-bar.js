@@ -3,24 +3,31 @@ import logoImg from '../pages/Images/logo.png';
 import userImg from '../pages/Images/user_logo.png';
 import { Link, NavLink } from 'react-router-dom';
 import NavigationButton from '../navigation-button/navigation-button';
+import { useState, useLayoutEffect } from "react";
+import { gsap } from 'gsap';
 
 import './top-bar.css'
 
 const Topbar = (props) => {
-    const {text, username, where} = props;
+    // anims
+    useLayoutEffect(() => {
+        gsap.fromTo('.anim-left-log', {x: -1000}, { duration: 2, ease: "power4.out", x: 0 });
+        gsap.fromTo('.anim-center-btns', {opacity: 0}, { duration: 2, opacity: 1 });
+    })
 
+    const {text, username, where} = props;
     return (
         <>
             <header className="top-bar d-flex flex-wrap justify-content-center border-bottom py-3" style={{backgroundColor: 'white'}}>
                 <div className='top-bar-flex'>
-                    <div className='d-flex'>
+                    <div className='anim-left-log d-flex'>
                         <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none special-link-left">
                             <img src={logoImg} style={{width: 2.5 + 'em'}} alt="mainLogo"></img>
                             <span className="fs-4">{text}</span>
                         </a>
                     </div>
 
-                    <div>
+                    <div className='anim-center-btns'>
                         {
                             where === 'feed' || where === 'profile' || where === 'battles' || where === 'chats'
                             ? 
