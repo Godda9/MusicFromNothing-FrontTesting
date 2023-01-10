@@ -11,6 +11,11 @@ const Leftbar = (props) => {
         {link: '/login', heading: "c", placeholder: "Track placeholder2", image: 'https://i.pinimg.com/originals/fa/e1/bc/fae1bce61f7b0403666fd894298488ee.gif'},
         {link: '/login', heading: "d", placeholder: "Track placeholder3", image: 'https://i.pinimg.com/originals/fa/e1/bc/fae1bce61f7b0403666fd894298488ee.gif'},
         {link: '/login', heading: "e", placeholder: "Track placeholder4", image: 'https://i.pinimg.com/originals/fa/e1/bc/fae1bce61f7b0403666fd894298488ee.gif'},
+        {link: '/login', heading: "a", placeholder: "Track placeholder0", image: 'https://i.pinimg.com/originals/fa/e1/bc/fae1bce61f7b0403666fd894298488ee.gif'},
+        {link: '/login', heading: "b", placeholder: "Track placeholder1", image: 'https://i.pinimg.com/originals/fa/e1/bc/fae1bce61f7b0403666fd894298488ee.gif'},
+        {link: '/login', heading: "c", placeholder: "Track placeholder2", image: 'https://i.pinimg.com/originals/fa/e1/bc/fae1bce61f7b0403666fd894298488ee.gif'},
+        {link: '/login', heading: "d", placeholder: "Track placeholder3", image: 'https://i.pinimg.com/originals/fa/e1/bc/fae1bce61f7b0403666fd894298488ee.gif'},
+        {link: '/login', heading: "e", placeholder: "Track placeholder4", image: 'https://i.pinimg.com/originals/fa/e1/bc/fae1bce61f7b0403666fd894298488ee.gif'},
     ];
 
 

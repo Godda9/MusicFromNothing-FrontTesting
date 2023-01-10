@@ -4,7 +4,6 @@ import audioFile from '../audio.mp3'
 import * as Icon from 'react-bootstrap-icons';
 
 import '../post-item.css'
-import '../PlayerStyles.css'
 import { useState } from 'react';
 
 
@@ -23,7 +22,7 @@ const PostItemSkeleton = (props) => {
             <div className="bordered shadow row g-0 border overflow-hidden flex-md-row mb-1 position-relative mx-2">
                 <div className="col p-4 d-flex flex-column position-static">
                     <div className='track-author-dt'>
-                        <div className='mb-3'>
+                        <div className='mb-2'>
                             <Skeleton.SkeletonThemeProvider>
                                 <div className='d-flex align-items-center'>
                                     <div className="track-author-image"><Skeleton width="35px" height="35px" borderRadius="50%" /></div>
@@ -39,19 +38,10 @@ const PostItemSkeleton = (props) => {
                         <div className='d-flex'>
                             <Skeleton.SkeletonThemeProvider>
                             <div className="dropdown">
-                                <Skeleton width="14vh" height="4vh" borderRadius="5px"/>
-                                <Skeleton width="14vh" height="2vh" borderRadius="5px"/>
+                                <Skeleton width="4vh" height="12.5vh" borderRadius="5px"/>
                             </div>
                             </Skeleton.SkeletonThemeProvider>
                         </div>
-                    </div>
-
-                    <div className='track-audio-dt'>
-                        <Skeleton.SkeletonThemeProvider>
-                            <div className="pt-2 d-flex">
-                                <Skeleton width="100%" height="12vh" borderRadius="15px"/>
-                            </div>
-                        </Skeleton.SkeletonThemeProvider> 
                     </div>
                 </div>
             </div>

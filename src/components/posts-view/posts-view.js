@@ -20,7 +20,7 @@ const PostsBlock = (props) => {
     const {onDataChanged} = props;
     return(
         <>
-            <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 m-2 mb-4">
+            <div className="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-3 m-2 mb-4">
                 <div className="col-md-12">
                     <PostItem 
                         user="UserName" 
@@ -35,6 +35,20 @@ const PostsBlock = (props) => {
                         onCommentsClick={onDataChanged}
                     />
                 </div>
+                <div className="col-md-12">
+                    <PostItem 
+                        user="UserName" 
+                        datetime="01.01.23" 
+                        title="Track title" 
+                        description="Track description..."
+                        isLiked={false}
+                        img="https://iso.500px.com/wp-content/uploads/2017/10/500px_Golden_Hour_Quest_winner-1500x1000.jpg"
+                        likes={120}
+                        comments={53}
+                        status={null}
+                        onCommentsClick={onDataChanged}
+                    />
+                </div>
 
                 <div className="col-md-12">
                     <PostItem 
@@ -42,7 +56,22 @@ const PostsBlock = (props) => {
                         datetime="01.01.23" 
                         title="Track title" 
                         description="Track description..."
-                        isLiked={true}
+                        isLiked={false}
+                        img="https://iso.500px.com/wp-content/uploads/2017/10/500px_Golden_Hour_Quest_winner-1500x1000.jpg"
+                        likes={120}
+                        comments={53}
+                        status={null}
+                        onCommentsClick={onDataChanged}
+                    />
+                </div>
+
+                <div className="col-md-12">
+                    <PostItem 
+                        user="UserName" 
+                        datetime="01.01.23" 
+                        title="Track title" 
+                        description="Track description..."
+                        isLiked={false}
                         img="https://iso.500px.com/wp-content/uploads/2017/10/500px_Golden_Hour_Quest_winner-1500x1000.jpg"
                         likes={120}
                         comments={53}

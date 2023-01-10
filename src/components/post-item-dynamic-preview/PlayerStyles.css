@@ -8,8 +8,7 @@
   padding: 10px 15px;
   background-color: #fff;
   box-shadow: 4px 4px 10px rgb(210, 210, 210);
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-radius: 15px;
 }
 .rhap_container:focus:not(:focus-visible) {
   outline: 0;

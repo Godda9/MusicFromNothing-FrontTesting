@@ -15,9 +15,13 @@ const PostItemDynamicPreview = (props) => {
         setLiked(!liked);
     }
 
+    console.log('render_POSTDYNAMIC_PREV')
+
+    
     return (
         <>
-            <div className="bordered row g-0 border overflow-hidden flex-md-row mb-1 position-relative w-75 m-3">
+            <div className="bordered shadow row g-0 border overflow-hidden flex-md-row mb-1 position-relative w-75 m-3" 
+                style={img === null ?  null : {backgroundImage: 'url('+ img + ')', backgroundRepeat: false, backgroundSize: 'auto'}}>
                 <div className="col p-4 d-flex flex-column position-static">
                     <div className='track-author-dt'>
                         <div className='mb-3'>
@@ -36,30 +40,13 @@ const PostItemDynamicPreview = (props) => {
                         <div className='d-flex'>
                             <Skeleton.SkeletonThemeProvider>
                                 <div className="dropdown">
-                                    <Skeleton width="14vh" height="4vh" borderRadius="5px"/>
-                                    <Skeleton width="14vh" height="2vh" borderRadius="5px"/>
+                                    <Skeleton width="4vh" height="12.5vh" borderRadius="5px"/>
                                 </div>
                             </Skeleton.SkeletonThemeProvider>
                         </div>
                     </div>
 
-                    <div className='track-author-dt'>
-                        {
-                            img === null
-                            ? 
-                            <div className='trac-image'>
-                                <Skeleton.SkeletonThemeProvider>
-                                    <Skeleton width='6.2vw' height='12vh'></Skeleton>
-                                </Skeleton.SkeletonThemeProvider>
-                            </div>
-                            :
-                            <img 
-                                src={img}
-                                alt="TrackLogo"
-                                className='track-image'>
-                            </img>
-                        }
-                           
+                    <div className='track-author-dt'> 
                         <AudioPlayer
                             autoPlay={false}
                             src={audio}

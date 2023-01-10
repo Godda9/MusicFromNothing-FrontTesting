@@ -1,16 +1,31 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
-import ProfileCardEdit from "../profile-card-edit/profile-card-edit";
+import PostItemDynamicPreview from "../post-item-dynamic-preview/post-item-dynamic-preview";
 
 const PostUploadForm = (props)=> {
     const { register, handleSubmit, getValues, formState: { errors } } = useForm();
-    const {handleTitle, handleDescr, handlePicture, handleAudio} = props;
 
     // form submit
     const onSubmit = data => {
         console.log(data);
     }
+
+    // states
+    const [title, setTitle] = useState('Title');
+    const [descr, setDescr] = useState('Track description');
+    const [picture, setPicture] = useState(null);
+    const [audio, setAudio] = useState(null);
+    
+    // handlers
+    const handleTitle = (text) => text.length === 0 ? setTitle('Title') : setTitle(text);
+    const handleDescr = (text) => text.length === 0 ? setDescr('Track description') : setDescr(text);
+    const handlePicture = (file) => { 
+        if (file !== null) setPicture(file) 
+    };
+    const handleAudio = (file) => { 
+        if (file !== null) setAudio(file); 
+    };
 
     return(
         <>  
@@ -40,7 +55,7 @@ const PostUploadForm = (props)=> {
                             placeholder="ShortDescription"
                             onInput={e => handleDescr(e.target.value || "")}
                             {...register("ShortDesc", {
-                                maxLength: 20,
+                                maxLength: 40,
                                 minLength: 4,
                                 required: true,
                             })}
@@ -71,7 +86,6 @@ const PostUploadForm = (props)=> {
                             type="file" 
                             placeholder="Upload"
                             onInput={e => handlePicture(e.target.files[0] || null)}
-                            
                             {...register("Image", {
                                 required: true,
                             })} 
@@ -115,6 +129,14 @@ const PostUploadForm = (props)=> {
                     <button type="submit" className="btn btn-primary w-100">Confirm</button>
                 </form>
             </div>
+            <PostItemDynamicPreview 
+                user="UserName"
+                title={title}
+                description={descr}
+                isLiked={false}
+                img={picture !== null ? URL.createObjectURL(picture) : null}
+                audio={audio !== null ? URL.createObjectURL(audio) : null}
+            />
         </>
     );
 }

@@ -10,6 +10,11 @@ const Rightbar = (props) => {
         {link: '/login', heading: "c", placeholder: "Account description2", image: 'https://secure.gravatar.com/avatar/4c2d5681a4633a173c20e74c3641e637?s=500&d=mm&r=g'},
         {link: '/login', heading: "d", placeholder: "Account description3", image: 'https://secure.gravatar.com/avatar/4c2d5681a4633a173c20e74c3641e637?s=500&d=mm&r=g'},
         {link: '/login', heading: "e", placeholder: "Account description4", image: 'https://secure.gravatar.com/avatar/4c2d5681a4633a173c20e74c3641e637?s=500&d=mm&r=g'},
+        {link: '/login', heading: "a", placeholder: "Account description0", image: 'https://secure.gravatar.com/avatar/4c2d5681a4633a173c20e74c3641e637?s=500&d=mm&r=g'},
+        {link: '/login', heading: "b", placeholder: "Account description1", image: 'https://secure.gravatar.com/avatar/4c2d5681a4633a173c20e74c3641e637?s=500&d=mm&r=g'},
+        {link: '/login', heading: "c", placeholder: "Account description2", image: 'https://secure.gravatar.com/avatar/4c2d5681a4633a173c20e74c3641e637?s=500&d=mm&r=g'},
+        {link: '/login', heading: "d", placeholder: "Account description3", image: 'https://secure.gravatar.com/avatar/4c2d5681a4633a173c20e74c3641e637?s=500&d=mm&r=g'},
+        {link: '/login', heading: "e", placeholder: "Account description4", image: 'https://secure.gravatar.com/avatar/4c2d5681a4633a173c20e74c3641e637?s=500&d=mm&r=g'},
     ];
 
 
