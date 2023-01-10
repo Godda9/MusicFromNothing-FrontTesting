@@ -41,4 +41,13 @@
   margin-right: 0.5em;
   border-radius: 50%;
   box-shadow: 4px 4px 10px rgb(210, 210, 210);
+}
+
+.white-border {
+  background-color: white;
+  padding: 0.5vh;
+  border-radius: 15px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }/*# sourceMappingURL=post-item-dynamic-preview.css.map */

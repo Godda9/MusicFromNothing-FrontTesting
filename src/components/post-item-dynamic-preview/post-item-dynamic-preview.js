@@ -15,8 +15,6 @@ const PostItemDynamicPreview = (props) => {
         setLiked(!liked);
     }
 
-    console.log('render_POSTDYNAMIC_PREV')
-
     
     return (
         <>
@@ -26,21 +24,21 @@ const PostItemDynamicPreview = (props) => {
                     <div className='track-author-dt'>
                         <div className='mb-3'>
                             <Skeleton.SkeletonThemeProvider>
-                            <div className='d-flex align-items-center'>
+                            <div className='white-border d-flex align-items-center'>
                                     <img src={userImg} className="track-author-image" alt='userAvatar'></img>
                                     <div className="d-inline-block text-primary"><Skeleton width="5vw" height="1.5vh" /></div>
                                     <div className="mx-2 text-muted"><Skeleton width="3vw" height="2vh" /></div>
                             </div>  
                             </Skeleton.SkeletonThemeProvider>
                             
-                            <h3 className="mb-2 mt-2">{title.charAt(0).toUpperCase() + title.slice(1)}</h3>
-                            <h5 className="mb-2">{description.charAt(0).toUpperCase() + description.slice(1)}</h5>
+                            <h3 className="white-border mb-2 mt-2">{title.charAt(0).toUpperCase() + title.slice(1)}</h3>
+                            <h5 className="white-border mb-2">{description.charAt(0).toUpperCase() + description.slice(1)}</h5>
                         </div>
 
-                        <div className='d-flex'>
+                        <div className='white-border d-flex'>
                             <Skeleton.SkeletonThemeProvider>
                                 <div className="dropdown">
-                                    <Skeleton width="6vh" height="15.5vh" borderRadius="5px"/>
+                                    <Skeleton width="6vh" height="20vh" borderRadius="5px"/>
                                 </div>
                             </Skeleton.SkeletonThemeProvider>
                         </div>
