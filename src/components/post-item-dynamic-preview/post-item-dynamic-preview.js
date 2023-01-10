@@ -40,28 +40,28 @@ const PostItemDynamicPreview = (props) => {
                         <div className='d-flex'>
                             <Skeleton.SkeletonThemeProvider>
                                 <div className="dropdown">
-                                    <Skeleton width="4vh" height="12.5vh" borderRadius="5px"/>
+                                    <Skeleton width="6vh" height="15.5vh" borderRadius="5px"/>
                                 </div>
                             </Skeleton.SkeletonThemeProvider>
                         </div>
                     </div>
+                </div>
+                
+                <div className='track-author-dt'> 
+                    <AudioPlayer
+                        autoPlay={false}
+                        src={audio}
+                        volume={0.3}
+                        onPlay={(e) => console.log("onPlay")}
 
-                    <div className='track-author-dt'> 
-                        <AudioPlayer
-                            autoPlay={false}
-                            src={audio}
-                            volume={0.3}
-                            onPlay={(e) => console.log("onPlay")}
-
-                            customControlsSection={
-                                [
-                                    RHAP_UI.ADDITIONAL_CONTROLS,
-                                    RHAP_UI.MAIN_CONTROLS,
-                                    RHAP_UI.VOLUME_CONTROLS,
-                                ]
-                            }
-                        />
-                    </div>
+                        customControlsSection={
+                            [
+                                RHAP_UI.ADDITIONAL_CONTROLS,
+                                RHAP_UI.MAIN_CONTROLS,
+                                RHAP_UI.VOLUME_CONTROLS,
+                            ]
+                        }
+                    />
                 </div>
             </div>
             

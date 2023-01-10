@@ -26,7 +26,7 @@ const PostsBlock = (props) => {
                         user="UserName" 
                         datetime="01.01.23" 
                         title="Track title" 
-                        description="Track description..."
+                        description="Track descriptionwhite-borderwhite-borderwhite-borderwhite-border..."
                         isLiked={true}
                         img="https://iso.500px.com/wp-content/uploads/2017/10/500px_Golden_Hour_Quest_winner-1500x1000.jpg"
                         likes={120}

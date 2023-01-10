@@ -30,7 +30,7 @@ const PostItemSkeleton = (props) => {
                                     <div className="mx-2 text-muted"><Skeleton width="3vw" height="2vh" /></div>
                                 </div> 
                                 <div className="mt-3">
-                                    <Skeleton count={2} widthMultiple={['100%', '50%']} heightMultiple={['30px', '20px']} />
+                                    <Skeleton count={2} widthMultiple={['100%', '50%']} heightMultiple={['40px', '30px']} />
                                 </div> 
                             </Skeleton.SkeletonThemeProvider>
                         </div>
@@ -38,7 +38,7 @@ const PostItemSkeleton = (props) => {
                         <div className='d-flex'>
                             <Skeleton.SkeletonThemeProvider>
                             <div className="dropdown">
-                                <Skeleton width="4vh" height="12.5vh" borderRadius="5px"/>
+                                <Skeleton width="6vh" height="15.5vh" borderRadius="5px"/>
                             </div>
                             </Skeleton.SkeletonThemeProvider>
                         </div>

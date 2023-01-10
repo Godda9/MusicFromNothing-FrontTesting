@@ -31,8 +31,8 @@
   margin-left: 2px;
   margin-top: 2px;
   margin-bottom: 2px;
-  width: 2em;
-  height: 2em;
+  width: 1em;
+  height: 1em;
 }
 
 .track-author-image {
@@ -41,4 +41,13 @@
   margin-right: 0.5em;
   border-radius: 50%;
   box-shadow: 4px 4px 10px rgb(210, 210, 210);
+}
+
+.white-border {
+  background-color: white;
+  padding: 0.5vh;
+  border-radius: 15px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }/*# sourceMappingURL=post-item.css.map */

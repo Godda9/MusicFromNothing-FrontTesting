@@ -60,9 +60,21 @@ const Topbar = (props) => {
                             :
                             null
                         }
+                        {
+                            where === 'studio'
+                            ?
+                                <ul className="nav nav-pills">
+                                    <li className="nav-item"><NavigationButton to="/feed" text="Open"/></li>
+                                    <li className="nav-item"><NavigationButton to="/feed" text="Save"/></li>
+                                    <li className="nav-item"><NavigationButton to="/feed" text="Save and Close"/></li>
+                                    <li className="nav-item"><NavigationButton to="/feed" text="Close and remove"/></li>
+                                    <li className="nav-item"><NavigationButton to="/feed" text="Clear all"/></li>
+                                </ul>
+                            :
+                            null
+                        }
 
                     </div>
-                    
                     {
                         where !== 'account-restore' 
                         ?
@@ -108,7 +120,6 @@ const Topbar = (props) => {
                         :
                         null
                     }
-                    
                 </div>
             </header>
         </>

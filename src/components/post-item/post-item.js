@@ -19,25 +19,24 @@ const PostItem = (props) => {
     return (
         <>
             <div className="col bordered shadow row g-0 border position-relative overflow-hidden mx-2 mb-4" 
-                style={{backgroundImage: 'url('+ img + ')', backgroundRepeat: false, backgroundSize: 'auto'}}>
+                style={{backgroundImage: 'url('+ img + ')', backgroundRepeat: false, backgroundSize: '100%'}}>
                 {status === 'inbattle' ? <button className='btn btn-secondary'>Support</button> : null}
                 {status === 'win' ? <button className='btn btn-success disabled'>Win</button> : null}
                 {status === 'lose' ? <button className='btn btn-danger disabled'>Lose</button> : null}
 
                 <div className="col p-4 pb-2 d-flex flex-column">
                     <div className='track-author-dt'>
-                        <div className='mb-2'>
-                            <div className='d-flex align-items-center'>
+                        <div style={{marginRight: '2vh'}}>
+                            <div className='white-border d-flex align-items-center'>
                                 <img src={img} className="track-author-image" alt='userAvatar'></img>
                                 <strong className="d-inline-block  text-primary">{user}</strong>
                                 <div className="mx-2 text-muted">{datetime}</div>
                             </div>  
-                            
-                            <h3 className="mb-2 mt-2">{title}</h3>
-                            <h5 className="mb-2">{description}</h5>
+                                <h3 className="white-border mb-2 mt-2">{title}</h3>
+                                <h5 className="white-border mb-2">{description}</h5>
                         </div>
 
-                        <div className='d-flex flex-column justify-content-center align-items-center'>
+                        <div className='white-border d-flex flex-column justify-content-center align-items-center mb-3'>
                             <div className="dropdown">
                                 <Icon.ThreeDots className='icon-likes-dislikes mx-2 align-items-center dropdown-toggle' type="button" data-bs-toggle="dropdown" aria-expanded="false"/>
                                 <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
@@ -68,7 +67,7 @@ const PostItem = (props) => {
                                 </ul>
                             </div>
                             
-                            <div className='d-flex flex-column mx-2 align-items-center'>
+                            <div className='d-flex flex-column align-items-center'>
                                 <button 
                                     className='p-0 m-0' 
                                     style={{borderWidth: 0, backgroundColor: 'transparent'}} 
@@ -79,7 +78,7 @@ const PostItem = (props) => {
                                 <span className='text-muted'>{comments}</span>
                             </div>
 
-                            <div className='d-flex flex-column ml-2 align-items-center'>
+                            <div className='d-flex flex-column align-items-center'>
                                 <button className='p-0 m-0' style={{borderWidth: 0, backgroundColor: 'transparent'}}>
                                     {
                                         liked ? <Icon.HeartFill className='icon-likes-dislikes'  type="button" color='red' onClick={(e) => onLikesChanged(e, -1)} /> 
