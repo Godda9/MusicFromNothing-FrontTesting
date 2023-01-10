@@ -23,7 +23,7 @@ const ProfileEdit = (props) => {
                     <div className="anim0 row">
                         <ProfileCardEdit id='0'/>
                     </div>  
-                    <div className="row">
+                    <div className="row d-flex flex-wrap jusify-content-center row-cols-1 row-cols-sm-2 row-cols-md-4 g-3 m-2 mb-4" >
                         <div className="anim1 col overflow-auto p-0">
                             <FormProfileEdit title="Password" />
                         </div>

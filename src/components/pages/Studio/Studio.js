@@ -9,7 +9,7 @@ const Studio = (props) => {
                 </div>
                 <div className="row">
 
-                    <div class="col border border-dark col-lg-2">
+                    <div className="col border border-dark col-lg-2">
                         <div className="row border border-dark" style={{minHeight: '60vh'}}>
                             PIANO
                         </div>
@@ -18,7 +18,7 @@ const Studio = (props) => {
                         </div>
                     </div>
 
-                    <div class="col border border-dark">
+                    <div className="col border border-dark">
                         <div className="row border border-dark" style={{minHeight: '50vh'}}>
                             MAIN VIEW
                         </div>
@@ -26,12 +26,12 @@ const Studio = (props) => {
                             TRACK CHARTS
                         </div>
                         <div className="row border border-dark" style={{minHeight: '10vh'}}>
-                            <div class="col border border-dark">VISUALIZER RECORDING</div>
-                            <div class="col border border-dark col-lg-2">BUTTONS</div>
+                            <div className="col border border-dark">VISUALIZER RECORDING</div>
+                            <div className="col border border-dark col-lg-2">BUTTONS</div>
                         </div>
                     </div>
 
-                    <div class="col border border-dark col-lg-2">
+                    <div className="col border border-dark col-lg-2">
                         <div className="row" style={{minHeight: '90vh'}}>
                             GUITAR
                         </div>

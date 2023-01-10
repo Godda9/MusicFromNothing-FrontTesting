@@ -73,6 +73,15 @@ const Topbar = (props) => {
                             :
                             null
                         }
+                        {
+                            where === 'f.a.q'
+                            ?
+                            <ul className="nav nav-pills">
+                                <li className="nav-item"><NavigationButton to="/feed" text="Home"/></li>
+                            </ul>
+                            :
+                            null
+                        }
 
                     </div>
                     {

@@ -44,7 +44,7 @@ const PostItemDynamicPreview = (props) => {
                         </div>
                     </div>
                 </div>
-                
+
                 <div className='track-author-dt'> 
                     <AudioPlayer
                         autoPlay={false}

@@ -10,7 +10,6 @@ const ProfileCard = (props) => {
             <div className="col pt-3 px-3">
                 <div className="bordered row g-0 border overflow-hidden flex-md-row mb-1 position-relative d-flex justify-content-center align-items-center">
                     <div className="list-group-item list-group-item-action py-3 lh-tight" aria-current="true">
-
                         <div className='d-flex align-items-center justify-content-center'>
                             <img alt='userAvatar' 
                                 className='rounded-circle shadow w-25 h-25 m-3' 

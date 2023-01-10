@@ -29,6 +29,9 @@ const PostUploadForm = (props)=> {
 
     return(
         <>  
+        <div>
+            
+        </div>
             <div className="bordered row border overflow-hidden shadow d-flex justify-content-center align-items-center w-75 m-5 p-3">
                 <form onSubmit={handleSubmit(onSubmit)} className='column'>
                     <div>

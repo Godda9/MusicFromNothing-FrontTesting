@@ -21,12 +21,12 @@ const PostsBlock = (props) => {
     return(
         <>
             <div className="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-3 m-2 mb-4">
-                <div className="col-md-12">
+                <div className="col-md-6">
                     <PostItem 
                         user="UserName" 
                         datetime="01.01.23" 
                         title="Track title" 
-                        description="Track descriptionwhite-borderwhite-borderwhite-borderwhite-border..."
+                        description="Track descriptionwhite-borderwhite-b"
                         isLiked={true}
                         img="https://iso.500px.com/wp-content/uploads/2017/10/500px_Golden_Hour_Quest_winner-1500x1000.jpg"
                         likes={120}
@@ -35,7 +35,7 @@ const PostsBlock = (props) => {
                         onCommentsClick={onDataChanged}
                     />
                 </div>
-                <div className="col-md-12">
+                <div className="col-md-6">
                     <PostItem 
                         user="UserName" 
                         datetime="01.01.23" 
@@ -50,7 +50,7 @@ const PostsBlock = (props) => {
                     />
                 </div>
 
-                <div className="col-md-12">
+                <div className="col-md-6">
                     <PostItem 
                         user="UserName" 
                         datetime="01.01.23" 
@@ -65,7 +65,7 @@ const PostsBlock = (props) => {
                     />
                 </div>
 
-                <div className="col-md-12">
+                <div className="col-md-6">
                     <PostItem 
                         user="UserName" 
                         datetime="01.01.23" 
@@ -80,7 +80,46 @@ const PostsBlock = (props) => {
                     />
                 </div>
 
-                <div className="col-md-12">
+                <div className="col-md-6">
+                    <PostItemSkeleton 
+                        user="UserName" 
+                        datetime="01.01.23" 
+                        title="Track title" 
+                        description="Track description..."
+                        isLiked={false}
+                        img="https://iso.500px.com/wp-content/uploads/2017/10/500px_Golden_Hour_Quest_winner-1500x1000.jpg"
+                        likes={120}
+                        comments={53}
+                        status={null}
+                    />
+                </div>
+                <div className="col-md-6">
+                    <PostItemSkeleton 
+                        user="UserName" 
+                        datetime="01.01.23" 
+                        title="Track title" 
+                        description="Track description..."
+                        isLiked={false}
+                        img="https://iso.500px.com/wp-content/uploads/2017/10/500px_Golden_Hour_Quest_winner-1500x1000.jpg"
+                        likes={120}
+                        comments={53}
+                        status={null}
+                    />
+                </div>
+                <div className="col-md-6">
+                    <PostItemSkeleton 
+                        user="UserName" 
+                        datetime="01.01.23" 
+                        title="Track title" 
+                        description="Track description..."
+                        isLiked={false}
+                        img="https://iso.500px.com/wp-content/uploads/2017/10/500px_Golden_Hour_Quest_winner-1500x1000.jpg"
+                        likes={120}
+                        comments={53}
+                        status={null}
+                    />
+                </div>
+                <div className="col-md-6">
                     <PostItemSkeleton 
                         user="UserName" 
                         datetime="01.01.23" 
@@ -106,17 +145,19 @@ const CommentsBlock = (props) => {
                 <button className='btn btn-primary btn-sm' onClick={switchDataType}>Close Comments</button>
             </div>
             <div className="row g-0 overflow-hidden mt-5 position-relative d-flex justify-content-center align-items-center px-3">
-                <PostItem 
-                    user="UserName" 
-                    datetime="01.01.23" 
-                    title="Track title" 
-                    description="Track description..."
-                    isLiked={true}
-                    img="https://iso.500px.com/wp-content/uploads/2017/10/500px_Golden_Hour_Quest_winner-1500x1000.jpg"
-                    likes={120}
-                    comments={53}
-                    status={null}
-                />
+                <div className='col-md-6'>
+                    <PostItem 
+                        user="UserName" 
+                        datetime="01.01.23" 
+                        title="Track title" 
+                        description="Track description..."
+                        isLiked={true}
+                        img="https://iso.500px.com/wp-content/uploads/2017/10/500px_Golden_Hour_Quest_winner-1500x1000.jpg"
+                        likes={120}
+                        comments={53}
+                        status={null}
+                    />
+                </div>
                 
             </div>
             
