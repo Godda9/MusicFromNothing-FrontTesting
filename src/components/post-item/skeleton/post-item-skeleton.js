@@ -27,7 +27,7 @@ const PostItemSkeleton = (props) => {
                                 <div className='d-flex align-items-center'>
                                     <div><Skeleton width="18vh" height="40px" borderRadius="15px" /></div>
                                 </div> 
-                                <div className="mt-3">
+                                <div className="mt-2">
                                     <Skeleton count={2} widthMultiple={['80%', '50%']} heightMultiple={['40px', '30px']} borderRadius="15px"/>
                                 </div> 
                             </Skeleton.SkeletonThemeProvider>
@@ -36,7 +36,7 @@ const PostItemSkeleton = (props) => {
                         <div className='d-flex'>
                             <Skeleton.SkeletonThemeProvider>
                             <div className="dropdown">
-                                <Skeleton width="6vh" height="15.5vh" borderRadius="15px"/>
+                                <Skeleton width="6vh" height="17vh" borderRadius="15px"/>
                             </div>
                             </Skeleton.SkeletonThemeProvider>
                         </div>

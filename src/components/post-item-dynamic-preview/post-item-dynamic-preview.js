@@ -35,10 +35,10 @@ const PostItemDynamicPreview = (props) => {
                             <h5 className="white-border mb-2">{description.charAt(0).toUpperCase() + description.slice(1)}</h5>
                         </div>
 
-                        <div className='white-border d-flex'>
+                        <div className='d-flex'>
                             <Skeleton.SkeletonThemeProvider>
                                 <div className="dropdown">
-                                    <Skeleton width="6vh" height="20vh" borderRadius="5px"/>
+                                    <Skeleton width="6vh" height="15.5vh" borderRadius="5px"/>
                                 </div>
                             </Skeleton.SkeletonThemeProvider>
                         </div>
