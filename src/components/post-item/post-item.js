@@ -19,7 +19,7 @@ const PostItem = (props) => {
     return (
         <>
             <div className="col bordered shadow row g-0 border position-relative overflow-hidden mx-2 mb-4" 
-                style={{backgroundImage: 'url('+ img + ')', backgroundRepeat: 'repeat', backgroundSize: '100%'}}>
+                style={{backgroundImage: 'url('+ img + ')', backgroundRepeat: 'repeat', backgroundSize: 'cover'}}>
                 {status === 'inbattle' ? <button className='btn btn-secondary'>Support</button> : null}
                 {status === 'win' ? <button className='btn btn-success disabled'>Win</button> : null}
                 {status === 'lose' ? <button className='btn btn-danger disabled'>Lose</button> : null}

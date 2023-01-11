@@ -4,12 +4,12 @@ import Comment from '../comment/comment';
 
 
 const PostsView = (props) => {
-    const {what, onDataChanged, commentsId, switchDataType} = props;
+    const {what, onDataChanged, commentsId, switchDataType, postSize} = props;
 
 
     return (
         <>
-            { what === "posts" ? <PostsBlock onDataChanged={onDataChanged}/> : null }
+            { what === "posts" ? <PostsBlock postSize={postSize} onDataChanged={onDataChanged}/> : null }
             { what === "comments" ? <CommentsBlock commentsId={commentsId} switchDataType={switchDataType}/> : null }
         </>
     );
@@ -17,11 +17,11 @@ const PostsView = (props) => {
 
 
 const PostsBlock = (props) => {
-    const {onDataChanged} = props;
+    const {onDataChanged, postSize} = props;
     return(
         <>
             <div className="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-3 m-2 mb-4">
-                <div className="col-md-6">
+                <div className={"col-md-" + postSize}>
                     <PostItem 
                         user="UserName" 
                         datetime="01.01.23" 
@@ -35,7 +35,7 @@ const PostsBlock = (props) => {
                         onCommentsClick={onDataChanged}
                     />
                 </div>
-                <div className="col-md-6">
+                <div className={"col-md-" + postSize}>
                     <PostItem 
                         user="UserName" 
                         datetime="01.01.23" 
@@ -50,7 +50,7 @@ const PostsBlock = (props) => {
                     />
                 </div>
 
-                <div className="col-md-6">
+                <div className={"col-md-" + postSize}>
                     <PostItem 
                         user="UserName" 
                         datetime="01.01.23" 
@@ -65,7 +65,7 @@ const PostsBlock = (props) => {
                     />
                 </div>
 
-                <div className="col-md-6">
+                <div className={"col-md-" + postSize}>
                     <PostItem 
                         user="UserName" 
                         datetime="01.01.23" 
@@ -80,7 +80,7 @@ const PostsBlock = (props) => {
                     />
                 </div>
 
-                <div className="col-md-6">
+                <div className={"col-md-" + postSize}>
                     <PostItemSkeleton 
                         user="UserName" 
                         datetime="01.01.23" 
@@ -93,7 +93,7 @@ const PostsBlock = (props) => {
                         status={null}
                     />
                 </div>
-                <div className="col-md-6">
+                <div className={"col-md-" + postSize}>
                     <PostItemSkeleton 
                         user="UserName" 
                         datetime="01.01.23" 
@@ -106,7 +106,7 @@ const PostsBlock = (props) => {
                         status={null}
                     />
                 </div>
-                <div className="col-md-6">
+                <div className={"col-md-" + postSize}>
                     <PostItemSkeleton 
                         user="UserName" 
                         datetime="01.01.23" 
@@ -119,7 +119,7 @@ const PostsBlock = (props) => {
                         status={null}
                     />
                 </div>
-                <div className="col-md-6">
+                <div className={"col-md-" + postSize}>
                     <PostItemSkeleton 
                         user="UserName" 
                         datetime="01.01.23" 

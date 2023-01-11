@@ -13,6 +13,8 @@ const MainPage = (props) => {
     // animations
     useLayoutEffect(() => {
         gsap.fromTo('.anim0', {y: 10000}, { duration: 2, ease: "power4.out", y: 0 });
+        gsap.fromTo('.anim1', {x: -10000}, { duration: 2, ease: "power4.out", x: 0 });
+        gsap.fromTo('.anim2', {x: 10000}, { duration: 2, ease: "power4.out", x: 0 });
     })
 
     const [dataType, setDataType] = useState("posts");
@@ -32,13 +34,13 @@ const MainPage = (props) => {
                     <Topbar text="Music From Nothing" username="UserName" where="feed"/>
                 </div>
                 <div className="row">
-                    <div className="col overflow-auto p-0" style={{maxHeight: '82.5vh'}}>
+                    <div className="col overflow-auto anim1 p-0" style={{maxHeight: '82.5vh'}}>
                         { window.innerWidth > 1000 ? <Leftbar/> : null}
                     </div>
                     <div className="col-md-8 p-0 anim0 overflow-auto" style={{maxHeight: '82.5vh'}}>
-                        <PostsView what={dataType} onDataChanged={onDataChanged} commentsId={commentsId} switchDataType={switchDataType}/>
+                        <PostsView what={dataType} postSize={6} onDataChanged={onDataChanged} commentsId={commentsId} switchDataType={switchDataType}/>
                     </div>
-                    <div className="col overflow-auto p-0" style={{maxHeight: '82.5vh'}}>
+                    <div className="col overflow-auto anim2 p-0" style={{maxHeight: '82.5vh'}}>
                         { window.innerWidth > 1000 ? <Rightbar/> : null}
                     </div>
                 </div>  

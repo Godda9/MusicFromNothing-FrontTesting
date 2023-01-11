@@ -31,15 +31,9 @@ const Profile = (props) => {
                     <Topbar text="Profile View" username="UserName" where="profile"/>
                 </div>
                 <div className="row">
-                    <div className="col overflow-auto p-0" style={{maxHeight: '93vh'}}>
-                        <Leftbar/>
-                    </div>
-                    <div className="anim0 col-8 overflow-auto p-0" style={{maxHeight: '93vh'}}>
+                    <div className="anim0 col-12 overflow-auto p-0" style={{maxHeight: '93vh'}}>
                         <ProfileCard id='0'/>
-                        <PostsView what={dataType} onDataChanged={onDataChanged} commentsId={commentsId} switchDataType={switchDataType}/>
-                    </div>
-                    <div className="col overflow-auto p-0" style={{maxHeight: '93vh'}}>
-                        <Rightbar/>
+                        <PostsView what={dataType} postSize={4} onDataChanged={onDataChanged} commentsId={commentsId} switchDataType={switchDataType}/>
                     </div>
                 </div>  
             </div>

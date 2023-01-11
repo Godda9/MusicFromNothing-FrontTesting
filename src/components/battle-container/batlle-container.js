@@ -7,11 +7,11 @@ const BattleContainer = (props) => {
                 <span className="fs-3"><b>VS</b></span>
                 <span className="fs-3">Post2Name</span>
             </div>
-            <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 m-2">
-                <div className="col-md-6">
+            <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 m-2 d-flex justify-content-center">
+                <div className="col-md-4">
                     {post1}
                 </div>
-                <div className="col-md-6">
+                <div className="col-md-4">
                     {post2}
                 </div>
             </div>

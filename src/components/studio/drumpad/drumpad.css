@@ -1,0 +1,33 @@
+.drum-row {
+  min-height: 10vh;
+}
+
+.drum-btn {
+  border: 2px solid #2ecc71;
+}
+
+.box {
+  width: 8vh;
+  height: 8vh;
+  box-shadow: 0 8px 6px -6px rgb(210, 210, 210);
+  background-color: #1BA39C;
+  margin: 0 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.4);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.box:hover {
+  background-color: #22cfc6;
+  cursor: pointer;
+}
+.box:active {
+  background-color: #147772;
+  transform: scale(1.1);
+  transition: all 0.2s;
+}/*# sourceMappingURL=drumpad.css.map */

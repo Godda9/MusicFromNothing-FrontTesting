@@ -1,3 +1,5 @@
+import Drumpad from "../../studio/drumpad/drumpad";
+import Piano from "../../studio/piano/piano";
 import Topbar from "../../top-bar/top-bar";
 
 const Studio = (props) => {
@@ -9,30 +11,35 @@ const Studio = (props) => {
                 </div>
                 <div className="row">
 
-                    <div className="col border border-dark col-lg-2">
-                        <div className="row border border-dark" style={{minHeight: '60vh'}}>
-                            PIANO
-                        </div>
-                        <div className="row border border-dark" style={{minHeight: '30vh'}}>
-                            DRUMPAD
+                    <div className="col col-lg-2">
+                        <div className="row" style={{minHeight: '95vh'}}>
+                            abc
                         </div>
                     </div>
 
-                    <div className="col border border-dark">
+                    <div className="col">
                         <div className="row border border-dark" style={{minHeight: '50vh'}}>
                             MAIN VIEW
                         </div>
                         <div className="row border border-dark" style={{minHeight: '30vh'}}>
-                            TRACK CHARTS
+                            <div className="col">
+                                EQ
+                            </div>
+                            <div className="col">
+                                <Piano/>
+                            </div>
+                            <div className="col">
+                                <Drumpad/>
+                            </div>
                         </div>
-                        <div className="row border border-dark" style={{minHeight: '10vh'}}>
+                        <div className="row" style={{minHeight: '15vh'}}>
                             <div className="col border border-dark">VISUALIZER RECORDING</div>
                             <div className="col border border-dark col-lg-2">BUTTONS</div>
                         </div>
                     </div>
 
-                    <div className="col border border-dark col-lg-2">
-                        <div className="row" style={{minHeight: '90vh'}}>
+                    <div className="col col-lg-2">
+                        <div className="row" style={{minHeight: '95vh'}}>
                             GUITAR
                         </div>
                     </div>
