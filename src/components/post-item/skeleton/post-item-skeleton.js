@@ -1,7 +1,5 @@
 import { Skeleton } from "react-skeleton-generator";
-import AudioPlayer, { RHAP_UI } from 'react-h5-audio-player';
 import audioFile from '../audio.mp3'
-import * as Icon from 'react-bootstrap-icons';
 
 import '../post-item.css'
 import { useState } from 'react';
@@ -42,8 +40,10 @@ const PostItemSkeleton = (props) => {
                         </div>
                     </div>
                 </div>
-            </div>
-            
+                <Skeleton.SkeletonThemeProvider>
+                    <Skeleton width="100%" height="9.5vh" />
+                </Skeleton.SkeletonThemeProvider>
+            </div>  
         </>
     );
 } 

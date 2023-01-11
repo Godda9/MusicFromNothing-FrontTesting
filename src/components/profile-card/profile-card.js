@@ -25,8 +25,8 @@ const ProfileCard = (props) => {
                                 <div className="col-10 mb-1 small fs-4"><Icon.People/> Following 15</div>
                                 <div className="col-10 mb-1 small fs-4"><Icon.People/> Followed 3</div>
                                 <div className='d-flex justify-content-center'>
-                                    <button type="button" className="btn btn-primary m-2">Follow</button>
-                                    <button type="button" className="btn btn-outline-secondary m-2">Message</button>
+                                    <button type="button" className="btn btn-primary m-2 fs-3 px-4">Follow</button>
+                                    <button type="button" className="btn btn-outline-secondary m-2 fs-3">Message</button>
                                 </div>
                             </div>
                         </div>

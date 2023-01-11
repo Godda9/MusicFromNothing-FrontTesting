@@ -1,13 +1,15 @@
-import AudioPlayer, { RHAP_UI } from 'react-h5-audio-player';
 import * as Icon from 'react-bootstrap-icons';
+import WaveSurfer from "wavesurfer.js";
+import audio from './audio.mp3'
+import CustomAudioPlayer from '../audio-player/audio-player';
 
 import './post-item.css'
-import { useState } from 'react';
+import { useEffect, useLayoutEffect, useState } from 'react';
 
 
 
 const PostItem = (props) => {
-    const {user, datetime, img, title, description, likes, isLiked, comments, status, onCommentsClick} = props;
+    const {id, user, datetime, img, title, description, likes, isLiked, comments, status, onCommentsClick} = props;
     const [liked, setLiked] = useState(isLiked);
     const [likesAmount, setLikesAmount] = useState(likes);
 
@@ -15,6 +17,7 @@ const PostItem = (props) => {
         setLikesAmount(likesAmount + value);
         setLiked(!liked);
     }
+    
 
     return (
         <>
@@ -90,8 +93,8 @@ const PostItem = (props) => {
                         </div>
                     </div>              
                 </div>
+                <CustomAudioPlayer/>
             </div>
-            
         </>
     );
 }

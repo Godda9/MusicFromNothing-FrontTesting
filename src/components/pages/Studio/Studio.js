@@ -1,5 +1,5 @@
 import Drumpad from "../../studio/drumpad/drumpad";
-import Piano from "../../studio/piano/piano";
+
 import Topbar from "../../top-bar/top-bar";
 
 const Studio = (props) => {
@@ -27,7 +27,7 @@ const Studio = (props) => {
                                     EQ
                                 </div>
                                 <div className="col">
-                                    <Piano/>
+                                    
                                 </div>
                                 <div className="col">
                                     <Drumpad/>

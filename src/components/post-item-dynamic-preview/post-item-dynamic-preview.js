@@ -2,7 +2,6 @@ import AudioPlayer, { RHAP_UI } from 'react-h5-audio-player';
 import * as Icon from 'react-bootstrap-icons';
 import userImg from '../pages/Images/user_logo.png';
 import './post-item-dynamic-preview.css'
-import './PlayerStyles.css'
 import { useEffect, useMemo, useState } from 'react';
 import { Skeleton } from 'react-skeleton-generator';
 
