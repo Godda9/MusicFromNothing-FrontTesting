@@ -1,0 +1,9 @@
+.right-bar-visibility {
+    visibility: visible;
+}
+
+@media screen and (max-width: 800px) {
+    .right-bar-visibility {
+        content-visibility:visible;
+    }
+}

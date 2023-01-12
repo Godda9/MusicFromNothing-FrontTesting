@@ -19,8 +19,8 @@ const Login = () => {
 
     return (
         <>
-            <div className="container">
-                <div>
+            <div className="container d-flex justify-content-center">
+                <div className='text-hello'>
                     <p className='anim0'>Welcome to</p>
                     <h1 className='anim1'><span id="m">M</span>usic</h1>
                     <h1 className='anim2'><span id="f">F</span>rom</h1>
@@ -32,7 +32,7 @@ const Login = () => {
                 <div className="login-form-all">
                     <LoginForm/>
                 </div>
-            </div>           
+            </div>          
         </>
     );
 }

@@ -18,12 +18,12 @@ const Topbar = (props) => {
     const {text, username, where} = props;
     return (
         <>
-            <header className="top-bar d-flex flex-wrap justify-content-center border-bottom py-3" style={{backgroundColor: 'white'}}>
+            <header className="top-bar d-flex flex-wrap justify-content-center border-bottom py-3">
                 <div className='top-bar-flex'>
                     <div className='anim-left-log d-flex'>
-                        <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none special-link-left">
+                        <a href="/" className="d-flex align-items-center justify-content-center mb-md-0 me-md-auto text-dark text-decoration-none special-link-left">
                             <img src={logoImg} style={{width: 2.5 + 'em'}} alt="mainLogo"></img>
-                            <span className="fs-4">{text}</span>
+                            <span className="top-bar-text fs-4">{text}</span>
                         </a>
                     </div>
 
@@ -88,8 +88,8 @@ const Topbar = (props) => {
                         where !== 'account-restore' 
                         ?
                         <div>
-                            <div className="d-flex dropdown align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none special-link-right">
-                                <span className="fs-4">{username}</span>
+                            <div className="d-flex dropdown align-items-center justify-content-center mb-md-0 me-md-auto text-dark text-decoration-none special-link-right">
+                                <span className="top-bar-text fs-4">{username}</span>
                                 <img src={userImg} style={{width: 2.5 + 'em', borderRadius: '50%'}} alt="userLogo" className='dropdown-toggle' type="button" data-bs-toggle="dropdown" aria-expanded="false"></img>
 
                                 <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">

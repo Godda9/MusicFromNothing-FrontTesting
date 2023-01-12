@@ -64,3 +64,13 @@
   html .login-form-all .reg-link, body .login-form-all .reg-link, .container .login-form-all .reg-link {
     font-size: 18px;
   }
+
+  .text-hello, .logo {
+    display: block;
+  }
+
+  @media screen and (max-width: 1000px) {
+    .text-hello, .logo {
+        display: none;
+    }
+  }

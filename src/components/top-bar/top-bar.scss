@@ -5,6 +5,7 @@
     z-index: 1000;
     padding-left: 1%;
     padding-right: 1%;
+    background-color: white;
 }
 
 .top-bar-flex {
@@ -45,4 +46,16 @@
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     background-color: #1BA39C;
     box-shadow: 4px 4px 15px rgb(210, 210, 210);
+}
+
+
+.top-bar-text {
+    visibility: visible;
+}
+
+
+@media screen and (max-width: 800px) {
+    .top-bar-text {
+        content-visibility: hidden;
+    }
 }

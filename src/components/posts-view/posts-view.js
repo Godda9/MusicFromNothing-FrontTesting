@@ -3,6 +3,7 @@ import PostItemSkeleton from '../post-item/skeleton/post-item-skeleton';
 import Comment from '../comment/comment';
 
 import './posts-view.css'
+import RightBarItem from '../right-bar/right-bar-item/right-bar-item';
 
 
 const PostsView = (props) => {

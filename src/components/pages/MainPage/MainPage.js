@@ -3,10 +3,11 @@ import Leftbar from "../../left-bar/left-bar";
 import Rightbar from "../../right-bar/right-bar";
 import PostsView from "../../posts-view/posts-view";
 
+import './MainPage.css'
 import '../scroll-bar.css'
-import CustomAudioPlayer from "../../audio-player/audio-player";
-import { useState, useLayoutEffect} from "react";
+import { useState, useLayoutEffect, useEffect} from "react";
 import { gsap } from 'gsap';
+import SearchBarBottom from "../../seacrh-bar-bottom/search-bar-bottom";
 
 
 const MainPage = (props) => {
@@ -26,6 +27,15 @@ const MainPage = (props) => {
     }
 
     const switchDataType = () => { dataType === "posts" ? setDataType("comments") : setDataType("posts") }
+
+    useEffect(() => {
+        const elem = document.querySelector('.top-bar')
+        elem.addEventListener('click', ()=> {
+            elem.classList.toggle('hidden');
+        })
+
+        return () => {}
+    }, [])
     
     return (
         <>
@@ -34,16 +44,17 @@ const MainPage = (props) => {
                     <Topbar text="Music From Nothing" username="UserName" where="feed"/>
                 </div>
                 <div className="row">
-                    <div className="col overflow-auto anim1 p-0" style={{maxHeight: '93vh'}}>
-                        { window.innerWidth > 1000 ? <Leftbar/> : null}
+                    <div className="dynamic-column col overflow-auto anim1 p-0">
+                        <Leftbar/>
                     </div>
-                    <div className="col-md-8 p-0 anim0 overflow-auto" style={{maxHeight: '93vh'}}>
+                    <div className="dynamic-column col-md-8 p-0 anim0 overflow-auto">
                         <PostsView what={dataType} postSize={6} onDataChanged={onDataChanged} commentsId={commentsId} switchDataType={switchDataType}/>
                     </div>
-                    <div className="col overflow-auto anim2 p-0" style={{maxHeight: '93vh'}}>
-                        { window.innerWidth > 1000 ? <Rightbar/> : null}
-                    </div>
-                </div> 
+                    <div className="dynamic-column col overflow-auto anim2 p-0">
+                        <Rightbar/>
+                    </div>        
+                </div>
+                <SearchBarBottom/>
             </div>
         </>
     );

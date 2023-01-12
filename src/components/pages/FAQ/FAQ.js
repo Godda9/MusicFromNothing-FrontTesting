@@ -23,7 +23,7 @@ const FAQ = (props) => {
                 <div className="row">
                     <Topbar text="F.A.Q" username="UserName" where="f.a.q"/>
                 </div>
-                <div className="row d-flex justify-content-center row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 m-2 d-flex">
+                <div className="row d-flex justify-content-center row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 d-flex overflow-scroll m-0" style={{maxHeight: '93vh'}}>
                     <div className="anim0 bordered row border overflow-hidden d-flex justify-content-between m-3 p-3" name="whoWeAre">
                         <span className="fs-3">Who we are?</span>
                         <span>{text}</span>
