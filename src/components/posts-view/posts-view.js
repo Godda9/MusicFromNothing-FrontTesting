@@ -41,7 +41,36 @@ const PostsBlock = (props) => {
                         onCommentsClick={onDataChanged}
                     />
                 </div>
+                <div className={"col-md-" + postSize}>
+                    <PostItem 
+                        id="0"
+                        user="UserName" 
+                        datetime="01.01.23" 
+                        title="Track title" 
+                        description="Track descriptionwhite-borderwhite-b"
+                        isLiked={true}
+                        img="https://iso.500px.com/wp-content/uploads/2017/10/500px_Golden_Hour_Quest_winner-1500x1000.jpg"
+                        likes={120}
+                        comments={53}
+                        status={null}
+                        onCommentsClick={onDataChanged}
+                    />
+                </div>
                 
+                <div className={"col-md-" + postSize}>
+                    <PostItemSkeleton 
+                        user="UserName" 
+                        datetime="01.01.23" 
+                        title="Track title" 
+                        description="Track description..."
+                        isLiked={false}
+                        img="https://iso.500px.com/wp-content/uploads/2017/10/500px_Golden_Hour_Quest_winner-1500x1000.jpg"
+                        likes={120}
+                        comments={53}
+                        status={null}
+                    />
+                </div>
+
                 <div className={"col-md-" + postSize}>
                     <PostItemSkeleton 
                         user="UserName" 

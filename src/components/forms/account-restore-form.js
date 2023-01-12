@@ -21,11 +21,11 @@ const AccountRestoreForm = (props)=> {
         }
     }
 
-    const HandleConfirmPassword =(e)=>{
+    const HandleConfirmPassword = (e) => {
         setConfirmPassword(e.target.value);
-        if(e.target.value != password){
+        if(e.target.value != password) {
             setPassError(true)
-        }else{
+        } else {
             setPassError(false)
         }
     }

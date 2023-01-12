@@ -17,31 +17,9 @@ const PostItemSkeleton = (props) => {
 
     return (
         <>
-            <div className="bordered shadow row g-0 border overflow-hidden flex-md-row mb-1 position-relative mx-2">
-                <div className="col p-4 d-flex flex-column position-static">
-                    <div className='track-author-dt'>
-                        <div className='mb-2'>
-                            <Skeleton.SkeletonThemeProvider>
-                                <div className='d-flex align-items-center'>
-                                    <div><Skeleton width="18vh" height="40px" borderRadius="15px" /></div>
-                                </div> 
-                                <div className="mt-2">
-                                    <Skeleton count={2} widthMultiple={['80%', '50%']} heightMultiple={['40px', '30px']} borderRadius="15px"/>
-                                </div> 
-                            </Skeleton.SkeletonThemeProvider>
-                        </div>
-
-                        <div className='d-flex'>
-                            <Skeleton.SkeletonThemeProvider>
-                            <div className="dropdown">
-                                <Skeleton width="6vh" height="17vh" borderRadius="15px"/>
-                            </div>
-                            </Skeleton.SkeletonThemeProvider>
-                        </div>
-                    </div>
-                </div>
+            <div className="bordered shadow row g-0 border overflow-hidden flex-md-row mb-1 mx-2 mb-4">
                 <Skeleton.SkeletonThemeProvider>
-                    <Skeleton width="100%" height="9.5vh" />
+                    <Skeleton width="100%" height="225px" borderRadius="0" />
                 </Skeleton.SkeletonThemeProvider>
             </div>  
         </>

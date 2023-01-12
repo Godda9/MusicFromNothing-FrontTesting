@@ -27,19 +27,19 @@ const PostItem = (props) => {
                 {status === 'win' ? <button className='btn btn-success disabled'>Win</button> : null}
                 {status === 'lose' ? <button className='btn btn-danger disabled'>Lose</button> : null}
 
-                <div className="col p-4 pb-2 d-flex flex-column">
+                <div className="col  d-flex flex-column">
                     <div className='track-author-dt'>
-                        <div style={{marginRight: '2vh'}}>
-                            <div className='white-border d-flex align-items-center'>
+                        <div>
+                            <div className='white-border-user d-flex align-items-center'>
                                 <img src={img} className="track-author-image" alt='userAvatar'></img>
                                 <strong className="d-inline-block  text-primary">{user}</strong>
                                 <div className="mx-2 text-muted">{datetime}</div>
                             </div>  
-                                <h3 className="white-border mb-2 mt-2">{title}</h3>
-                                <h5 className="white-border mb-2">{description}</h5>
+                            <h3 className="white-border mb-2 mt-2">{title}</h3>
+                            <span className="white-border mb-2 fs-6">{description}</span>
                         </div>
 
-                        <div className='white-border d-flex flex-column justify-content-center align-items-center mb-3'>
+                        <div className='d-flex flex-column justify-content-center align-items-center' style={{backgroundColor: 'white', padding: '10px'}}>
                             <div className="dropdown">
                                 <Icon.ThreeDots className='icon-likes-dislikes mx-2 align-items-center dropdown-toggle' type="button" data-bs-toggle="dropdown" aria-expanded="false"/>
                                 <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
@@ -78,7 +78,7 @@ const PostItem = (props) => {
                                     >
                                     <Icon.ChatDots className='icon-likes-dislikes' type="button"/>
                                 </button>
-                                <span className='text-muted'>{comments}</span>
+                                <span className='text-muted '>{comments}</span>
                             </div>
 
                             <div className='d-flex flex-column align-items-center'>
