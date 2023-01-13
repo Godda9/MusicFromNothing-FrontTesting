@@ -4,3 +4,13 @@
 .second-first-letter {
     color: #333333;
 }
+
+.restore-image {
+    display: block;
+}
+
+@media screen and (max-width: 770px) {
+    .restore-image {
+        display: none;
+    }
+}

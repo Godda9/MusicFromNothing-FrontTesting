@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import './forms-style.css'
 
 const AccountRestoreForm = (props)=> {
     const { register, handleSubmit, getValues, formState: { errors } } = useForm({
@@ -32,7 +32,7 @@ const AccountRestoreForm = (props)=> {
 
     return(
         <>
-            <div className="bordered row border overflow-hidden shadow d-flex justify-content-center align-items-center w-50 p-3" style={{marginLeft: '10vh'}}>
+            <div className="form-restore bordered row border overflow-hidden shadow d-flex justify-content-center align-items-center p-3">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="mb-3">
                         <label htmlFor="Password" className="form-label"><b>New</b></label>

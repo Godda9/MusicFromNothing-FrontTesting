@@ -17,7 +17,7 @@ const PostItemDynamicPreview = (props) => {
     
     return (
         <>
-            <div className="bordered shadow row g-0 border overflow-hidden flex-md-row mb-1 position-relative w-75 m-3" 
+            <div className="bordered shadow row g-0 border overflow-hidden flex-md-row position-relative" 
                 style={img === null ?  null : {backgroundImage: 'url('+ img + ')', backgroundRepeat: false, backgroundSize: 'auto'}}>
                 <div className="col p-4 d-flex flex-column position-static">
                     <div className='track-author-dt'>

@@ -1,0 +1,18 @@
+
+.form-support {
+    width: 50%;
+}
+
+.form-restore {
+    width: 50%;
+}
+
+.post-upload {
+    width: 45%;
+}
+
+@media screen and (max-width: 800px) {
+    .form-support, .form-restore, .post-upload {
+        width: 80%;
+    }
+}

@@ -4,6 +4,8 @@ import logoSupport from '../Images/logo_support.png'
 import { useLayoutEffect } from "react";
 import { gsap } from "gsap";
 
+import './Support.css';
+
 const Support = (props) => {
     useLayoutEffect(() => {
         gsap.fromTo('.anim0', {y: 500}, { duration: 1, ease: "expo.out", y: 0 });
@@ -24,8 +26,8 @@ const Support = (props) => {
                         <span className="anim1 text-center fs-1">We are ready to get in contact, please provide us with information below:</span>
                     </div>
                     <div className="row">
-                        <div className="anim2 col p-3 d-flex justify-content-center align-items-center h-50 m-5">
-                            <img style={{width: '30vh', height: '30vh'}} className="rounded-circle shadow" src={logoSupport}></img>
+                        <div className="anim2 col p-3 d-flex justify-content-center align-items-center m-0">
+                            <img style={{width: '30vh', height: '30vh', marginRight: '10vh'}} className="support-image rounded-circle shadow" src={logoSupport}></img>
                             <FormSupportContact/>
                         </div>
                     </div>

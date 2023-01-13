@@ -1,0 +1,9 @@
+.support-image {
+    display: block;
+}
+
+@media screen and (max-width: 770px) {
+    .support-image {
+        display: none;
+    }
+}

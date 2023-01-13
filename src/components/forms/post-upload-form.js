@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
 import PostItemDynamicPreview from "../post-item-dynamic-preview/post-item-dynamic-preview";
+
+import './forms-style.css';
 
 const PostUploadForm = (props)=> {
     const { register, handleSubmit, getValues, formState: { errors } } = useForm();
@@ -29,10 +30,7 @@ const PostUploadForm = (props)=> {
 
     return(
         <>  
-        <div>
-            
-        </div>
-            <div className="bordered row border overflow-hidden shadow d-flex justify-content-center align-items-center w-75 m-5 p-3">
+            <div className="post-upload bordered row border overflow-hidden shadow d-flex justify-content-center align-items-center my-5 p-3">
                 <form onSubmit={handleSubmit(onSubmit)} className='column'>
                     <div>
                         <label htmlFor="Title" className="form-label"><b>Title</b></label>
@@ -132,14 +130,17 @@ const PostUploadForm = (props)=> {
                     <button type="submit" className="btn btn-primary w-100">Confirm</button>
                 </form>
             </div>
-            <PostItemDynamicPreview 
-                user="UserName"
-                title={title}
-                description={descr}
-                isLiked={false}
-                img={picture !== null ? URL.createObjectURL(picture) : null}
-                audio={audio !== null ? URL.createObjectURL(audio) : null}
-            />
+            
+            <div className="post-upload d-flex justify-content-center">
+                <PostItemDynamicPreview 
+                    user="UserName"
+                    title={title}
+                    description={descr}
+                    isLiked={false}
+                    img={picture !== null ? URL.createObjectURL(picture) : null}
+                    audio={audio !== null ? URL.createObjectURL(audio) : null}
+                />
+            </div>
         </>
     );
 }

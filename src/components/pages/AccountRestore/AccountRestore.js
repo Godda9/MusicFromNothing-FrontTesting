@@ -27,7 +27,7 @@ const AccountRestore = (props)=> {
                     </div>
                     <div className="row">
                         <div className="anim2 col p-3 d-flex justify-content-center align-items-center h-50 m-5">
-                            <img style={{width: '30vh', height: '30vh'}} className="rounded-circle shadow" src={logoRestore}></img>
+                            <img style={{width: '30vh', height: '30vh', marginRight: '10vh'}} className="restore-image rounded-circle shadow" src={logoRestore}></img>
                             <AccountRestoreForm/>
                         </div>
                     </div>

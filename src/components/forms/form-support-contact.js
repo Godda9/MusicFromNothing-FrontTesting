@@ -1,4 +1,6 @@
 import { useForm } from "react-hook-form";
+import './forms-style.css'
+
 
 const FormSupportContact = (props) => {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -7,7 +9,7 @@ const FormSupportContact = (props) => {
 
     return (
         <>
-            <div className="bordered row border overflow-hidden shadow d-flex justify-content-center align-items-center w-50 p-3" style={{marginLeft: '10vh'}}>
+            <div className="form-support bordered row border overflow-hidden shadow d-flex justify-content-center align-items-center p-3">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="mb-3">
                         <label htmlFor="ContactReason" className="form-label">Contact Reason</label>

@@ -25,7 +25,7 @@ const PostUpload = (props) => {
                         <h1 className="anim0" style={{textAlign: 'center'}}><span style={{'color': '#1BA39C'}}>P</span>ost upload</h1>
                         <span className="anim1 text-center fs-1">Set up your post using super-form below:</span>
                     </div>
-                    <div className="anim2 d-flex justify-content-center align-items-center">
+                    <div className="anim2 d-flex justify-content-around align-items-center flex-wrap">
                         <PostUploadForm/>
                     </div>
                 </div>
