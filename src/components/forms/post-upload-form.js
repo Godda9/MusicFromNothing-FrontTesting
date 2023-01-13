@@ -5,7 +5,7 @@ import PostItemDynamicPreview from "../post-item-dynamic-preview/post-item-dynam
 import './forms-style.css';
 
 const PostUploadForm = (props)=> {
-    const { register, handleSubmit, getValues, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
 
     // form submit
     const onSubmit = data => {

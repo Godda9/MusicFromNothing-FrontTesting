@@ -16,14 +16,14 @@ const AccountRestoreForm = (props)=> {
 
     const onSubmit = data => {
         console.log(data);
-        if(data.Password != data.ConfirmPassword){
+        if(data.Password !== data.ConfirmPassword){
             setPassError(true);
         }
     }
 
     const HandleConfirmPassword = (e) => {
         setConfirmPassword(e.target.value);
-        if(e.target.value != password) {
+        if(e.target.value !== password) {
             setPassError(true)
         } else {
             setPassError(false)

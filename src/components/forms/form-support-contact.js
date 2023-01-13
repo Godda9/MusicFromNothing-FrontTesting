@@ -4,7 +4,7 @@ import './forms-style.css'
 
 const FormSupportContact = (props) => {
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const {title, current} = props;
+
     const onSubmit = data => console.log(data);
 
     return (

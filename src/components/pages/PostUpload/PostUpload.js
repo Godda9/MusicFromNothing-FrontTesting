@@ -1,6 +1,6 @@
 import Topbar from "../../top-bar/top-bar";
 import PostUploadForm from "../../forms/post-upload-form";
-import { useMemo, useState, useLayoutEffect, useCallback } from "react";
+import { useLayoutEffect } from "react";
 import { gsap } from "gsap";
 
 

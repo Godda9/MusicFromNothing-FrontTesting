@@ -27,7 +27,7 @@ const Support = (props) => {
                     </div>
                     <div className="row">
                         <div className="anim2 col p-3 d-flex justify-content-center align-items-center m-0">
-                            <img style={{width: '30vh', height: '30vh', marginRight: '10vh'}} className="support-image rounded-circle shadow" src={logoSupport}></img>
+                            <img style={{width: '30vh', height: '30vh', marginRight: '10vh'}} className="support-image rounded-circle shadow" src={logoSupport} alt="supportImage"></img>
                             <FormSupportContact/>
                         </div>
                     </div>
