@@ -36,7 +36,7 @@ const SearchBarBottom = (props) => {
 
 
     return (
-        <footer className="search-bar-bottom">
+        <footer className="search-bar-bottom pt-3">
             <div className="d-flex flex-row-reverse align-items-center justify-content-between">
                 <input className="form-control rounded" type="text" placeholder='People/Tracks' onChange={(e) => setSearchQuery(e.target.value)}/>       
                 <Icon.Search width='1.8em' height='1.8em' style={{marginRight: '0.5em'}}/>

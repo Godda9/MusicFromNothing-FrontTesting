@@ -1,10 +1,8 @@
 import * as Icon from 'react-bootstrap-icons';
-import WaveSurfer from "wavesurfer.js";
-import audio from './audio.mp3'
 import CustomAudioPlayer from '../audio-player/audio-player';
 
 import './post-item.css'
-import { useEffect, useLayoutEffect, useState } from 'react';
+import { useState } from 'react';
 
 
 
@@ -21,7 +19,7 @@ const PostItem = (props) => {
 
     return (
         <>
-            <div className="col bordered shadow row g-0 border position-relative overflow-hidden mx-2 mb-4" 
+            <div className="col bordered shadow row g-0 border position-relative overflow-hidden mb-4" 
                 style={{backgroundImage: 'url('+ img + ')', backgroundRepeat: 'repeat', backgroundSize: 'cover'}}>
                 {status === 'inbattle' ? <button className='btn btn-secondary'>Support</button> : null}
                 {status === 'win' ? <button className='btn btn-success disabled'>Win</button> : null}

@@ -3,3 +3,42 @@
     border-color: #1BA39C;
 }
 
+
+.avatar-image {
+    width: 25vh;
+}
+
+.profile-button {
+    font-size: large;
+}
+
+.text-profile-following {
+    font-size: large;
+}
+
+.text-profile-name {
+    font-size: 40px;
+}
+
+.text-profile-description {
+    font-size: 20px;
+}
+
+@media screen and (max-width: 940px) {
+    .avatar-image {
+        width: 20vh;
+    }
+    .profile-button, .text-profile-following {
+        font-size: medium;
+    }
+    
+}
+
+@media screen and (max-width: 400px) {
+    .avatar-image {
+        width: 10vh;
+    }
+    .profile-button, .text-profile-following {
+        font-size: small;
+    }
+}
