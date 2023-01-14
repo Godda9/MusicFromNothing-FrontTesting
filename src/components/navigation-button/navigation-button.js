@@ -8,7 +8,14 @@ const NavigationButton = (props) => {
     return (
         <NavLink to={to} className={({isActive}) => isActive ? "nav-link active" : "nav-link"}>
             <div className='nav-item'>
-                <Icon.House width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/> <span className="text-inside-button">{text}</span>
+                { to === '/feed'    ? <Icon.House          className="icon-styled"/> : null }
+                { to === '/battles' ? <Icon.XDiamond       className="icon-styled"/> : null }
+                { to === '/chats'   ? <Icon.Chat           className="icon-styled"/> : null }
+                { to === '/profile' ? <Icon.Person         className="icon-styled"/> : null }
+                { to === '/f.a.q'   ? <Icon.QuestionCircle className="icon-styled"/> : null }
+                
+
+                <span className="text-inside-button">{text}</span>
             </div>
         </NavLink>
     );
