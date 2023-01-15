@@ -21,16 +21,6 @@ const MainPage = (props) => {
         gsap.fromTo('.anim1', {x: -500}, { duration: 1.5, ease: "power4.out", x: 0 });
         gsap.fromTo('.anim2', {x: 500}, { duration: 1.5, ease: "power4.out", x: 0 });
     })
-
-    useEffect(() => {
-        const elem = document.querySelector('.top-bar')
-        elem.addEventListener('click', ()=> {
-            elem.classList.toggle('hidden');
-        })
-
-        return () => {}
-    }, [])
-
     
     return (
         <>
