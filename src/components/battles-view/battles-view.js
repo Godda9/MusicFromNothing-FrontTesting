@@ -10,6 +10,7 @@ const BattlesView = (props) => {
             <BattleContainer 
                     post1={
                     <PostItem
+                        id="0"
                         user="UserName" 
                         datetime="01.01.23" 
                         title="Track title" 
@@ -21,6 +22,7 @@ const BattlesView = (props) => {
                     />}
                     post2={
                     <PostItem
+                        id="1"
                         user="UserName" 
                         datetime="01.01.23" 
                         title="Track title" 
