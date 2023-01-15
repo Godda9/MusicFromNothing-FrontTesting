@@ -12,22 +12,22 @@ const Comment = (props) => {
 
     return (
         <>
-            <div className="card-body shadow m-3" style={{borderRadius: '15px'}}>
+            <div className="card-body shadow my-3" style={{borderRadius: '15px'}}>
                 <div className="d-flex justify-content-between">
                     <div>
                         <div className='d-flex align-items-center mb-3'>
                             <img src="" className="track-author-image" alt='userAvatar'></img>
-                            <strong className="d-inline-block  text-primary">UserName</strong>
+                            <strong className="d-inline-block text-primary">UserName</strong>
                             <div className="mx-2 text-muted">00.00.00</div>
                         </div>
                         <div className="d-flex align-items-center justify-content-between">
-                            <p className="fs-5">Comment text</p>
+                            <p className="fs-6">Comment text</p>
                         </div>
                     </div>
 
                     <div className='d-flex flex-column align-items-center'>
                         <div className="dropdown">
-                            <Icon.ThreeDots className='icon-likes-dislikes mx-2 mb-2 align-items-center dropdown-toggle' type="button" data-bs-toggle="dropdown" aria-expanded="false"/>
+                            <Icon.ThreeDots className='icon-likes-dislikes-comment mx-2 mb-2 align-items-center dropdown-toggle' type="button" data-bs-toggle="dropdown" aria-expanded="false"/>
                             <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
                                 <li>
                                     <button className="dropdown-item d-flex align-items-center" type="button">
@@ -39,8 +39,8 @@ const Comment = (props) => {
                         </div>
                         <button className='p-0 m-0' style={{borderWidth: 0, backgroundColor: 'transparent'}}>
                             {
-                                liked ? <Icon.HeartFill className='icon-likes-dislikes' type="button" color='red' onClick={(e) => onLikesChanged(e, -1)}/> 
-                                    : <Icon.Heart className='icon-likes-dislikes' type="button" onClick={(e) => onLikesChanged(e, 1)}/> 
+                                liked ? <Icon.HeartFill className='icon-likes-dislikes-comment' type="button" color='red' onClick={(e) => onLikesChanged(e, -1)}/> 
+                                    : <Icon.Heart className='icon-likes-dislikes-comment' type="button" onClick={(e) => onLikesChanged(e, 1)}/> 
                             }
                         </button>
                         <span className='text-muted'>{likesAmount}</span>

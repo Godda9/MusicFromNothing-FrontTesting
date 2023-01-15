@@ -1,9 +1,9 @@
 import * as Icon from 'react-bootstrap-icons';
 import logoImg from '../pages/Images/logo.png';
 import userImg from '../pages/Images/user_logo.png';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import NavigationButton from '../navigation-button/navigation-button';
-import { useState, useLayoutEffect } from "react";
+import { useLayoutEffect } from "react";
 import { gsap } from 'gsap';
 
 import './top-bar.css'

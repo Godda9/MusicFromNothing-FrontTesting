@@ -8,8 +8,8 @@ import '../scroll-bar.css'
 import { useState, useLayoutEffect, useEffect} from "react";
 import { gsap } from 'gsap';
 import SearchBarBottom from "../../seacrh-bar-bottom/search-bar-bottom";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { useLocation } from "react-router-dom";
+import CommentsModal from "../../comments-modal/comments-modal";
 
 
 const MainPage = (props) => {
@@ -43,6 +43,7 @@ const MainPage = (props) => {
     
     return (
         <>
+            <CommentsModal/>
             <div className="container-fluid position-fixed">
                 <div className="row">
                     <Topbar text="Music From Nothing" username="UserName" where="feed"/>

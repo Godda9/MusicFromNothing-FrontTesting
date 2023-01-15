@@ -15,7 +15,7 @@ const PostItem = (props) => {
         setLikesAmount(likesAmount + value);
         setLiked(!liked);
     }
-    
+    // onClick={e => onCommentsClick("[DB_POST_ID]")}
 
     return (
         <>
@@ -70,9 +70,10 @@ const PostItem = (props) => {
                             
                             <div className='d-flex flex-column align-items-center'>
                                 <button 
+                                    id="openComments"
                                     className='p-0 m-0' 
                                     style={{borderWidth: 0, backgroundColor: 'transparent'}} 
-                                    onClick={e => onCommentsClick("[DB_POST_ID]")}
+                                    
                                     >
                                     <Icon.ChatDots className='icon-likes-dislikes' type="button"/>
                                 </button>
