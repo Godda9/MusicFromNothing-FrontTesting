@@ -2,6 +2,7 @@ import * as Icon from 'react-bootstrap-icons';
 import CustomAudioPlayer from '../audio-player/audio-player';
 import CommentsModal from '../comments-modal/comments-modal';
 import './post-item.css'
+import ReactDOM from "react-dom"; 
 import { useEffect, useState } from 'react';
 
 
@@ -31,16 +32,19 @@ const PostItem = (props) => {
     const onCommentsClick = (e) => {
         const modal = document.querySelector('#commentsModal' + id)
         if (modal.style.display === "block") {
-            modal.style.display = "none"  
+            modal.style.display = "none";
         }
         else { 
             modal.style.display = "block";
-        } 
+            modal.style.top = document.querySelector('.posts-view').scrollTop;
+        }
     }
     
     return (
         <>
-            <CommentsModal specialKey={id}/>
+            <Portal>
+                <CommentsModal specialKey={id}/>
+            </Portal>
             <div className="col bordered shadow row g-0 border position-relative overflow-hidden mb-4" 
                 style={{backgroundImage: 'url('+ img + ')', backgroundRepeat: 'repeat', backgroundSize: 'cover'}}>
                 {status === 'inbattle' ? <button className='btn btn-secondary'>Support</button> : null}
@@ -118,6 +122,12 @@ const PostItem = (props) => {
             </div>
         </>
     );
+}
+
+const Portal = (props) => {
+    const node = document.createElement('div');
+    document.body.append(node);
+    return ReactDOM.createPortal(props.children, node);
 }
 
 export default PostItem;

@@ -3,10 +3,11 @@ import logoImg from '../pages/Images/logo.png';
 import userImg from '../pages/Images/user_logo.png';
 import { NavLink } from 'react-router-dom';
 import NavigationButton from '../navigation-button/navigation-button';
-import { useLayoutEffect } from "react";
+import { useLayoutEffect, memo } from "react";
 import { gsap } from 'gsap';
 
 import './top-bar.css'
+
 
 const Topbar = (props) => {
     // anims
@@ -136,4 +137,4 @@ const Topbar = (props) => {
 }
 
 
-export default Topbar;
+export default memo(Topbar);

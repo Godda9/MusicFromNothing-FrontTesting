@@ -14,13 +14,12 @@ const Profile = (props) => {
 
     return (
         <>
-            <CommentsModal/>
             <div className="container-fluid position-fixed">
                 <div className="row">
                     <Topbar text="Profile View" username="UserName" where="profile"/>
                 </div>
                 <div className="row">
-                    <div className="anim0 col-12 overflow-auto p-0" style={{maxHeight: '93vh'}}>
+                    <div className="profile-view-container anim0 col-12 overflow-auto p-0" style={{maxHeight: '93vh'}}>
                         <ProfileCard id='0'/>
                         <PostsView postSize={4}/>
                     </div>

@@ -1,5 +1,5 @@
 import AudioPlayer, { RHAP_UI } from 'react-h5-audio-player';
-import { useLayoutEffect } from 'react';
+import { useLayoutEffect, memo } from 'react';
 import { gsap } from 'gsap';
 import audioFile from './audio.mp3'
 import './PlayerStyles.css'
@@ -32,4 +32,4 @@ const CustomAudioPlayer = (props) => {
     );
 }
 
-export default CustomAudioPlayer;
+export default memo(CustomAudioPlayer);
