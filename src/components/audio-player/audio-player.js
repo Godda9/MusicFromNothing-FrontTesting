@@ -1,15 +1,11 @@
 import AudioPlayer, { RHAP_UI } from 'react-h5-audio-player';
-import { useLayoutEffect, memo } from 'react';
-import { gsap } from 'gsap';
+import { memo } from 'react';
 import audioFile from './audio.mp3'
 import './PlayerStyles.css'
 import './audio-player.css'
 
 
 const CustomAudioPlayer = (props) => {
-    useLayoutEffect(() => {
-        gsap.fromTo('.anim-player', {y: 500}, { duration: 1, ease: "power4.out", y: 0 });
-    }, []);
     return (
         <>
             <div className="anim-player bottom-bar" style={{zIndex: 1}}>
