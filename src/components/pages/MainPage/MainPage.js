@@ -8,9 +8,13 @@ import '../scroll-bar.css'
 import { useState, useLayoutEffect, useEffect} from "react";
 import { gsap } from 'gsap';
 import SearchBarBottom from "../../seacrh-bar-bottom/search-bar-bottom";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+import { useLocation } from "react-router-dom";
 
 
 const MainPage = (props) => {
+    const location = useLocation();
+
     // animations
     useLayoutEffect(() => {
         gsap.fromTo('.anim0', {y: 10000}, { duration: 2, ease: "power4.out", y: 0 });

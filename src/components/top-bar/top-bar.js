@@ -94,34 +94,34 @@ const Topbar = (props) => {
 
                                 <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
                                     <li>
-                                        <button className="dropdown-item d-flex align-items-center" type="button">
+                                        <NavLink className="dropdown-item d-flex align-items-center" type="button" to='/profile'>
                                             <Icon.Person width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
                                             <span>Profile</span>
-                                        </button>
+                                        </NavLink>
                                     </li>
                                     <li>
-                                        <button className="dropdown-item d-flex align-items-center" type="button">
+                                        <NavLink className="dropdown-item d-flex align-items-center" type="button" to='/profile-edit'>
                                             <Icon.Gear width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
                                             <span>Edit Profile</span>
-                                        </button>
+                                        </NavLink>
                                     </li>
                                     <li>
-                                        <button className="dropdown-item d-flex align-items-center" type="button">
+                                        <NavLink className="dropdown-item d-flex align-items-center" type="button" to='/saved-posts'>
                                             <Icon.Bookmarks width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
                                             <span>Saved Posts</span>
-                                        </button>
+                                        </NavLink>
                                     </li>
                                     <li>
-                                        <button className="dropdown-item d-flex align-items-center" type="button">
+                                        <NavLink className="dropdown-item d-flex align-items-center" type="button" to='/support'>
                                             <Icon.Diamond width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
                                             <span>Support</span>
-                                        </button>
+                                        </NavLink>
                                     </li>
                                     <li>
-                                        <button className="dropdown-item d-flex align-items-center" type="button">
+                                        <NavLink className="dropdown-item d-flex align-items-center" type="button" to='/logout'>
                                             <Icon.DoorOpen width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
                                             <span>Logout</span>
-                                        </button>
+                                        </NavLink>
                                     </li>
                                 </ul>
                             </div>
