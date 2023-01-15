@@ -8,7 +8,7 @@ import './audio-player.css'
 
 const CustomAudioPlayer = (props) => {
     useLayoutEffect(() => {
-        gsap.fromTo('.anim-player', {y: 10000}, { duration: 1, ease: "power4.out", y: 0 });
+        gsap.fromTo('.anim-player', {y: 500}, { duration: 1, ease: "power4.out", y: 0 });
     }, []);
     return (
         <>
