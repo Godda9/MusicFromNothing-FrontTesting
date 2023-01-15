@@ -22,16 +22,6 @@ const MainPage = (props) => {
         gsap.fromTo('.anim2', {x: 500}, { duration: 1.5, ease: "power4.out", x: 0 });
     })
 
-    const [dataType, setDataType] = useState("posts");
-    const [commentsId, setCommentsId] = useState(null);
-
-    const onDataChanged = (id) => {
-        switchDataType();
-        setCommentsId(id);
-    }
-
-    const switchDataType = () => { dataType === "posts" ? setDataType("comments") : setDataType("posts") }
-
     useEffect(() => {
         const elem = document.querySelector('.top-bar')
         elem.addEventListener('click', ()=> {
@@ -40,10 +30,10 @@ const MainPage = (props) => {
 
         return () => {}
     }, [])
+
     
     return (
         <>
-            <CommentsModal/>
             <div className="container-fluid position-fixed">
                 <div className="row">
                     <Topbar text="Music From Nothing" username="UserName" where="feed"/>
@@ -53,7 +43,7 @@ const MainPage = (props) => {
                         <Leftbar/>
                     </div>
                     <div className="dynamic-column col-md-8 p-0 anim0 overflow-auto">
-                        <PostsView what={dataType} postSize={6} onDataChanged={onDataChanged} commentsId={commentsId} switchDataType={switchDataType}/>
+                        <PostsView postSize={6}/>
                     </div>
                     <div className="dynamic-column col overflow-auto anim2 p-0">
                         <Rightbar/>

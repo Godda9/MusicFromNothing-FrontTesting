@@ -1,13 +1,12 @@
 import * as Icon from 'react-bootstrap-icons';
 import CustomAudioPlayer from '../audio-player/audio-player';
-
+import CommentsModal from '../comments-modal/comments-modal';
 import './post-item.css'
-import { useState } from 'react';
-
+import { useEffect, useState } from 'react';
 
 
 const PostItem = (props) => {
-    const {id, user, datetime, img, title, description, likes, isLiked, comments, status, onCommentsClick} = props;
+    const {id, user, datetime, img, title, description, likes, isLiked, comments, status} = props;
     const [liked, setLiked] = useState(isLiked);
     const [likesAmount, setLikesAmount] = useState(likes);
 
@@ -15,10 +14,33 @@ const PostItem = (props) => {
         setLikesAmount(likesAmount + value);
         setLiked(!liked);
     }
-    // onClick={e => onCommentsClick("[DB_POST_ID]")}
 
+    useEffect(()=> {
+        const modal = document.querySelector('#commentsModal' + id);
+        const closeBtn = document.querySelector('#closeCommentsModal' + id);
+
+        closeBtn.addEventListener('click', (e) => {
+            modal.style.display = "none";
+        })
+
+        return () => {
+            closeBtn.removeEventListener('click', null);
+        }
+    }, [])
+
+    const onCommentsClick = (e) => {
+        const modal = document.querySelector('#commentsModal' + id)
+        if (modal.style.display === "block") {
+            modal.style.display = "none"  
+        }
+        else { 
+            modal.style.display = "block";
+        } 
+    }
+    
     return (
         <>
+            <CommentsModal specialKey={id}/>
             <div className="col bordered shadow row g-0 border position-relative overflow-hidden mb-4" 
                 style={{backgroundImage: 'url('+ img + ')', backgroundRepeat: 'repeat', backgroundSize: 'cover'}}>
                 {status === 'inbattle' ? <button className='btn btn-secondary'>Support</button> : null}
@@ -73,7 +95,7 @@ const PostItem = (props) => {
                                     id="openComments"
                                     className='p-0 m-0' 
                                     style={{borderWidth: 0, backgroundColor: 'transparent'}} 
-                                    
+                                    onClick={onCommentsClick}
                                     >
                                     <Icon.ChatDots className='icon-likes-dislikes' type="button"/>
                                 </button>
