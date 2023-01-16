@@ -7,17 +7,19 @@ import '../scroll-bar.css'
 const Chats = (props) => {
     return (
         <>
-            <div className="row">
-                <div className="col overflow-auto p-0">
-                    <LeftbarChats/>
-                </div>
-                <div className="col-8 overflow-auto p-0">
-                    <MessagesView/>
-                </div>
-                <div className="col overflow-auto p-0">
-                    <RightBarUserInfo/>
-                </div>
-            </div>  
+            <div className="container-fluid position-fixed">
+                <div className="row">
+                    <div className="col overflow-auto p-0">
+                        <LeftbarChats/>
+                    </div>
+                    <div className="col-8 overflow-auto p-0">
+                        <MessagesView/>
+                    </div>
+                    <div className="col overflow-auto p-0">
+                        <RightBarUserInfo/>
+                    </div>
+                </div>  
+            </div>
         </>
     );
 }
