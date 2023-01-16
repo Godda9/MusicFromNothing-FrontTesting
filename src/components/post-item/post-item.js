@@ -39,7 +39,6 @@ const PostItem = (props) => {
             modal.style.top = document.querySelector('.posts-view').scrollTop;
         }
     }
-    //<p className="white-border-description mb-2 fs-6">{description}</p>
     
     return (
         <>
@@ -60,6 +59,7 @@ const PostItem = (props) => {
                                 <div className="mx-2 text-muted">{datetime}</div>
                             </div>  
                             <h3 className="white-border mb-2 mt-2">{title}</h3>
+                            <p className="white-border-description mb-2 fs-6">{description}</p>
                         </div>
 
                         <div className='d-flex flex-column justify-content-center align-items-center' style={{backgroundColor: 'white', backdropFilter: 'blur(10px)', padding: '4px', zIndex: 1}}>

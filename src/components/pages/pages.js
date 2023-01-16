@@ -11,7 +11,8 @@ import Support         from "./Support/Support";
 import FAQ             from "./FAQ/FAQ";
 import PostUpload      from "./PostUpload/PostUpload";
 import Studio          from "./Studio/Studio";
+import Container       from "./Container/Container";
 
-export {Login, Register, NotFound404, MainPage, Chats, Profile, ProfileEdit, Battles, Support, FAQ, AccountRestore, PostUpload, Studio};
+export {Container, Login, Register, NotFound404, MainPage, Chats, Profile, ProfileEdit, Battles, Support, FAQ, AccountRestore, PostUpload, Studio};
 
 

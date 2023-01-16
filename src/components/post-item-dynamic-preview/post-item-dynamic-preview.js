@@ -6,14 +6,10 @@ import { Skeleton } from 'react-skeleton-generator';
 const PostItemDynamicPreview = (props) => {
     const {user, img, title, description, audio} = props;
 
-    
-
-    
     return (
         <>
-            <div className="bordered shadow row g-0 border overflow-hidden flex-md-row position-relative" 
-                style={img === null ?  null : {backgroundImage: 'url('+ img + ')', backgroundRepeat: false, backgroundSize: 'auto'}}>
-                <div className="col d-flex flex-column position-static">
+            <div className="bordered shadow row g-0 border overflow-hidden flex-md-row position-relative">
+                <div className="col d-flex flex-column position-static" style={img === null ?  null : {backgroundImage: 'url('+ img + ')', backgroundRepeat: false, backgroundSize: 'auto'}}>
                     <div className='track-author-dt'>
                         <div className='mb-3'>
                             <Skeleton.SkeletonThemeProvider>

@@ -1,8 +1,10 @@
+import './battle-container.css'
+
 const BattleContainer = (props) => {
     const {post1, post2, endsIn} = props;
     return (
         <>
-            <div className="d-flex justify-content-around">
+            <div className="d-flex justify-content-around battle-info-head">
                 <span className="fs-3">Post1_Name</span>
                 <span className="fs-3"><b>VS</b></span>
                 <span className="fs-3">Post2_Name</span>

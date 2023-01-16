@@ -3,25 +3,20 @@ import logoImg from '../pages/Images/logo.png';
 import userImg from '../pages/Images/user_logo.png';
 import { NavLink } from 'react-router-dom';
 import NavigationButton from '../navigation-button/navigation-button';
-import { useLayoutEffect, memo } from "react";
-import { gsap } from 'gsap';
+import { memo } from "react";
 
 import './top-bar.css'
 
 
 const Topbar = (props) => {
-    // anims
-    useLayoutEffect(() => {
-        gsap.fromTo('.anim-left-log', {x: -1000}, { duration: 2, ease: "power4.out", x: 0 });
-        gsap.fromTo('.anim-center-btns', {opacity: 0}, { duration: 2, opacity: 1 });
-    })
+    
 
     const {text, username, where} = props;
     return (
         <>
             <header className="top-bar d-flex flex-wrap justify-content-center border-bottom py-3">
                 <div className='top-bar-flex'>
-                    <div className='anim-left-log d-flex'>
+                    <div className='d-flex'>
                         <a href="/" className="d-flex align-items-center justify-content-center mb-md-0 me-md-auto text-dark text-decoration-none special-link-left">
                             <img src={logoImg} style={{width: 2.5 + 'em'}} alt="mainLogo"></img>
                             <span className="top-bar-text fs-4">{text}</span>
