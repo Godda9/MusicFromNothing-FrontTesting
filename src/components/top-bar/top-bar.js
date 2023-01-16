@@ -36,22 +36,10 @@ const Topbar = (props) => {
                             null
                         }
                         {
-                            where === 'profile-edit' || where === 'post-upload'
-                            ?
-                                <ul className="nav nav-pills">
-                                    <li className='nav-item'><NavigationButton to="/profile" text="Back to profile"/></li>
-                                </ul>
-                            :
-                            null
-                        }
-                        {
                             where === 'support'
                             ?
                                 <ul className="nav nav-pills">
                                     <li className="nav-item"><NavigationButton to="/feed" text="Home"/></li>
-                                    <li className="nav-item"><NavigationButton to="/battles" text="Battles"/></li>
-                                    <li className="nav-item"><NavigationButton to="/chats" text="Chats"/></li>
-                                    <li className='nav-item'><NavigationButton to="/f.a.q" text="FAQ"/></li>
                                 </ul>
                             :
                             null

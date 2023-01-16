@@ -14,6 +14,7 @@ function App() {
           <Route path='/account-restore' element={<AccountRestore/>}/>
           <Route path='/support'         element={<Support/>}/>
           <Route path='/f.a.q'           element={<FAQ/>}/>
+          <Route path='/studio'          element={<Studio/>}/>
           <Route path='/'                element={<Container/>}>   
             <Route path='/feed'            element={<MainPage/>}/>
             <Route path='/chats'           element={<Chats/>} />
@@ -21,7 +22,6 @@ function App() {
             <Route path='/profile-edit'    element={<ProfileEdit/>}/>
             <Route path='/battles'         element={<Battles/>}/>
             <Route path='/post-upload'     element={<PostUpload/>}/>
-            <Route path='/studio'          element={<Studio/>}/>
             <Route path='*'                element={<NotFound404/>}/>
           </Route>
         </Routes>
