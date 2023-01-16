@@ -8,20 +8,12 @@ import './audio-player.css'
 const CustomAudioPlayer = (props) => {
     return (
         <>
-            <div className="anim-player bottom-bar" style={{zIndex: 1}}>
+            <div className="anim-player bottom-bar" style={{zIndex: 0}}>
                 <AudioPlayer
                     autoPlay={false}
                     src={audioFile}
                     volume={0.3}
                     onPlay={(e) => console.log("onPlay")}
-
-                    customControlsSection={
-                        [
-                            RHAP_UI.ADDITIONAL_CONTROLS,
-                            RHAP_UI.MAIN_CONTROLS,
-                            RHAP_UI.VOLUME_CONTROLS,
-                        ]
-                    }
                 /> 
             </div>
         </> 

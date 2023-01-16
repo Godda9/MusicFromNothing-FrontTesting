@@ -29,13 +29,13 @@ const MainPage = (props) => {
                     <Topbar text="Music From Nothing" username="UserName" where="feed"/>
                 </div>
                 <div className="row">
-                    <div className="dynamic-column col overflow-auto anim1 p-0">
+                    <div className="dynamic-column dynamic-column-borders col overflow-auto anim1 p-0">
                         <Leftbar/>
                     </div>
-                    <div className="dynamic-column col-md-8 p-0 anim0 overflow-auto">
+                    <div className="dynamic-column col-md-9 p-0 anim0 overflow-auto">
                         <PostsView postSize={6}/>
                     </div>
-                    <div className="dynamic-column col overflow-auto anim2 p-0">
+                    <div className="dynamic-column dynamic-column-borders col overflow-auto anim2 p-0">
                         <Rightbar/>
                     </div>        
                 </div>

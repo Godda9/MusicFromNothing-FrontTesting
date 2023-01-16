@@ -39,19 +39,19 @@ const PostItem = (props) => {
             modal.style.top = document.querySelector('.posts-view').scrollTop;
         }
     }
+    //<p className="white-border-description mb-2 fs-6">{description}</p>
     
     return (
         <>
             <Portal>
                 <CommentsModal specialKey={id}/>
             </Portal>
-            <div className="col bordered shadow row g-0 border position-relative overflow-hidden mb-4" 
-                style={{backgroundImage: 'url('+ img + ')', backgroundRepeat: 'repeat', backgroundSize: 'cover'}}>
-                {status === 'inbattle' ? <button className='btn btn-secondary'>Support</button> : null}
-                {status === 'win' ? <button className='btn btn-success disabled'>Win</button> : null}
-                {status === 'lose' ? <button className='btn btn-danger disabled'>Lose</button> : null}
+            <div className="bordered shadow g-0 border position-relative overflow-hidden mb-4">
+                {status === 'inbattle' ? <button className='btn btn-secondary w-100'>Support</button>    : null}
+                {status === 'win'      ? <button className='btn btn-success disabled w-100'>Win</button> : null}
+                {status === 'lose'     ? <button className='btn btn-danger disabled w-100'>Lose</button> : null}
 
-                <div className="col  d-flex flex-column">
+                <div className="col d-flex flex-column" style={{backgroundImage: 'url('+ img + ')', backgroundRepeat: 'repeat', backgroundSize: 'cover'}}>
                     <div className='track-author-dt'>
                         <div>
                             <div className='white-border-user d-flex align-items-center'>
@@ -60,10 +60,9 @@ const PostItem = (props) => {
                                 <div className="mx-2 text-muted">{datetime}</div>
                             </div>  
                             <h3 className="white-border mb-2 mt-2">{title}</h3>
-                            <span className="white-border-description mb-2 fs-6">{description}</span>
                         </div>
 
-                        <div className='d-flex flex-column justify-content-center align-items-center' style={{backgroundColor: 'white', padding: '10px'}}>
+                        <div className='d-flex flex-column justify-content-center align-items-center' style={{backgroundColor: 'white', backdropFilter: 'blur(10px)', padding: '4px', zIndex: 1}}>
                             <div className="dropdown">
                                 <Icon.ThreeDots className='icon-likes-dislikes mx-2 align-items-center dropdown-toggle' type="button" data-bs-toggle="dropdown" aria-expanded="false"/>
                                 <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
