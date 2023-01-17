@@ -4,6 +4,8 @@ import * as Icon from 'react-bootstrap-icons';
 import { useEffect, useState, useTransition, memo } from 'react';
 
 
+
+
 const Leftbar = (props) => {
     const data = [
         {link: '/login', heading: "a", placeholder: "Track placeholder0", image: 'https://i.pinimg.com/originals/fa/e1/bc/fae1bce61f7b0403666fd894298488ee.gif'},
@@ -38,29 +40,35 @@ const Leftbar = (props) => {
 
 
     return (
-        <div className="d-flex flex-column align-items-stretch flex-shrink-0 bg-white w-100 overflow-auto">
-            <div className="m-3 d-flex align-items-center justify-content-between position-relative">
-                <Icon.Search width='1.8em' height='1.8em' style={{marginRight: '0.5em'}}/>
-                <input className="form-control rounded" type="text" placeholder='Tracks' onChange={(e) => setSearchQuery(e.target.value)} />       
+        <>
+            <div className="offcanvas offcanvas-start" tabindex="-1" id="offcanvasTracks" aria-labelledby="offcanvasTracksLabel">
+                <div className="offcanvas-header">
+                    <div className="d-flex align-items-center justify-content-between position-relative">
+                        <Icon.Search width='1.8em' height='1.8em' style={{marginRight: '0.5em'}}/>
+                        <input className="form-control rounded w-100" type="text" placeholder='Tracks' onChange={(e) => setSearchQuery(e.target.value)} />       
+                    </div>
+                    <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div className="offcanvas-body">
+                    <div className="list-group list-group-flush border-bottom scrollarea">
+                            {
+                                visibleData.map((item, index) => {
+                                    return (
+                                        <LeftBarItem 
+                                            link={item.link}
+                                            heading={item.heading}
+                                            placeholder={item.placeholder}
+                                            image={item.image}
+                                            key={index}
+                                        />
+                                    );
+                                })         
+                            }
+                            <LeftBarItemSkeleton/>
+                    </div>
+                </div>
             </div>
-
-            <div className="list-group list-group-flush border-bottom scrollarea">
-                    {
-                        visibleData.map((item, index) => {
-                            return (
-                                <LeftBarItem 
-                                    link={item.link}
-                                    heading={item.heading}
-                                    placeholder={item.placeholder}
-                                    image={item.image}
-                                    key={index}
-                                />
-                            );
-                        })         
-                    }
-                    <LeftBarItemSkeleton/>
-            </div>
-        </div>
+        </>
     );
 }
 

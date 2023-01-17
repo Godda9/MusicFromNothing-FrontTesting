@@ -40,28 +40,33 @@ const Rightbar = (props) => {
 
 
     return (
-        <div className="right-bar-visibility d-flex flex-column align-items-stretch flex-shrink-0 bg-white w-100 overflow-auto">
-            <div className="m-3 d-flex flex-row-reverse align-items-center justify-content-between position-relative">
-                <input className="form-control rounded" type="text" placeholder='People' onChange={(e) => setSearchQuery(e.target.value)}/>       
-                <Icon.Search width='1.8em' height='1.8em' style={{marginRight: '0.5em'}}/>
+        <div className="offcanvas offcanvas-end" tabindex="-1" id="offcanvasPeople" aria-labelledby="offcanvasPeopleLabel">
+            <div className="offcanvas-header">
+                <div className="d-flex flex-row-reverse align-items-center justify-content-between position-relative">
+                    <input className="form-control rounded" type="text" placeholder='People' onChange={(e) => setSearchQuery(e.target.value)}/>       
+                    <Icon.Search width='1.8em' height='1.8em' style={{marginRight: '0.5em'}}/>
+                </div>
+                <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-
-            <div className="list-group list-group-flush border-bottom scrollarea">
-                {
-                    visibleData.map((item, index) => {
-                        return (
-                            <RightBarItem 
-                                link={item.link} 
-                                heading={item.heading} 
-                                placeholder={item.placeholder}
-                                image={item.image}
-                                key={index}
-                            />  
-                        );
-                    })
-                }
-                <RightBarItemSkeleton/> 
-                
+            <div className="offcanvas-body">
+                <div className="d-flex flex-column align-items-stretch flex-shrink-0 bg-white w-100 overflow-auto">
+                    <div className="list-group list-group-flush border-bottom scrollarea">
+                        {
+                            visibleData.map((item, index) => {
+                                return (
+                                    <RightBarItem 
+                                        link={item.link} 
+                                        heading={item.heading} 
+                                        placeholder={item.placeholder}
+                                        image={item.image}
+                                        key={index}
+                                    />  
+                                );
+                            })
+                        }
+                        <RightBarItemSkeleton/> 
+                    </div>
+                </div>
             </div>
         </div>
     );

@@ -15,7 +15,7 @@ const MainPage = (props) => {
     
     return (
         <>
-            <PostsView postSize={6}/>
+            <PostsView postSize={4}/>
         </>
     );
 }

@@ -14,7 +14,7 @@ const Profile = (props) => {
     return (
         <>
             <ProfileCard id='0'/>
-            <PostsView postSize={6}/>
+            <PostsView postSize={4}/>
         </>
     );
 }

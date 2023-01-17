@@ -15,6 +15,7 @@ function App() {
           <Route path='/support'         element={<Support/>}/>
           <Route path='/f.a.q'           element={<FAQ/>}/>
           <Route path='/studio'          element={<Studio/>}/>
+          
           <Route path='/'                element={<Container/>}>   
             <Route path='/feed'            element={<MainPage/>}/>
             <Route path='/chats'           element={<Chats/>} />
