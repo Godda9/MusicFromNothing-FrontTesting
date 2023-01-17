@@ -13,8 +13,8 @@ const Chats = (props) => {
 
     return (
         <>
-            <div className="anim-chats-load container-fluid position-fixed">
-                <div className="row">
+            <div className="container-fluid">
+                <div className="row anim-chats-load" style={{minHeight: '93vh'}}>
                     <div className="col overflow-auto p-0">
                         <LeftbarChats/>
                     </div>

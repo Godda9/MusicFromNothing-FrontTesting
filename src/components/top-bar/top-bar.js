@@ -108,7 +108,7 @@ const Topbar = (props) => {
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item d-flex align-items-center m-0" 
+                                        <a className="dropdown-item d-flex align-items-center m-0" 
                                             data-bs-toggle="offcanvas" href="#offcanvasTracks" 
                                             role="button" aria-controls="offcanvasTracks" 
                                             >
@@ -116,7 +116,7 @@ const Topbar = (props) => {
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item d-flex align-items-center m-0" 
+                                        <a className="dropdown-item d-flex align-items-center m-0" 
                                             data-bs-toggle="offcanvas" href="#offcanvasPeople" 
                                             role="button" aria-controls="offcanvasPeople" 
                                             >

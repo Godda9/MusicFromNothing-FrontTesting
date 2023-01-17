@@ -41,7 +41,7 @@ const Leftbar = (props) => {
 
     return (
         <>
-            <div className="offcanvas offcanvas-start" tabindex="-1" id="offcanvasTracks" aria-labelledby="offcanvasTracksLabel">
+            <div className="offcanvas offcanvas-start" tabIndex="-1" id="offcanvasTracks" aria-labelledby="offcanvasTracksLabel">
                 <div className="offcanvas-header">
                     <div className="d-flex align-items-center justify-content-between position-relative">
                         <Icon.Search width='1.8em' height='1.8em' style={{marginRight: '0.5em'}}/>

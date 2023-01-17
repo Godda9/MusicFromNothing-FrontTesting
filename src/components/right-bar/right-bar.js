@@ -40,7 +40,7 @@ const Rightbar = (props) => {
 
 
     return (
-        <div className="offcanvas offcanvas-end" tabindex="-1" id="offcanvasPeople" aria-labelledby="offcanvasPeopleLabel">
+        <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasPeople" aria-labelledby="offcanvasPeopleLabel">
             <div className="offcanvas-header">
                 <div className="d-flex flex-row-reverse align-items-center justify-content-between position-relative">
                     <input className="form-control rounded" type="text" placeholder='People' onChange={(e) => setSearchQuery(e.target.value)}/>       
