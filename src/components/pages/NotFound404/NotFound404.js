@@ -1,6 +1,5 @@
 import './NotFound404.css'
-import { gsap } from 'gsap';
-import { useLayoutEffect } from 'react';
+
 
 const NotFound404 = () => {
     return (

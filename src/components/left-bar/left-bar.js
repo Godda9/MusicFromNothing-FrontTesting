@@ -3,7 +3,7 @@ import LeftBarItemSkeleton from './left-bar-item/skeleton/left-bar-item-skeleton
 import * as Icon from 'react-bootstrap-icons';
 import { useEffect, useState, useTransition, memo } from 'react';
 
-
+import './left-bar.css';
 
 
 const Leftbar = (props) => {
@@ -41,7 +41,7 @@ const Leftbar = (props) => {
 
     return (
         <>
-            <div className="offcanvas offcanvas-start" tabIndex="-1" id="offcanvasTracks" aria-labelledby="offcanvasTracksLabel">
+            <div className="offcanvas offcanvas-start" tabIndex="-1" id="offcanvasTracks" aria-labelledby="offcanvasTracksLabel" data-bs-scroll="true" data-bs-backdrop="false">
                 <div className="offcanvas-header">
                     <div className="d-flex align-items-center justify-content-between position-relative">
                         <Icon.Search width='1.8em' height='1.8em' style={{marginRight: '0.5em'}}/>
