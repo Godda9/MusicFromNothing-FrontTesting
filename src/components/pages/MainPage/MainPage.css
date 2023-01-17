@@ -5,15 +5,3 @@
 .dynamic-column {
     max-height: 93vh;
 }
-
-
-
-@media screen and (max-width: 770px) {
-    .search-bar-bottom {
-        visibility: visible;
-    }
-    .dynamic-column {
-        max-height: 83.5vh;
-    }
-}
-
