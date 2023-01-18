@@ -2,6 +2,9 @@ import PostItem from "../post-item/post-item";
 import BattleContainer from "../battle-container/batlle-container";
 
 const BattlesView = (props) => {
+    const {setCommentsKey} = props;
+
+
     return (
         <>
             <div className="d-flex justify-content-center m-3">
@@ -19,6 +22,7 @@ const BattlesView = (props) => {
                         likes={120}
                         comments={53}
                         status="inbattle"
+                        setCommentsKey={setCommentsKey}
                     />}
                     post2={
                     <PostItem
@@ -31,6 +35,7 @@ const BattlesView = (props) => {
                         likes={120}
                         comments={53}
                         status="inbattle"
+                        setCommentsKey={setCommentsKey}
                     />}
                     endsIn="00.00.00"
             />
@@ -46,6 +51,7 @@ const BattlesView = (props) => {
                         likes={120}
                         comments={53}
                         status="win"
+                        setCommentsKey={setCommentsKey}
                     />}
                     post2={
                     <PostItem
@@ -57,6 +63,7 @@ const BattlesView = (props) => {
                         likes={120}
                         comments={53}
                         status="lose"
+                        setCommentsKey={setCommentsKey}
                     />}
                     endsIn="00.00.00"
             />

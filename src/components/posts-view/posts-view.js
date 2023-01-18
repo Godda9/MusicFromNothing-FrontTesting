@@ -6,7 +6,7 @@ import './posts-view.css'
 
 
 const PostsView = (props) => {
-    const {postSize} = props;
+    const {postSize, setCommentsKey} = props;
 
     return ( 
         <>
@@ -23,6 +23,7 @@ const PostsView = (props) => {
                         likes={120}
                         comments={53}
                         status={null}
+                        setCommentsKey={setCommentsKey}
                     />
                 </div>
                 <div className={"col-md-" + postSize}>
@@ -37,6 +38,7 @@ const PostsView = (props) => {
                         likes={120}
                         comments={53}
                         status={null}
+                        setCommentsKey={setCommentsKey}
                     />
                 </div>
                 <div className={"col-md-" + postSize}>

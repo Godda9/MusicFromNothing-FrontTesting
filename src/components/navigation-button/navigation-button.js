@@ -7,7 +7,7 @@ const NavigationButton = (props) => {
 
     return (
         <NavLink to={to} className={({isActive}) => isActive ? "nav-link active" : "nav-link"}>
-            <div className='nav-item'>
+            <div className='nav-item d-flex align-items-center justify-content-center'>
                 { to === '/feed'    ? <Icon.House          className="icon-styled"/> : null }
                 { to === '/battles' ? <Icon.XDiamond       className="icon-styled"/> : null }
                 { to === '/chats'   ? <Icon.Chat           className="icon-styled"/> : null }

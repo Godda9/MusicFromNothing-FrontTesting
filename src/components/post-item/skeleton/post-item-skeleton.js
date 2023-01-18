@@ -9,7 +9,7 @@ const PostItemSkeleton = (props) => {
         <>
             <div className="bordered shadow row g-0 border overflow-hidden flex-md-row mb-4">
                 <Skeleton.SkeletonThemeProvider>
-                    <Skeleton width="100%" height="175px" borderRadius="0" />
+                    <Skeleton width="100%" height="165px" borderRadius="0" />
                 </Skeleton.SkeletonThemeProvider>
             <CustomAudioPlayer/>
             </div> 
