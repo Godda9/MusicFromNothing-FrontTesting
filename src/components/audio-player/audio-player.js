@@ -1,4 +1,4 @@
-import AudioPlayer, { RHAP_UI } from 'react-h5-audio-player';
+import AudioPlayer from 'react-h5-audio-player';
 import { memo } from 'react';
 import audioFile from './audio.mp3'
 import './PlayerStyles.css'

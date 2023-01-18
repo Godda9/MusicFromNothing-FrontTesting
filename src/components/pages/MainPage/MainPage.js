@@ -1,7 +1,7 @@
 import PostsView from "../../posts-view/posts-view";
 import { useEffect} from "react";
 import { gsap } from 'gsap';
-import { useLocation, useOutletContext } from "react-router-dom";
+import { useOutletContext } from "react-router-dom";
 
 import './MainPage.css'
 import '../scroll-bar.css'
