@@ -17,7 +17,7 @@ const Container = (props) => {
         closeBtn.addEventListener('click', (e) => {
             modal.style.display = "none";
         })
-        console.log('render_container')
+        
 
         return () => {
             closeBtn.removeEventListener('click', null);
