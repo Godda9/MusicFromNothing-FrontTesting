@@ -107,22 +107,6 @@ const Topbar = (props) => {
                                             <span>Logout</span>
                                         </NavLink>
                                     </li>
-                                    <li>
-                                        <a className="open-left-bar-menu-with-tracks dropdown-item d-flex align-items-center m-0" 
-                                            data-bs-toggle="offcanvas" href="#offcanvasTracks" 
-                                            role="button" aria-controls="offcanvasTracks" 
-                                            >
-                                            Tracks
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a className="open-right-bar-menu-with-tracks dropdown-item d-flex align-items-center m-0" 
-                                            data-bs-toggle="offcanvas" href="#offcanvasPeople" 
-                                            role="button" aria-controls="offcanvasPeople" 
-                                            >
-                                            People
-                                        </a>
-                                    </li>
                                 </ul>
                             </div>
                         </div>

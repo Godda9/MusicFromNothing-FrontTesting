@@ -47,7 +47,7 @@ const Leftbar = (props) => {
                         <Icon.Search width='1.8em' height='1.8em' style={{marginRight: '0.5em'}}/>
                         <input className="form-control rounded w-100" type="text" placeholder='Tracks' onChange={(e) => setSearchQuery(e.target.value)} />       
                     </div>
-                    <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <button type="button" className="btn btn-primary btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div className="offcanvas-body">
                     <div className="list-group list-group-flush border-bottom scrollarea">

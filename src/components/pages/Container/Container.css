@@ -1,0 +1,21 @@
+.feedback {
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+  
+#mybutton {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: -4px;
+    right: 0;
+}
+
+.border-radius-right-top {
+    border-radius: 0px 40px 0px 0px;
+}
+
+.border-radius-left-top {
+    border-radius: 40px 0px 0px 0px;
+}

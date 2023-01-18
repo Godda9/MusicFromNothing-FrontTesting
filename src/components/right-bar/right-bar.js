@@ -46,7 +46,7 @@ const Rightbar = (props) => {
                     <input className="form-control rounded" type="text" placeholder='People' onChange={(e) => setSearchQuery(e.target.value)}/>       
                     <Icon.Search width='1.8em' height='1.8em' style={{marginRight: '0.5em'}}/>
                 </div>
-                <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <button type="button" className="btn btn-primary btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div className="offcanvas-body">
                 <div className="d-flex flex-column align-items-stretch flex-shrink-0 bg-white w-100 overflow-auto">
