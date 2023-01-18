@@ -125,6 +125,11 @@
   border-radius: 50px;
   box-shadow: rgba(134, 134, 134, 0.5) 0 0 5px;
 }
+
+.rhap_progress-indicator:hover {
+  animation: animHover 0.3s ease 0s 1 normal forwards;
+}
+
 /*--------------------*/
 .rhap_controls-section {
   display: flex;
@@ -147,6 +152,10 @@
   color: #868686;
   margin-right: 6px;
 }
+
+.rhap_repeat-button:hover {
+  animation: animHover 0.3s ease 0s 1 normal forwards;
+}
 /*--------------------*/
 .rhap_main-controls {
   flex: 0 1 auto;
@@ -166,6 +175,7 @@
 
 .rhap_main-controls-button:hover {
   color: #1BA39C;
+  animation: animHover 0.3s ease 0s 1 normal forwards;
 }
 
 .rhap_play-pause-button {
@@ -236,6 +246,7 @@
 }
 .rhap_volume-indicator:hover {
   opacity: 0.9;
+  animation: animHover 0.3s ease 0s 1 normal forwards;
 }
 
 .rhap_volume-filled {
@@ -263,4 +274,19 @@
 }
 .rhap_button-clear:focus:not(:focus-visible) {
   outline: 0;
+}
+
+
+
+
+
+
+@keyframes animHover {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.2);
+  }
 }
