@@ -6,6 +6,8 @@ import Rightbar from "../../right-bar/right-bar";
 import CommentsModal from "../../comments-modal/comments-modal";
 import { useEffect, useState } from "react";
 
+import './swipe-handler';
+
 
 const Container = (props) => {
     const [commentsKey, setCommentsKey] = useState(null);

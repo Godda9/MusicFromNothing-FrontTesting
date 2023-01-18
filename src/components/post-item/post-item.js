@@ -30,7 +30,7 @@ const PostItem = (props) => {
     
     return (
         <>
-            <div className="bordered shadow g-0 border position-relative overflow-hidden mb-4">
+            <div className="bordered shadow g-0 border position-relative overflow-hidden my-2">
                 {status === 'inbattle' ? <button className='btn btn-secondary w-100'>Support</button>    : null}
                 {status === 'win'      ? <button className='btn btn-success disabled w-100'>Win</button> : null}
                 {status === 'lose'     ? <button className='btn btn-danger disabled w-100'>Lose</button> : null}

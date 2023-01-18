@@ -10,7 +10,7 @@ const PostsView = (props) => {
 
     return ( 
         <>
-            <div className="posts-view row row-cols-1 row-cols-sm-2 row-cols-md-2 g-3 m-0 mb-3 px-2">
+            <div className="posts-view row row-cols-1 row-cols-sm-2 row-cols-md-2 g-3 m-0 mb-2 px-2">
                 <div className={"col-md-" + postSize}>
                     <PostItem 
                         id="1111"

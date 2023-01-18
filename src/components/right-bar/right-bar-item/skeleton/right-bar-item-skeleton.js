@@ -10,9 +10,7 @@ const RightBarItemSkeleton = (ptops) => {
                         <div className="col-10 mb-1 small pt-1"><Skeleton width="10vw" height="2vh"></Skeleton></div>
                     </Skeleton.SkeletonThemeProvider>
                 </div>
-                <Skeleton.SkeletonThemeProvider>
-                    <div className='w-25 h-100'><Skeleton width="3.8vw" height="3.8vw" borderRadius="50%"/></div>
-                </Skeleton.SkeletonThemeProvider>
+                <img className='rounded-circle shadow w-25 h-25' src="https://secure.gravatar.com/avatar/4c2d5681a4633a173c20e74c3641e637?s=500&d=mm&r=g"></img>
             </div>
         </a>
     );
