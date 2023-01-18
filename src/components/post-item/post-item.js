@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 
 
 const PostItem = (props) => {
-    const {id, user, datetime, img, title, description, likes, isLiked, comments, status} = props;
+    const {id, user, datetime, img, title, description, likes, isLiked, comments, status, setCommentsKey} = props;
     const [liked, setLiked] = useState(isLiked);
     const [likesAmount, setLikesAmount] = useState(likes);
 
@@ -16,35 +16,20 @@ const PostItem = (props) => {
         setLiked(!liked);
     }
 
-    useEffect(()=> {
-        const modal = document.querySelector('#commentsModal' + id);
-        const closeBtn = document.querySelector('#closeCommentsModal' + id);
-
-        closeBtn.addEventListener('click', (e) => {
-            modal.style.display = "none";
-        })
-
-        return () => {
-            closeBtn.removeEventListener('click', null);
-        }
-    }, [])
 
     const onCommentsClick = (e) => {
-        const modal = document.querySelector('#commentsModal' + id)
+        const modal = document.querySelector('#commentsModal')
         if (modal.style.display === "block") {
             modal.style.display = "none";
         }
         else { 
             modal.style.display = "block";
-            modal.style.top = document.querySelector('.posts-view').scrollTop;
+            setCommentsKey(id);
         }
     }
     
     return (
         <>
-            <Portal>
-                <CommentsModal specialKey={id}/>
-            </Portal>
             <div className="bordered shadow g-0 border position-relative overflow-hidden mb-4">
                 {status === 'inbattle' ? <button className='btn btn-secondary w-100'>Support</button>    : null}
                 {status === 'win'      ? <button className='btn btn-success disabled w-100'>Win</button> : null}
