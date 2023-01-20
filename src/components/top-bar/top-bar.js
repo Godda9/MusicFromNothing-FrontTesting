@@ -23,7 +23,7 @@ const Topbar = (props) => {
                         </a>
                     </div>
 
-                    <div className='anim-center-btns'>
+                    <div className='anim-center-btns' style={{alignSelf: 'center'}}>
                         {
                             where === 'feed' || where === 'profile' || where === 'battles' || where === 'chats'
                             ? 
@@ -66,7 +66,6 @@ const Topbar = (props) => {
                             :
                             null
                         }
-
                     </div>
                     
                     {
@@ -80,31 +79,31 @@ const Topbar = (props) => {
                                 <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
                                     <li>
                                         <NavLink className="dropdown-item d-flex align-items-center" type="button" to='/profile'>
-                                            <Icon.Person width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
+                                            <Icon.PersonFill width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
                                             <span>Profile</span>
                                         </NavLink>
                                     </li>
                                     <li>
                                         <NavLink className="dropdown-item d-flex align-items-center" type="button" to='/profile-edit'>
-                                            <Icon.Gear width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
+                                            <Icon.GearFill width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
                                             <span>Edit Profile</span>
                                         </NavLink>
                                     </li>
                                     <li>
                                         <NavLink className="dropdown-item d-flex align-items-center" type="button" to='/saved-posts'>
-                                            <Icon.Bookmarks width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
+                                            <Icon.BookmarksFill width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
                                             <span>Saved Posts</span>
                                         </NavLink>
                                     </li>
                                     <li>
                                         <NavLink className="dropdown-item d-flex align-items-center" type="button" to='/support'>
-                                            <Icon.Diamond width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
+                                            <Icon.QuestionDiamondFill width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
                                             <span>Support</span>
                                         </NavLink>
                                     </li>
                                     <li>
                                         <NavLink className="dropdown-item d-flex align-items-center" type="button" to='/logout'>
-                                            <Icon.DoorOpen width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
+                                            <Icon.DoorOpenFill width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
                                             <span>Logout</span>
                                         </NavLink>
                                     </li>

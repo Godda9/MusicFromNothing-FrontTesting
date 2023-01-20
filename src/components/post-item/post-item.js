@@ -53,13 +53,13 @@ const PostItem = (props) => {
                                 <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
                                     <li>
                                         <button className="dropdown-item d-flex align-items-center" type="button">
-                                            <Icon.Bookmark width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
+                                            <Icon.BookmarkFill width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
                                             <span>Save</span>
                                         </button>
                                     </li>
                                     <li>
                                         <button className="dropdown-item d-flex align-items-center" type="button">
-                                            <Icon.Link45deg width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
+                                            <Icon.ShareFill width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
                                             <span>Share</span>
                                         </button>
                                     </li>
@@ -71,7 +71,7 @@ const PostItem = (props) => {
                                     </li>
                                     <li>
                                         <button className="dropdown-item d-flex align-items-center" type="button">
-                                            <Icon.Tornado width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
+                                            <Icon.Virus width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
                                             <span>Report</span>
                                         </button>
                                     </li>
