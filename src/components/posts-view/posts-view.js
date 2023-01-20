@@ -2,7 +2,7 @@ import PostItem from '../post-item/post-item';
 import PostItemSkeleton from '../post-item/skeleton/post-item-skeleton';
 
 
-import './posts-view.css'
+import './posts-view.scss'
 
 
 const PostsView = (props) => {

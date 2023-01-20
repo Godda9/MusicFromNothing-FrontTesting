@@ -1,4 +1,4 @@
-import './messages-view.css';
+import './messages-view.scss';
 
 
 const MessagesView = (props) => {

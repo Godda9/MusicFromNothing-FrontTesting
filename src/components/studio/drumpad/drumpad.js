@@ -1,4 +1,4 @@
-import './drumpad.css'
+import './drumpad.scss'
 
 const Drumpad = (props) => {
     return (

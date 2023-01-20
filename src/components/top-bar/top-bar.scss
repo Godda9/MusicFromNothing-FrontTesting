@@ -6,56 +6,57 @@
     padding-left: 1%;
     padding-right: 1%;
     background-color: white;
-}
-
-.top-bar-flex {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.special-link-left {
-    img {
-        display: inline-block;
-        margin-right: 10px;
+    
+    .top-bar-flex {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
-}
-
-.special-link-right {
-    img {
-        display: inline-block;
-        margin-left: 10px;
+    
+    .special-link-left {
+        img {
+            display: inline-block;
+            margin-right: 10px;
+        }
     }
-}
-
-.nav-item {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding-left: 0.2em;
-    padding-right: 0.2em;
-}
-
-.nav-link:hover {
-    background-color: #1BA39C;
-    color: white;
-    box-shadow: 4px 4px 15px rgb(210, 210, 210);
-}
-
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    background-color: #1BA39C;
-    box-shadow: 4px 4px 15px rgb(210, 210, 210);
-}
-
-
-.top-bar-text {
-    visibility: visible;
-}
-
-
-@media screen and (max-width: 800px) {
+    
+    .special-link-right {
+        img {
+            display: inline-block;
+            margin-left: 10px;
+        }
+    }
+    
+    .nav-item {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-left: 0.2em;
+        padding-right: 0.2em;
+    }
+    
+    .nav-link:hover {
+        background-color: #1BA39C;
+        color: white;
+        box-shadow: 4px 4px 15px rgb(210, 210, 210);
+    }
+    
+    .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+        background-color: #1BA39C;
+        box-shadow: 4px 4px 15px rgb(210, 210, 210);
+    }
+    
+    
     .top-bar-text {
-        content-visibility: hidden;
+        visibility: visible;
+    }
+    
+    
+    @media screen and (max-width: 800px) {
+        .top-bar-text {
+            content-visibility: hidden;
+        }
     }
 }
+

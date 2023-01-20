@@ -1,7 +1,7 @@
 import { Skeleton } from "react-skeleton-generator";
 import CustomAudioPlayer from "../../audio-player/audio-player";
 
-import '../post-item.css'
+import '../post-item.scss'
 
 
 const PostItemSkeleton = (props) => {

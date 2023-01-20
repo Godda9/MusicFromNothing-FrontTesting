@@ -1,6 +1,8 @@
 .feedback {
     padding: 10px 20px;
     border-radius: 4px;
+    background-color: #1BA39C;
+    border-color: #1BA39C;
 }
   
 #mybutton {

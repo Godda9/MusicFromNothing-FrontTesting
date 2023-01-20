@@ -3,8 +3,6 @@ import RightBarItemSkeleton from './right-bar-item/skeleton/right-bar-item-skele
 import * as Icon from 'react-bootstrap-icons';
 import {useState, useTransition, useEffect, memo} from "react";
 
-import './right-bar';
-
 
 const Rightbar = (props) => {
     const data = [

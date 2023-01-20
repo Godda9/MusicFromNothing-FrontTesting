@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 import NavigationButton from '../navigation-button/navigation-button';
 import { memo } from "react";
 
-import './top-bar.css'
+import './top-bar.scss'
 
 
 const Topbar = (props) => {

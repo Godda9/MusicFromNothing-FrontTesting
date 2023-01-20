@@ -1,4 +1,4 @@
-import './profile-card.css'
+import './profile-card.scss'
 import * as Icon from 'react-bootstrap-icons';
 
 const ProfileCard = (props) => {
@@ -6,7 +6,7 @@ const ProfileCard = (props) => {
     
     return (
         <>
-            <div className="col p-3">
+            <div className="col p-3 profile-card">
                 <div className="bordered row g-0 border overflow-hidden flex-md-row mb-1 position-relative d-flex justify-content-center align-items-center">
                     <div className="list-group-item list-group-item-action py-3 lh-tight d-flex justify-content-center" aria-current="true">
                         <div className='d-flex align-items-center justify-content-center flex-wrap'>

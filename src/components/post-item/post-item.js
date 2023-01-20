@@ -1,7 +1,7 @@
 import * as Icon from 'react-bootstrap-icons';
 import CustomAudioPlayer from '../audio-player/audio-player';
-import CommentsModal from '../comments-modal/comments-modal';
-import './post-item.css'
+
+import './post-item.scss'
 import ReactDOM from "react-dom"; 
 import { useEffect, useState } from 'react';
 

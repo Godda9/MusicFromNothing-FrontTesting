@@ -3,7 +3,7 @@ import LeftBarItemSkeleton from './left-bar-item/skeleton/left-bar-item-skeleton
 import * as Icon from 'react-bootstrap-icons';
 import { useEffect, useState, useTransition, memo } from 'react';
 
-import './left-bar.css';
+import './left-bar.scss';
 
 
 const Leftbar = (props) => {

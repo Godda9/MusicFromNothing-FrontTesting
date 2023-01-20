@@ -1,10 +1,10 @@
-import './battle-container.css'
+import './battle-container.scss'
 
 const BattleContainer = (props) => {
     const {post1, post2, endsIn} = props;
     return (
         <>
-            <div className='bordered border p-2 m-2'>
+            <div className='battle-container bordered border p-2 m-2'>
                 <div className="d-flex justify-content-around battle-info-head">
                     <span className="fs-3">Post1_Name</span>
                     <span className="fs-3"><b>VS</b></span>

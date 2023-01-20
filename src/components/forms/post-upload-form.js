@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import PostItemDynamicPreview from "../post-item-dynamic-preview/post-item-dynamic-preview";
 
-import './forms-style.css';
+import './forms-style.scss';
 
 const PostUploadForm = (props)=> {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -30,7 +30,7 @@ const PostUploadForm = (props)=> {
 
     return(
         <>  
-            <div className="post-upload bordered row border overflow-hidden shadow d-flex justify-content-center align-items-center my-5 p-3">
+            <div className="post-upload form-with-buttons bordered row border overflow-hidden shadow d-flex justify-content-center align-items-center my-5 p-3">
                 <form onSubmit={handleSubmit(onSubmit)} className='column'>
                     <div>
                         <label htmlFor="Title" className="form-label"><b>Title</b></label>

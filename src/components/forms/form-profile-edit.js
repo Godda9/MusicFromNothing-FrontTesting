@@ -1,4 +1,6 @@
 import { useForm } from "react-hook-form";
+import './forms-style.scss'
+
 
 const FormProfileEdit = (props) => {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -7,7 +9,7 @@ const FormProfileEdit = (props) => {
 
     return (
         <>
-        <div className="bordered row border overflow-hidden d-flex justify-content-center align-items-center m-3 p-3 shadow-sm">
+        <div className="form-with-buttons bordered row border overflow-hidden d-flex justify-content-center align-items-center m-3 p-3 shadow-sm">
             <span className="fs-4 my-3">{title}</span>
             <form onSubmit={handleSubmit(onSubmit)}>
                 { title === "Password" ? <Password register={register} errors={errors}/> : null }
