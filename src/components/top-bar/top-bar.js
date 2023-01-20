@@ -68,6 +68,7 @@ const Topbar = (props) => {
                         }
 
                     </div>
+                    
                     {
                         where !== 'account-restore' 
                         ?

@@ -7,14 +7,29 @@
 
 .form-support {
     width: 50%;
+
+    .btn-primary {
+        background-color: #1BA39C;
+        border-color: #1BA39C;
+    }
 }
 
 .form-restore {
     width: 50%;
+
+    .btn-primary {
+        background-color: #1BA39C;
+        border-color: #1BA39C;
+    }
 }
 
 .post-upload {
     width: 45%;
+
+    .btn-primary {
+        background-color: #1BA39C;
+        border-color: #1BA39C;
+    }
 }
 
 @media screen and (max-width: 800px) {

@@ -6,8 +6,9 @@ import Rightbar from "../../right-bar/right-bar";
 import CommentsModal from "../../comments-modal/comments-modal";
 import { useEffect, useState } from "react";
 
-import './Container.css';
+import './Container.scss';
 import './swipe-handler';
+import BottomBar from "../../bottom-bar/bottom-bar";
 
 
 const Container = (props) => {
@@ -29,38 +30,20 @@ const Container = (props) => {
 
     return (
         <>
+            <Topbar text="Music From Nothing" username="UserName" where="feed"/>
             <CommentsModal specialKey={commentsKey}/>
-            <div className="container-fluid position-fixed">
-                <Leftbar/>
-                <Rightbar/>
+            <Leftbar/>
+            <Rightbar/>
 
-                <div className="row">
-                    <Topbar text="Music From Nothing" username="UserName" where="feed"/>
-                </div>
-                
+            <div className="container-fluid position-fixed">
                 <div className="row d-flex justfy-content-center">
                     <div className="dynamic-column col-md-12 p-0 anim0 overflow-auto">
                         <Outlet context={[setCommentsKey]}/>
                     </div>     
                 </div>
-
-                <div id="mybutton">
-                    <button className="feedback border-radius-right-top btn btn-primary open-left-bar-menu-with-tracks"
-                            data-bs-toggle="offcanvas" 
-                            href="#offcanvasTracks" 
-                            role="button" 
-                            aria-controls="offcanvasTracks">
-                                Tracks
-                    </button>
-                    <button className="feedback border-radius-left-top btn btn-primary open-right-bar-menu-with-tracks" 
-                            data-bs-toggle="offcanvas" 
-                            href="#offcanvasPeople" 
-                            role="button" 
-                            aria-controls="offcanvasPeople">
-                            People
-                    </button>
-                </div>
             </div>
+
+            <BottomBar/>
         </>
     );
 }
