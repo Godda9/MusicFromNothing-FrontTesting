@@ -30,10 +30,10 @@ const Container = (props) => {
 
     return (
         <>
-            <Topbar text="Music From Nothing" username="UserName" where="feed"/>
             <CommentsModal specialKey={commentsKey}/>
             <Leftbar/>
             <Rightbar/>
+            <Topbar text="Music From Nothing" username="UserName" where="feed"/>
 
             <div className="container-fluid position-fixed">
                 <div className="row d-flex justfy-content-center">
