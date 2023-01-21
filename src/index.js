@@ -4,6 +4,27 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+
+
+import Darkmode from 'darkmode-js';
+import './Darkmode.scss';
+new Darkmode({
+  bottom: '10px', // default: '32px'
+  right: 'unset', // default: '32px'
+  left: '10px', // default: 'unset'
+  time: '0.3s', // default: '0.3s'
+  mixColor: '#fff', // default: '#fff'
+  backgroundColor: 'unset',  // default: '#fff'
+  backgroundColorDark: 'red',
+  buttonColorDark: '#333',  // default: '#100f2c'
+  buttonColorLight: '#1BA39C', // default: '#fff'
+  saveInCookies: true, // default: true,
+  label: '🌓', // default: ''
+  autoMatchOsTheme: false // default: true
+}).showWidget();
+
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
