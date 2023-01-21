@@ -1,8 +1,6 @@
-import { Link } from 'react-router-dom';
-import * as Icon from 'react-bootstrap-icons';
 
 const ProfileCardEdit = (props) => {
-    const {id} = props;
+    //const {id} = props;
     
     return (
         <>

@@ -1,6 +1,7 @@
-import './bottom-bar.scss';
 import * as Icon from "react-bootstrap-icons";
 import { NavLink } from 'react-router-dom';
+
+import './bottom-bar.scss';
 
 
 const BottomBar = (props) => {
@@ -8,7 +9,7 @@ const BottomBar = (props) => {
         <nav class="bottom-bar">
             <div className="navbar fixed-bottom navbar-light bg-light">
                 <div class="container-fluid">
-                    <div className="navigation-button nav-link btn btn-outline-primary" data-bs-toggle="offcanvas" href="#offcanvasTracks" aria-controls="offcanvasTracks">
+                    <div className="open-left-bar-menu-with-tracks navigation-button nav-link btn btn-outline-primary" data-bs-toggle="offcanvas" href="#offcanvasTracks" aria-controls="offcanvasTracks">
                         <Icon.MusicNote className="icon-styled"/>
                         <span className="text-inside-button">Tracks</span>
                     </div>
@@ -23,7 +24,7 @@ const BottomBar = (props) => {
                         </NavLink>
                     </div>
                         
-                    <div className="navigation-button nav-link btn btn-outline-primary" data-bs-toggle="offcanvas" href="#offcanvasPeople" aria-controls="offcanvasPeople">
+                    <div className="open-right-bar-menu-with-people navigation-button nav-link btn btn-outline-primary" data-bs-toggle="offcanvas" href="#offcanvasPeople" aria-controls="offcanvasPeople">
                         <Icon.PeopleFill className="icon-styled"/>
                         <span className="text-inside-button">Users</span>
                     </div>

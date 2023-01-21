@@ -1,7 +1,7 @@
 import './battle-container.scss'
 
 const BattleContainer = (props) => {
-    const {post1, post2, endsIn} = props;
+    const {post1, post2} = props;
     return (
         <>
             <div className='battle-container bordered border p-2 m-2'>

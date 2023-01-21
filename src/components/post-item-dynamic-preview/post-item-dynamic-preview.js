@@ -4,7 +4,7 @@ import './post-item-dynamic-preview.scss'
 import { Skeleton } from 'react-skeleton-generator';
 
 const PostItemDynamicPreview = (props) => {
-    const {user, img, title, description, audio} = props;
+    const {img, title, description, audio} = props;
 
     return (
         <>

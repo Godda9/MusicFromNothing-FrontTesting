@@ -1,6 +1,5 @@
 import Topbar from "../../top-bar/top-bar";
-import * as Icon from "react-bootstrap-icons";
-import { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect } from "react";
 import { gsap } from "gsap";
 
 
@@ -52,32 +51,6 @@ const FAQ = (props) => {
             </div>
         </>
     );
-}
-
-const getDescription = (name) => {
-    if (name === "whoWeAre") {
-        return "{text}";
-    }
-
-    if (name === "howCanIPostSth") {
-        return "Text2";
-    }
-
-    if (name === "howCanIRestoreMyAccount") {
-        return "Text3";
-    }
-
-    if (name === "whatTypeOfDataCanILoad") {
-        return "Text4";
-    }
-
-    if (name === "howCanIReport") {
-        return "Text5";
-    }
-
-    if (name === "howDoBattlesWork") {
-        return "Text6";
-    }
 }
 
 export default FAQ;

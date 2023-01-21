@@ -2,7 +2,7 @@ import './profile-card.scss'
 import * as Icon from 'react-bootstrap-icons';
 
 const ProfileCard = (props) => {
-    const {id} = props;
+    //const {id} = props;
     
     return (
         <>

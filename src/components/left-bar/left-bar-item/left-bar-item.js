@@ -1,4 +1,3 @@
-import * as Icon from 'react-bootstrap-icons';
 
 const LeftBarItem = (props) => {
     const {link, heading, placeholder, image} = props;
@@ -12,7 +11,7 @@ const LeftBarItem = (props) => {
                     <div className="col-10 mb-1 small">{placeholder}</div>
                 </div>
 
-                <img className='rounded-3 shadow w-25 h-25' src={image}></img>
+                <img className='rounded-3 shadow w-25 h-25' src={image} alt='user-avatar'></img>
             </div>
         </a>
     );

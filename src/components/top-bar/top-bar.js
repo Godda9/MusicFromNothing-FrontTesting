@@ -10,7 +10,6 @@ import './top-bar.scss'
 
 const Topbar = (props) => {
     
-
     const {text, username, where} = props;
     return (
         <>
@@ -74,7 +73,7 @@ const Topbar = (props) => {
                         <div>
                             <div className="d-flex dropdown align-items-center justify-content-center mb-md-0 me-md-auto text-dark text-decoration-none special-link-right">
                                 <span className="top-bar-text fs-4">{username}</span>
-                                <img src={userImg} style={{width: 2.5 + 'em', borderRadius: '50%'}} alt="userLogo" className='dropdown-toggle' type="button" data-bs-toggle="dropdown" aria-expanded="false"></img>
+                                <img src={userImg} style={{width: 2.5 + 'em', borderRadius: '50%'}} alt="userLogo" className='dropdown-toggle' type="button" data-bs-toggle="dropdown"></img>
 
                                 <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
                                     <li>

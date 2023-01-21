@@ -23,7 +23,7 @@ const Rightbar = (props) => {
     const [seachQuery, setSearchQuery] = useState("");
     const [visibleData, setVisibleData] = useState(data);
 
-    const filterData = (text) => {
+    const filterData = text => {
         if (text.length === 0) { 
             return data;
         }
@@ -39,6 +39,7 @@ const Rightbar = (props) => {
 
     return (
         <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasPeople" aria-labelledby="offcanvasPeopleLabel" data-bs-scroll="true" data-bs-backdrop="false">
+            {isPending ? null : null}
             <div className="offcanvas-header">
                 <div className="d-flex flex-row-reverse align-items-center justify-content-between position-relative">
                     <input className="form-control rounded" type="text" placeholder='People' onChange={(e) => setSearchQuery(e.target.value)}/>       

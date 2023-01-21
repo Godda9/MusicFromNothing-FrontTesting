@@ -2,8 +2,7 @@ import * as Icon from 'react-bootstrap-icons';
 import CustomAudioPlayer from '../audio-player/audio-player';
 
 import './post-item.scss'
-import ReactDOM from "react-dom"; 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 
 const PostItem = (props) => {
@@ -106,12 +105,6 @@ const PostItem = (props) => {
             </div>
         </>
     );
-}
-
-const Portal = (props) => {
-    const node = document.createElement('div');
-    document.body.append(node);
-    return ReactDOM.createPortal(props.children, node);
 }
 
 export default PostItem;

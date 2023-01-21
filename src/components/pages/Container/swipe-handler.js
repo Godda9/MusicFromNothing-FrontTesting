@@ -31,7 +31,7 @@ function handleTouchMove(evt) {
         if ( xDiff > 0 ) {
             /* right swipe */
             //console.log("R_SWIPE")
-            document.querySelector('.open-right-bar-menu-with-tracks').click(); 
+            document.querySelector('.open-right-bar-menu-with-people').click(); 
         } else {
             /* left swipe */
             //console.log("L_SWIPE") 
