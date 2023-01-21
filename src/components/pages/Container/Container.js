@@ -41,9 +41,8 @@ const Container = (props) => {
                         <Outlet context={[setCommentsKey]}/>
                     </div>     
                 </div>
+                <BottomBar/>
             </div>
-
-            <BottomBar/>
         </>
     );
 }

@@ -20,7 +20,7 @@ const Track = (props) => {
                 <div className="row d-flex justify-content-center align-items-center mt-5">
                     <h2 className="anim-text-pupload fs-1" style={{textAlign: 'center'}}><span style={{'color': '#1BA39C'}}>T</span>rack title</h2>
                 </div>
-                <div className="bordered row g-0 border row-cols-md-2 d-flex justify-content-center align-items-center pt-4 px-5 pb-4">
+                <div className="bordered row g-0 border row-cols-md-2 d-flex justify-content-center align-items-center pt-4 px-5 pb-4 bg-white">
                     <PostItem 
                         id="1111"
                         user="UserName" 

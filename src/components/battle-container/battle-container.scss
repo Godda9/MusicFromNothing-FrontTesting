@@ -1,5 +1,9 @@
-.battle-container
+.battle-container {
+    background-color: white;
     .battle-info-head {
-        background-color: white;
-        padding: 5px;
+        box-shadow: 4px 4px 10px rgb(210, 210, 210);
+        border-radius: 10px;
+        background-color: #1BA39C;
+        color: white;
     }
+}

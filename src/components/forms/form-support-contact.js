@@ -9,7 +9,7 @@ const FormSupportContact = (props) => {
 
     return (
         <>
-            <div className="form-support bordered row border overflow-hidden shadow d-flex justify-content-center align-items-center p-3 mt-5">
+            <div className="form-with-buttons form-support bordered row border overflow-hidden shadow d-flex justify-content-center align-items-center p-3 mt-5">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="mb-3">
                         <label htmlFor="ContactReason" className="form-label">Contact Reason</label>
