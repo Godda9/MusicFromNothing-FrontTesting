@@ -30,12 +30,12 @@ const PostUploadForm = (props)=> {
 
     return(
         <>  
-            <div className="post-upload form-with-buttons bordered row border overflow-hidden shadow d-flex justify-content-center align-items-center my-5 p-3">
+            <div className="d-mode-bg post-upload form-with-buttons bordered row border overflow-hidden shadow d-flex justify-content-center align-items-center my-5 p-3">
                 <form onSubmit={handleSubmit(onSubmit)} className='column'>
                     <div>
-                        <label htmlFor="Title" className="form-label"><b>Title</b></label>
+                        <label htmlFor="Title" className="d-mode-text form-label"><b>Title</b></label>
                         <input 
-                            className="form-control rounded"
+                            className="d-mode-input form-control rounded"
                             type="text" 
                             placeholder="Title"
                             onInput={e => handleTitle(e.target.value || "")}
@@ -49,9 +49,9 @@ const PostUploadForm = (props)=> {
                     </div>
 
                     <div className="pt-3">
-                        <label htmlFor="ShortDescription" className="form-label"><b>Short Description</b></label>
+                        <label htmlFor="ShortDescription" className="d-mode-text form-label"><b>Short Description</b></label>
                         <input 
-                            className="form-control rounded"
+                            className="d-mode-input form-control rounded"
                             type="text" 
                             placeholder="ShortDescription"
                             onInput={e => handleDescr(e.target.value || "")}
@@ -65,9 +65,9 @@ const PostUploadForm = (props)=> {
                     </div>
                     
                     <div className="pt-3 w-50">
-                        <label className="form-check-label"><b>Music type</b></label>
+                        <label className="d-mode-text form-check-label"><b>Music type</b></label>
                         <select 
-                            className="form-select" 
+                            className="d-mode-input form-select" 
                             id="floatingSelect"
                             {...register("MusicType", {
                                 required: true,
@@ -81,9 +81,9 @@ const PostUploadForm = (props)=> {
                     </div>
                     
                     <div className='w-100 pt-3'>
-                        <label className="form-check-label"><b>Image</b></label>
+                        <label className="d-mode-text form-check-label"><b>Image</b></label>
                         <input 
-                            className="form-control"
+                            className="d-mode-input form-control"
                             type="file" 
                             placeholder="Upload"
                             onInput={e => handlePicture(e.target.files[0] || null)}
@@ -95,9 +95,9 @@ const PostUploadForm = (props)=> {
                     </div>
 
                     <div className="pt-3">
-                        <label className="form-check-label"><b>Your OWN audio</b></label>
+                        <label className="d-mode-text form-check-label"><b>Your OWN audio</b></label>
                         <input 
-                            className="form-control"
+                            className="d-mode-input form-control"
                             type="file" 
                             placeholder="Upload"
                             onInput={e => handleAudio(e.target.files[0] || null)}
@@ -111,20 +111,20 @@ const PostUploadForm = (props)=> {
                     
                     <div className="input-group mb-3 pt-3">
                         <input 
-                            className="form-check-input"
+                            className="d-mode-input form-check-input"
                             type="checkbox" 
                             {...register("AllowComments", {})} 
                         />
-                        <label className="form-check-label mx-2">Allow comments</label>
+                        <label className="d-mode-text form-check-label mx-2">Allow comments</label>
                     </div>
 
                     <div className="input-group mb-3">
                         <input 
-                                className="form-check-input"
-                                type="checkbox" 
-                                {...register("AllowDownloads", {})} 
+                            className="d-mode-input form-check-input"
+                            type="checkbox" 
+                            {...register("AllowDownloads", {})} 
                             />
-                        <label className="form-check-label mx-2">Allow downloads</label>
+                        <label className="d-mode-text form-check-label mx-2">Allow downloads</label>
                     </div>
 
                     <button type="submit" className="btn btn-primary w-100">Confirm</button>
