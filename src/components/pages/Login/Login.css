@@ -1,6 +1,7 @@
   body {
     background-image: url('../Images/Meteor.svg');
   }
+
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -45,7 +46,6 @@
   html .login-form .btn-primary, body .login-form .btn-primary, .container .login-form .btn-primary {
     background-color: #1BA39C;
     border-color: #1BA39C;
-    box-shadow: 4px 4px 15px rgb(210, 210, 210);
   }
   .form-control {
     border-color: #1BA39C;
@@ -64,7 +64,6 @@
   html .login-form-all .reg-link, body .login-form-all .reg-link, .container .login-form-all .reg-link {
     font-size: 18px;
   }
-
 
   .text-hello, .logo {
     display: block;

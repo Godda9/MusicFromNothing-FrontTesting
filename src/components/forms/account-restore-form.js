@@ -32,12 +32,12 @@ const AccountRestoreForm = (props)=> {
 
     return(
         <>
-            <div className="form-restore form-with-buttons bordered row border overflow-hidden shadow d-flex justify-content-center align-items-center p-3">
+            <div className="d-mode-bg form-restore form-with-buttons bordered row border overflow-hidden shadow d-flex justify-content-center align-items-center p-3">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="mb-3">
-                        <label htmlFor="Password" className="form-label"><b>New</b></label>
+                        <label htmlFor="Password" className="d-mode-text form-label"><b>New</b></label>
                         <input 
-                            className="form-control rounded"
+                            className="d-mode-input form-control rounded"
                             type="password" 
                             placeholder="Your password"
                             onInput={(e) => setPassword(e.target.value)}
@@ -51,9 +51,9 @@ const AccountRestoreForm = (props)=> {
                     </div>
                     
                     <div className="mb-3">
-                        <label htmlFor="ConfirmPassword" className="form-label" ><b>Repeat</b></label>
+                        <label htmlFor="ConfirmPassword" className="d-mode-text form-label" ><b>Repeat</b></label>
                         <input
-                            className="form-control rounded"
+                            className="d-mode-input form-control rounded"
                             type="password"
                             placeholder="Your password"
                             onInput={(e)=>HandleConfirmPassword(e)}

@@ -13,12 +13,12 @@ const Topbar = (props) => {
     const {text, username, where} = props;
     return (
         <>
-            <header className="top-bar d-flex flex-wrap justify-content-center border-bottom py-3">
+            <header className="d-mode-bg top-bar d-flex flex-wrap justify-content-center border-bottom py-3">
                 <div className='top-bar-flex'>
                     <div className='d-flex'>
                         <a href="/" className="d-flex align-items-center justify-content-center mb-md-0 me-md-auto text-dark text-decoration-none special-link-left">
                             <img src={logoImg} style={{width: 2.5 + 'em'}} alt="mainLogo"></img>
-                            <span className="top-bar-text fs-4">{text}</span>
+                            <span className="top-bar-text fs-4 d-mode-text">{text}</span>
                         </a>
                     </div>
 
@@ -72,36 +72,36 @@ const Topbar = (props) => {
                         ?
                         <div>
                             <div className="d-flex dropdown align-items-center justify-content-center mb-md-0 me-md-auto text-dark text-decoration-none special-link-right">
-                                <span className="top-bar-text fs-4">{username}</span>
+                                <span className="top-bar-text fs-4 d-mode-text">{username}</span>
                                 <img src={userImg} style={{width: 2.5 + 'em', borderRadius: '50%'}} alt="userLogo" className='dropdown-toggle' type="button" data-bs-toggle="dropdown"></img>
 
-                                <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <ul className="dropdown-menu d-mode-bg" aria-labelledby="dropdownMenu2">
                                     <li>
-                                        <NavLink className="dropdown-item d-flex align-items-center" type="button" to='/profile'>
+                                        <NavLink className="d-mode-text dropdown-item d-flex align-items-center" type="button" to='/profile'>
                                             <Icon.PersonFill width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
                                             <span>Profile</span>
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink className="dropdown-item d-flex align-items-center" type="button" to='/profile-edit'>
+                                        <NavLink className="d-mode-text dropdown-item d-flex align-items-center" type="button" to='/profile-edit'>
                                             <Icon.GearFill width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
                                             <span>Edit Profile</span>
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink className="dropdown-item d-flex align-items-center" type="button" to='/saved-posts'>
+                                        <NavLink className="d-mode-text dropdown-item d-flex align-items-center" type="button" to='/saved-posts'>
                                             <Icon.BookmarksFill width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
                                             <span>Saved Posts</span>
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink className="dropdown-item d-flex align-items-center" type="button" to='/support'>
+                                        <NavLink className="d-mode-text dropdown-item d-flex align-items-center" type="button" to='/support'>
                                             <Icon.QuestionDiamondFill width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
                                             <span>Support</span>
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink className="dropdown-item d-flex align-items-center" type="button" to='/logout'>
+                                        <NavLink className="d-mode-text dropdown-item d-flex align-items-center" type="button" to='/logout'>
                                             <Icon.DoorOpenFill width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
                                             <span>Logout</span>
                                         </NavLink>

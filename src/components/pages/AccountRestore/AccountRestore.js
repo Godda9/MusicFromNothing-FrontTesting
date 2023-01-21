@@ -22,8 +22,8 @@ const AccountRestore = (props)=> {
 
                 <div className="col overflow-y-auto pt-5" style={{maxHeight: '93vh'}}>
                     <div className="row d-flex justify-content-center align-items-center">
-                        <h1 className='anim0' style={{textAlign: 'center'}}><span style={{'color': '#1BA39C'}}>A</span>ccount restore</h1>
-                        <span className="anim1 text-center fs-1">Account AccountName is ready to be restored, please fill in the form below:</span>
+                        <h1 className='anim0' style={{textAlign: 'center'}}><span style={{'color': '#1BA39C'}}>A</span><span className='d-mode-text'>ccount restore</span></h1>
+                        <span className="anim1 d-mode-text text-center fs-1">Account AccountName is ready to be restored, please fill in the form below:</span>
                     </div>
                     <div className="row">
                         <div className="anim2 col p-3 d-flex justify-content-center align-items-center h-50 m-5">

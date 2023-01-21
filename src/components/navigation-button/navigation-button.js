@@ -8,10 +8,10 @@ const NavigationButton = (props) => {
     return (
         <div className="navigation-button">
             <NavLink to={to} className={({isActive}) => isActive ? "nav-link active" : "nav-link"}>
-                <div className='nav-item d-flex align-items-center justify-content-center'>
+                <div className='nav-item d-flex align-items-center justify-content-center d-mode-text'>
                     { to === '/feed'    ? <Icon.MusicNoteList  className="icon-styled"/> : null }
-                    { to === '/battles' ? <Icon.XDiamondFill       className="icon-styled"/> : null }
-                    { to === '/chats'   ? <Icon.ChatLeftFill           className="icon-styled"/> : null }
+                    { to === '/battles' ? <Icon.XDiamondFill   className="icon-styled"/> : null }
+                    { to === '/chats'   ? <Icon.ChatLeftFill   className="icon-styled"/> : null }
                     { to === '/profile' ? <Icon.Person         className="icon-styled"/> : null }
                     { to === '/f.a.q'   ? <Icon.QuestionCircle className="icon-styled"/> : null }
                     

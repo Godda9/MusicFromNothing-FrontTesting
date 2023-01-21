@@ -37,39 +37,39 @@ const PostItem = (props) => {
                 <div className="col d-flex flex-column" style={{backgroundImage: 'url('+ img + ')', backgroundRepeat: 'repeat', backgroundSize: 'cover'}}>
                     <div className='track-author-dt'>
                         <div>
-                            <div className='white-border-user d-flex align-items-center'>
+                            <div className='d-mode-bg white-border-user d-flex align-items-center'>
                                 <img src={img} className="track-author-image" alt='userAvatar'></img>
                                 <strong className="d-inline-block  text-primary">{user}</strong>
                                 <div className="mx-2 text-muted">{datetime}</div>
                             </div>  
-                            <h3 className="white-border mb-2 mt-2">{title}</h3>
-                            <p className="white-border-description mb-2 fs-6">{description}</p>
+                            <h3 className="d-mode-bg d-mode-text white-border mb-2 mt-2">{title}</h3>
+                            <p className="d-mode-bg d-mode-text white-border-description mb-2 fs-6">{description}</p>
                         </div>
 
-                        <div className='d-flex flex-column justify-content-center align-items-center' style={{backgroundColor: 'white', backdropFilter: 'blur(10px)', padding: '4px', zIndex: 1}}>
+                        <div className='d-mode-bg white-bg d-flex flex-column justify-content-center align-items-center' style={{backdropFilter: 'blur(10px)', padding: '4px', zIndex: 1}}>
                             <div className="dropdown">
                                 <Icon.ThreeDots className='icon-likes-dislikes mx-2 align-items-center dropdown-toggle' type="button" data-bs-toggle="dropdown" aria-expanded="false"/>
-                                <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <ul className="dropdown-menu d-mode-bg" aria-labelledby="dropdownMenu2">
                                     <li>
-                                        <button className="dropdown-item d-flex align-items-center" type="button">
+                                        <button className="d-mode-text dropdown-item d-flex align-items-center" type="button">
                                             <Icon.BookmarkFill width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
                                             <span>Save</span>
                                         </button>
                                     </li>
                                     <li>
-                                        <button className="dropdown-item d-flex align-items-center" type="button">
+                                        <button className="d-mode-text dropdown-item d-flex align-items-center" type="button">
                                             <Icon.ShareFill width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
                                             <span>Share</span>
                                         </button>
                                     </li>
                                     <li>
-                                        <button className="dropdown-item d-flex align-items-center" type="button">
+                                        <button className="d-mode-text dropdown-item d-flex align-items-center" type="button">
                                             <Icon.Download width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
                                             <span>Download</span>
                                         </button>
                                     </li>
                                     <li>
-                                        <button className="dropdown-item d-flex align-items-center" type="button">
+                                        <button className="d-mode-text dropdown-item d-flex align-items-center" type="button">
                                             <Icon.Virus width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
                                             <span>Report</span>
                                         </button>

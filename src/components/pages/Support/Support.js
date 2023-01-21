@@ -22,8 +22,8 @@ const Support = (props) => {
 
                 <div className="col overflow-y-auto pt-5" style={{maxHeight: '93vh'}}>
                     <div className="row d-flex justify-content-center align-items-center">
-                        <h1 className="anim0" style={{textAlign: 'center'}}><span style={{'color': '#1BA39C'}}>S</span>upport</h1>
-                        <span className="anim1 text-center fs-1">We are ready to get in contact, please provide us with information below:</span>
+                        <h1 className="anim0" style={{textAlign: 'center'}}><span style={{'color': '#1BA39C'}}>S</span><span className="d-mode-text">upport</span></h1>
+                        <span className="anim1 d-mode-text text-center fs-1">We are ready to get in contact, please provide us with information below:</span>
                     </div>
                     <div className="row">
                         <div className="anim2 col p-3 d-flex justify-content-center align-items-center m-0">

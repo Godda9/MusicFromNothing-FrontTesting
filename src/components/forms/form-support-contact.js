@@ -9,13 +9,13 @@ const FormSupportContact = (props) => {
 
     return (
         <>
-            <div className="form-with-buttons form-support bordered row border overflow-hidden shadow d-flex justify-content-center align-items-center p-3 mt-5">
+            <div className="d-mode-bg form-with-buttons form-support bordered row border overflow-hidden shadow d-flex justify-content-center align-items-center p-3 mt-5">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="mb-3">
-                        <label htmlFor="ContactReason" className="form-label">Contact Reason</label>
+                        <label htmlFor="ContactReason" className="d-mode-text form-label">Contact Reason</label>
                         <select 
                             id="ContactReason" 
-                            className="form-control"
+                            className="form-control d-mode-input"
                             placeholder="Choose..."
                             {...register("ContactReason", {
                                 required: true,
@@ -27,9 +27,9 @@ const FormSupportContact = (props) => {
                     </div>
 
                     <div className="mb-3">
-                        <label htmlFor="Email" className="form-label">Your email</label>
+                        <label htmlFor="Email" className="d-mode-text form-label">Your email</label>
                         <input 
-                            className="form-control rounded"
+                            className="d-mode-input form-control rounded"
                             type="text"
                             placeholder="Email"
                             {...register("Email", {
@@ -41,9 +41,9 @@ const FormSupportContact = (props) => {
                     </div>
 
                     <div className="mb-3">
-                        <label htmlFor="Message" className="form-label">Your message</label>
+                        <label htmlFor="Message" className="d-mode-text form-label">Your message</label>
                         <textarea 
-                            className="form-control" 
+                            className="form-control d-mode-input" 
                             rows="3"
                             placeholder="Message"
                             {...register("Message", {

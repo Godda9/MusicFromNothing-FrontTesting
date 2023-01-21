@@ -7,12 +7,12 @@ const LoginForm = (props) => {
 
     return (
         <>
-            <p>Please sign in</p>
+            <p className="d-mode-text">Please sign in</p>
             <form className="m-5 login-form" onSubmit={handleSubmit(onSubmit)}>
                 <div className="mb-3">
-                    <label htmlFor="Email" className="form-label">Email</label>
+                    <label htmlFor="Email" className="form-label d-mode-text">Email</label>
                     <input
-                        className="form-control rounded"
+                        className="form-control rounded d-mode-input"
                         type="text"
                         {...register("Email", {
                             required: true,
@@ -23,9 +23,9 @@ const LoginForm = (props) => {
                 </div>
 
                 <div className="mb-3">
-                    <label htmlFor="Password" className="form-label">Password</label>
+                    <label htmlFor="Password" className="form-label d-mode-text">Password</label>
                     <input 
-                        className="form-control rounded"
+                        className="form-control rounded d-mode-input"
                         type="password" 
                         {...register("Password", {
                             maxLength: 20,
@@ -38,16 +38,16 @@ const LoginForm = (props) => {
 
                 <div className="mb-3 form-check">
                     <input 
-                        className="form-check-input"
+                        className="form-check-input d-mode-input"
                         type="checkbox" 
                         {...register("RememberMe", {})} 
                     />
-                    <label className="form-check-label" htmlFor="exampleCheck1">Remember me</label>
+                    <label className="form-check-label d-mode-text" htmlFor="exampleCheck1">Remember me</label>
                 </div>
                 
-                <button type="submit" className="btn btn-primary">Les's go</button>     
+                <button type="submit" className="d-mode-button btn btn-primary">Les's go</button>     
             </form>
-            <p className="reg-link">Haven't got an account? <Link to="/register">Register</Link> a new one</p>
+            <p className="reg-link d-mode-text">Haven't got an account? <Link to="/register">Register</Link> a new one</p>
         </>
     );
 }

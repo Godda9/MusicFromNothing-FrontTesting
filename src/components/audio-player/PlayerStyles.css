@@ -9,6 +9,10 @@
   background-color: #fff;
 }
 
+.darkmode--activated .rhap_container {
+  background-color: #333;
+}
+
 .rhap_container:focus:not(:focus-visible) {
   outline: 0;
 }

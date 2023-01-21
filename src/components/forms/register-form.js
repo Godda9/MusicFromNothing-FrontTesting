@@ -7,12 +7,12 @@ const RegisterForm = (props) => {
 
     return (
         <>
-            <p>Creating new account</p>
+            <p className="d-mode-text">Creating new account</p>
             <form className="m-5 login-form" onSubmit={handleSubmit(onSubmit)}>
                 <div className="mb-3">
-                    <label htmlFor="Email" className="form-label">Email</label>
+                    <label htmlFor="Email" className="form-label d-mode-text">Email</label>
                     <input
-                        className="form-control rounded"
+                        className="form-control rounded d-mode-input"
                         type="text"
                         {...register("Email", {
                             required: true,
@@ -23,9 +23,9 @@ const RegisterForm = (props) => {
                 </div>
 
                 <div className="mb-3">
-                    <label htmlFor="Nickname" className="form-label">Nickname</label>
+                    <label htmlFor="Nickname" className="form-label d-mode-text">Nickname</label>
                     <input 
-                        className="form-control rounded"
+                        className="form-control rounded d-mode-input"
                         type="text" 
                         {...register("Nickname", {
                             maxLength: 20,
@@ -36,9 +36,9 @@ const RegisterForm = (props) => {
                 </div>
 
                 <div className="mb-3">
-                    <label htmlFor="Password" className="form-label">Password</label>
+                    <label htmlFor="Password" className="form-label d-mode-text">Password</label>
                     <input 
-                        className="form-control rounded"
+                        className="form-control rounded d-mode-input"
                         type="password" 
                         {...register("Password", {
                             minLength: 8,
@@ -49,9 +49,9 @@ const RegisterForm = (props) => {
                 </div>
 
                 <div className="mb-3">
-                    <label htmlFor="ConfirmPassword" className="form-label">Confirm Password</label>
+                    <label htmlFor="ConfirmPassword" className="form-label d-mode-text">Confirm Password</label>
                     <input 
-                        className="form-control rounded"
+                        className="form-control rounded d-mode-input"
                         type="password" 
                         {...register("ConfirmPassword", {
                             required: "Please confirm password!",
@@ -68,16 +68,16 @@ const RegisterForm = (props) => {
 
                 <div className="mb-3 form-check">
                     <input 
-                        className="form-check-input"
+                        className="form-check-input d-mode-input"
                         type="checkbox" 
                         {...register("RememberMe", {})} 
                     />
-                    <label className="form-check-label" htmlFor="exampleCheck1">Remember me</label>
+                    <label className="form-check-label d-mode-text" htmlFor="exampleCheck1">Remember me</label>
                 </div>
                 
                 <button type="submit" className="btn btn-primary">Register</button>     
             </form>
-            <p className="reg-link">Already registered? <Link to="/login">Login</Link></p>
+            <p className="reg-link d-mode-text">Already registered? <Link to="/login">Login</Link></p>
         </>
     );
 }

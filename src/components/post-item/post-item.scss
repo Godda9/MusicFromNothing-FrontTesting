@@ -1,5 +1,8 @@
 .bordered {
     border-radius: 15px;
+    .white-bg {
+        background-color: white;
+    }
 
     .track-author-dt {
         display: flex;

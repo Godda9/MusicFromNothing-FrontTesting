@@ -18,9 +18,9 @@ const Track = (props) => {
         <>
             <div className="container-fluid">
                 <div className="row d-flex justify-content-center align-items-center mt-5">
-                    <h2 className="anim-text-pupload fs-1" style={{textAlign: 'center'}}><span style={{'color': '#1BA39C'}}>T</span>rack title</h2>
+                    <h2 className="anim-text-pupload fs-1" style={{textAlign: 'center'}}><span style={{'color': '#1BA39C'}}>T</span><span className="d-mode-text">rack title</span></h2>
                 </div>
-                <div className="bordered row g-0 border row-cols-md-2 d-flex justify-content-center align-items-center pt-4 px-5 pb-4 bg-white">
+                <div className="d-mode-bg bordered row g-0 border row-cols-md-2 d-flex justify-content-center align-items-center pt-4 px-5 pb-4">
                     <PostItem 
                         id="1111"
                         user="UserName" 
@@ -37,7 +37,7 @@ const Track = (props) => {
                     <ProfileCard id='0'/>
                 </div>
                 <div className="row d-flex justify-content-center align-items-center mt-5">
-                    <h2 className="anim-text-pupload" style={{textAlign: 'center'}}><span style={{'color': '#1BA39C'}}>M</span>ore from UserName:</h2>
+                    <h2 className="anim-text-pupload" style={{textAlign: 'center'}}><span style={{'color': '#1BA39C'}}>M</span><span className="d-mode-text">ore from UserName:</span></h2>
                 </div>
                 <PostsView postSize={4} setCommentsKey={setCommentsKey}/>
             </div>

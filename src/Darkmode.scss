@@ -1,0 +1,22 @@
+.darkmode-toggle {
+    z-index: 1000;
+}
+
+.darkmode--activated .d-mode-text {
+    color: white;
+}
+
+.darkmode--activated .d-mode-input {
+    background-color: #333;
+    box-shadow: none;
+    color: white;
+}
+
+.darkmode--activated .d-mode-button {
+    box-shadow: none;
+}
+
+.darkmode--activated .d-mode-bg {
+    background-color: #333;
+}
+

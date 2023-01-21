@@ -9,8 +9,8 @@ const FormProfileEdit = (props) => {
 
     return (
         <>
-        <div className="form-with-buttons bordered row border overflow-hidden d-flex justify-content-center align-items-center m-3 p-3 shadow-sm">
-            <span className="fs-4 my-3">{title}</span>
+        <div className="d-mode-bg form-with-buttons bordered row border overflow-hidden d-flex justify-content-center align-items-center m-3 p-3 shadow-sm">
+            <span className="d-mode-text fs-4 my-3">{title}</span>
             <form onSubmit={handleSubmit(onSubmit)}>
                 { title === "Password" ? <Password register={register} errors={errors}/> : null }
                 { title === "Nickname" ? <Nickname register={register} errors={errors}/> : null }
@@ -30,9 +30,9 @@ const Password = (props) => {
     return (
         <>
             <div className="mb-3">
-                <label htmlFor="inputPassword" className="form-label"><b>Old</b></label>
+                <label htmlFor="inputPassword" className="d-mode-text form-label"><b>Old</b></label>
                 <input 
-                    className="form-control rounded"
+                    className="d-mode-input form-control rounded"
                     type="password"
                     placeholder="Old Password"
                     {...register("OldPassword", {
@@ -45,9 +45,9 @@ const Password = (props) => {
             </div>
 
             <div className="mb-3">
-                <label htmlFor="inputPassword" className="form-label"><b>New</b></label>
+                <label htmlFor="inputPassword" className="d-mode-text form-label"><b>New</b></label>
                 <input 
-                    className="form-control rounded"
+                    className="d-mode-input form-control rounded"
                     type="password"
                     placeholder="New Password"
                     {...register("NewPassword", {
@@ -68,9 +68,9 @@ const Nickname = (props) => {
     return (
         <>
             <div className="mb-3">
-                <label htmlFor="inputNickname" className="form-label"><b>New</b></label>
+                <label htmlFor="inputNickname" className="d-mode-text form-label"><b>New</b></label>
                 <input 
-                    className="form-control rounded"
+                    className="d-mode-input form-control rounded"
                     type="text"
                     placeholder="New Nickname"
                     {...register("NewNickname", {
@@ -91,9 +91,9 @@ const Email = (props) => {
     return (
         <>
             <div className="mb-3">
-                <label htmlFor="inputOldEmal" className="form-label"><b>Current email: {current}</b></label>
+                <label htmlFor="inputOldEmal" className="d-mode-text form-label"><b>Current email: {current}</b></label>
                 <input 
-                    className="form-control rounded"
+                    className="d-mode-input form-control rounded"
                     type="text"
                     placeholder="Old Email"
                     {...register("OldEmail", {
@@ -105,9 +105,9 @@ const Email = (props) => {
             </div>
 
             <div className="mb-3">
-                <label htmlFor="inputNewEmal" className="form-label"><b>New</b></label>
+                <label htmlFor="inputNewEmal" className="d-mode-text form-label"><b>New</b></label>
                 <input 
-                    className="form-control rounded"
+                    className="d-mode-input form-control rounded"
                     type="text"
                     placeholder="New Email"
                     {...register("NewEmail", {
@@ -127,9 +127,9 @@ const Phone = (props) => {
     return (
         <>
             <div className="mb-3">
-                <label htmlFor="inputOldPhone" className="form-label"><b>Current phone: {current}</b></label>
+                <label htmlFor="inputOldPhone" className="d-mode-text form-label"><b>Current phone: {current}</b></label>
                 <input 
-                    className="form-control rounded"
+                    className="d-mode-input form-control rounded"
                     type="text"
                     placeholder="Old Phone"
                     {...register("OldPhone", {
@@ -141,9 +141,9 @@ const Phone = (props) => {
             </div>
 
             <div className="mb-3">
-                <label htmlFor="inputNewPhone" className="form-label"><b>New</b></label>
+                <label htmlFor="inputNewPhone" className="d-mode-text form-label"><b>New</b></label>
                 <input 
-                    className="form-control rounded"
+                    className="d-mode-input form-control rounded"
                     type="text"
                     placeholder="New Phone"
                     {...register("NewPhone", {

@@ -4,8 +4,8 @@ const BattleContainer = (props) => {
     const {post1, post2} = props;
     return (
         <>
-            <div className='battle-container bordered border p-2 m-2'>
-                <div className="basic-info-container d-flex justify-content-around battle-info-head p-2 mt-4 mx-3">
+            <div className='d-mode-bg battle-container bordered border p-2 m-2'>
+                <div className="d-mode-button basic-info-container d-flex justify-content-around battle-info-head p-2 mt-4 mx-3">
                     <span className="fs-3">Post1_Name</span>
                     <span className="fs-3"><b>VS</b></span>
                     <span className="fs-3">Post2_Name</span>
