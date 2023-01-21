@@ -14,15 +14,13 @@ new Darkmode({
   left: '10px', // default: 'unset'
   time: '0.3s', // default: '0.3s'
   mixColor: '#fff', // default: '#fff'
-  backgroundColor: 'unset',  // default: '#fff'
-  backgroundColorDark: 'red',
+  backgroundColor: '#fff',  // default: '#fff'
   buttonColorDark: '#333',  // default: '#100f2c'
   buttonColorLight: '#1BA39C', // default: '#fff'
   saveInCookies: true, // default: true,
   label: '🌓', // default: ''
   autoMatchOsTheme: false // default: true
 }).showWidget();
-
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

@@ -39,8 +39,8 @@ const PostItem = (props) => {
                         <div>
                             <div className='d-mode-bg white-border-user d-flex align-items-center'>
                                 <img src={img} className="track-author-image" alt='userAvatar'></img>
-                                <strong className="d-inline-block  text-primary">{user}</strong>
-                                <div className="mx-2 text-muted">{datetime}</div>
+                                <strong className="d-inline-block text-primary">{user}</strong>
+                                <div className="d-mode-text mx-2">{datetime}</div>
                             </div>  
                             <h3 className="d-mode-bg d-mode-text white-border mb-2 mt-2">{title}</h3>
                             <p className="d-mode-bg d-mode-text white-border-description mb-2 fs-6">{description}</p>

@@ -10,7 +10,7 @@
 }
 
 .darkmode--activated .rhap_container {
-  background-color: #333;
+  background-color: rgb(27, 27, 27);
 }
 
 .rhap_container:focus:not(:focus-visible) {
