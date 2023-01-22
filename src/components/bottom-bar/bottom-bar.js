@@ -6,9 +6,9 @@ import './bottom-bar.scss';
 
 const BottomBar = (props) => {
     return (
-        <nav class="bottom-bar">
+        <nav className="bottom-bar">
             <div className="d-mode-bg navbar fixed-bottom">
-                <div class="container-fluid">
+                <div className="container-fluid">
                     <div className="d-mode-text open-left-bar-menu-with-tracks navigation-button nav-link btn btn-outline-primary" data-bs-toggle="offcanvas" href="#offcanvasTracks" aria-controls="offcanvasTracks">
                         <Icon.MusicNote className="icon-styled"/>
                         <span className="text-inside-button">Tracks</span>

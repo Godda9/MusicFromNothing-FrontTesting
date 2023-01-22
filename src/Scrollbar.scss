@@ -19,3 +19,12 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #1BA39C;
 }
+
+
+
+/* DARKMODE */
+
+/* Track */
+.darkmode--activated ::-webkit-scrollbar-track {
+    background: rgb(31, 31, 31);
+}

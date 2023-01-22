@@ -6,8 +6,8 @@ const RightBarItemSkeleton = (ptops) => {
             <div className='d-flex'>
                 <div className="w-100 align-items-center justify-content-between">
                     <Skeleton.SkeletonThemeProvider>
-                        <div className="mb-1"><Skeleton width="5vw" height="2vh"></Skeleton></div>
-                        <div className="col-10 mb-1 small pt-1"><Skeleton width="10vw" height="2vh"></Skeleton></div>
+                        <div className="mb-1"><Skeleton width="120px" height="18px"></Skeleton></div>
+                        <div className="col-10 mb-1 small pt-1"><Skeleton width="160px" height="15px"></Skeleton></div>
                     </Skeleton.SkeletonThemeProvider>
                 </div>
                 <img className='rounded-circle shadow w-25 h-25' src="https://secure.gravatar.com/avatar/4c2d5681a4633a173c20e74c3641e637?s=500&d=mm&r=g" alt="user-avatar"></img>
