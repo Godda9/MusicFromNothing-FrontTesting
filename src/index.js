@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Darkmode from 'darkmode-js';
 import './Darkmode.scss';
-import './scroll-bar.css';
+import './Scrollbar.scss';
 
 
 // DARKMODE

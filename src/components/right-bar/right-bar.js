@@ -38,11 +38,11 @@ const Rightbar = (props) => {
 
 
     return (
-        <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasPeople" aria-labelledby="offcanvasPeopleLabel" data-bs-scroll="true" data-bs-backdrop="false">
+        <div className="d-mode-bg d-mode-text offcanvas offcanvas-end" tabIndex="-1" id="offcanvasPeople" aria-labelledby="offcanvasPeopleLabel" data-bs-scroll="true" data-bs-backdrop="false">
             {isPending ? null : null}
             <div className="offcanvas-header">
                 <div className="d-flex flex-row-reverse align-items-center justify-content-between position-relative">
-                    <input className="form-control rounded" type="text" placeholder='People' onChange={(e) => setSearchQuery(e.target.value)}/>       
+                    <input className="d-mode-input form-control rounded" type="text" placeholder='People' onChange={(e) => setSearchQuery(e.target.value)}/>       
                     <Icon.Search width='1.8em' height='1.8em' style={{marginRight: '0.5em'}}/>
                 </div>
                 <button type="button" className="btn btn-primary btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>

@@ -41,12 +41,12 @@ const Leftbar = (props) => {
 
     return (
         <>
-            <div className="offcanvas offcanvas-start" tabIndex="-1" id="offcanvasTracks" aria-labelledby="offcanvasTracksLabel" data-bs-scroll="true" data-bs-backdrop="false">
+            <div className="d-mode-bg d-mode-text offcanvas offcanvas-start" tabIndex="-1" id="offcanvasTracks" aria-labelledby="offcanvasTracksLabel" data-bs-scroll="true" data-bs-backdrop="false">
                 {isPending ? null : null}
                 <div className="offcanvas-header">
                     <div className="d-flex align-items-center justify-content-between position-relative">
                         <Icon.Search width='1.8em' height='1.8em' style={{marginRight: '0.5em'}}/>
-                        <input className="form-control rounded w-100" type="text" placeholder='Tracks' onChange={(e) => setSearchQuery(e.target.value)} />       
+                        <input className="d-mode-input form-control rounded w-100" type="text" placeholder='Tracks' onChange={(e) => setSearchQuery(e.target.value)} />       
                     </div>
                     <button type="button" className="btn btn-primary btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>

@@ -2,7 +2,7 @@ import { Skeleton } from "react-skeleton-generator";
 
 const LeftBarItemSkeleton = (ptops) => {
     return (
-        <a href="/" className="list-group-item list-group-item-action py-3 lh-tight" aria-current="true">
+        <a href="/" className="d-mode-bg list-group-item list-group-item-action py-3 lh-tight" aria-current="true">
             <div className='d-flex'>
                 <div className="w-100 align-items-center justify-content-between">
                     <Skeleton.SkeletonThemeProvider>
