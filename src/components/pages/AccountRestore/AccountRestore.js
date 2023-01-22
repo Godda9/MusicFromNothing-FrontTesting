@@ -20,13 +20,13 @@ const AccountRestore = (props)=> {
                     <Topbar text="Account Restore" username="UserName" where="account-restore"/>
                 </div>
 
-                <div className="col overflow-y-auto pt-5" style={{maxHeight: '93vh'}}>
+                <div className="col overflow-y-auto pt-5 mt-5" style={{maxHeight: '93vh'}}>
                     <div className="row d-flex justify-content-center align-items-center">
-                        <h1 className='anim0' style={{textAlign: 'center'}}><span style={{'color': '#1BA39C'}}>A</span><span className='d-mode-text'>ccount restore</span></h1>
+                        <p className='anim0 head-text' style={{textAlign: 'center'}}><span style={{'color': '#1BA39C'}}>A</span><span className='d-mode-text'>ccount restore</span></p>
                         <span className="anim1 d-mode-text text-center fs-1">Account AccountName is ready to be restored, please fill in the form below:</span>
                     </div>
                     <div className="row">
-                        <div className="anim2 col p-3 d-flex justify-content-center align-items-center h-50 m-5">
+                        <div className="anim2 col d-flex justify-content-center align-items-center m-5">
                             <img style={{width: '30vh', height: '30vh', marginRight: '10vh'}} className="restore-image rounded-circle shadow" src={logoRestore} alt="restoreImage"></img>
                             <AccountRestoreForm/>
                         </div>

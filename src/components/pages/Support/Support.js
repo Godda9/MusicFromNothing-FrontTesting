@@ -1,4 +1,3 @@
-import Topbar from "../../top-bar/top-bar";
 import FormSupportContact from "../../forms/form-support-contact";
 import logoSupport from '../Images/logo_support.png'
 import { useLayoutEffect } from "react";
@@ -15,14 +14,14 @@ const Support = (props) => {
 
     return (
         <>
-            <div className="container-fluid">
+            <div className="row m-0">
                 <div className="col overflow-y-auto pt-5" style={{maxHeight: '93vh'}}>
                     <div className="row d-flex justify-content-center align-items-center">
-                        <h1 className="anim0" style={{textAlign: 'center'}}><span style={{'color': '#1BA39C'}}>S</span><span className="d-mode-text">upport</span></h1>
+                        <p className="anim0 head-text" style={{textAlign: 'center'}}><span style={{'color': '#1BA39C'}}>S</span><span className="d-mode-text">upport</span></p>
                         <span className="anim1 d-mode-text text-center fs-1">We are ready to get in contact, please provide us with information below:</span>
                     </div>
                     <div className="row">
-                        <div className="anim2 col p-3 d-flex justify-content-center align-items-center m-0">
+                        <div className="anim2 col p-3 pb-5 d-flex justify-content-center align-items-center m-0">
                             <img style={{width: '30vh', height: '30vh', marginRight: '10vh'}} className="support-image rounded-circle shadow" src={logoSupport} alt="supportImage"></img>
                             <FormSupportContact/>
                         </div>
