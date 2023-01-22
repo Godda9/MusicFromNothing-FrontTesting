@@ -4,7 +4,6 @@ import LeftbarChats from "../../left-bar-chats/left-bar-chats";
 import MessagesView from "../../messages-view/messages-view";
 import RightBarUserInfo from "../../right-bar-user-info/right-bar-user-info";
 
-import '../scroll-bar.css'
 
 const Chats = (props) => {
     useLayoutEffect(() => {

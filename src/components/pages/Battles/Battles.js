@@ -8,7 +8,7 @@ const Battles = (props) => {
     const [setCommentsKey] = useOutletContext();
 
     useEffect(() => {
-        gsap.fromTo('.anim0', {y: 500}, { duration: 1.5, ease: "power4.out", y: 0 });
+        gsap.fromTo('.anim0', {y: 500}, { duration: 0.5, ease: "power4.out", y: 0 });
     }, [])
 
     return (

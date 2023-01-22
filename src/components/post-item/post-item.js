@@ -46,7 +46,7 @@ const PostItem = (props) => {
                             <p className="d-mode-bg d-mode-text white-border-description mb-2 fs-6">{description}</p>
                         </div>
 
-                        <div className='d-mode-bg white-bg d-flex flex-column justify-content-center align-items-center' style={{backdropFilter: 'blur(10px)', padding: '4px', zIndex: 1}}>
+                        <div className='d-mode-text d-mode-bg white-bg d-flex flex-column justify-content-center align-items-center' style={{backdropFilter: 'blur(10px)', padding: '4px', zIndex: 1}}>
                             <div className="dropdown">
                                 <Icon.ThreeDots className='icon-likes-dislikes mx-2 align-items-center dropdown-toggle' type="button" data-bs-toggle="dropdown" aria-expanded="false"/>
                                 <ul className="dropdown-menu d-mode-bg" aria-labelledby="dropdownMenu2">
@@ -80,7 +80,7 @@ const PostItem = (props) => {
                             <div className='d-flex flex-column align-items-center'>
                                 <button 
                                     id="openComments"
-                                    className='p-0 m-0' 
+                                    className='p-0 m-0 d-mode-text' 
                                     style={{borderWidth: 0, backgroundColor: 'transparent'}} 
                                     onClick={onCommentsClick}
                                     >
@@ -90,7 +90,7 @@ const PostItem = (props) => {
                             </div>
 
                             <div className='d-flex flex-column align-items-center'>
-                                <button className='p-0 m-0' style={{borderWidth: 0, backgroundColor: 'transparent'}}>
+                                <button className='p-0 m-0 d-mode-text' style={{borderWidth: 0, backgroundColor: 'transparent'}}>
                                     {
                                         liked ? <Icon.HeartFill className='icon-likes-dislikes'  type="button" color='red' onClick={(e) => onLikesChanged(e, -1)} /> 
                                             : <Icon.Heart className='icon-likes-dislikes' type="button" onClick={(e) => onLikesChanged(e, 1)}/> 

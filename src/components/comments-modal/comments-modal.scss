@@ -2,7 +2,7 @@
     .modal {
         display: none; /* Hidden by default */
         position: fixed;
-        z-index: 100; /* Sit on top */
+        z-index: 1000; /* Sit on top */
         left: 0;
         top: 0;
         width: 100%; /* Full width */
@@ -18,8 +18,12 @@
         
         -webkit-animation-fill-mode: both;
         animation-fill-mode: both;
+
+        .btn-primary {
+            border-color: #1BA39C;
+            background-color: #1BA39C;
+        }
     }
-    
     
     
     @-webkit-keyframes fadeIn {

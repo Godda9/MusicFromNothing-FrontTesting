@@ -14,15 +14,15 @@ const PostItemDynamicPreview = (props) => {
                         <div className='track-author-dt'>
                             <div className='mb-3'>
                                 <Skeleton.SkeletonThemeProvider>
-                                <div className='white-border-user d-flex align-items-center'>
+                                <div className='d-mode-bg d-mode-text white-border-user d-flex align-items-center'>
                                         <img src={userImg} className="track-author-image" alt='userAvatar'></img>
                                         <div className="d-inline-block text-primary"><Skeleton width="5vw" height="1.5vh" /></div>
                                         <div className="mx-2 text-muted"><Skeleton width="3vw" height="2vh" /></div>
                                 </div>  
                                 </Skeleton.SkeletonThemeProvider>
                                 
-                                <h3 className="white-border mb-2 mt-2">{title.charAt(0).toUpperCase() + title.slice(1)}</h3>
-                                <p className="white-border mb-2 fs-6">{description.charAt(0).toUpperCase() + description.slice(1)}</p>
+                                <h3 className="d-mode-bg d-mode-text white-border mb-2 mt-2">{title.charAt(0).toUpperCase() + title.slice(1)}</h3>
+                                <p className="d-mode-bg d-mode-text white-border mb-2 fs-6">{description.charAt(0).toUpperCase() + description.slice(1)}</p>
                             </div>
 
                             <div className='d-flex'>

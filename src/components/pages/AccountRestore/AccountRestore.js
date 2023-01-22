@@ -8,9 +8,9 @@ import { gsap } from "gsap";
 
 const AccountRestore = (props)=> {
     useLayoutEffect(() => {
-        gsap.fromTo('.anim0', {y: 500}, { duration: 1, ease: "expo.out", y: 0 });
-        gsap.fromTo('.anim1', {y: 500}, { duration: 1, ease: "expo.out", y: 0 });
-        gsap.fromTo('.anim2', {y: 500}, { duration: 2, ease: "expo.out", y: 0 });
+        gsap.fromTo('.anim0', {y: 500}, { duration: 0.5, ease: "expo.out", y: 0 });
+        gsap.fromTo('.anim1', {y: 500}, { duration: 0.5, ease: "expo.out", y: 0 });
+        gsap.fromTo('.anim2', {y: 500}, { duration: 0.8, ease: "expo.out", y: 0 });
     }, [])
 
     return(

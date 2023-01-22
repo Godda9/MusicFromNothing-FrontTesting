@@ -5,11 +5,11 @@ import { gsap } from "gsap";
 
 const ProfileEdit = (props) => {
     useEffect(() => {
-        gsap.fromTo('.anim-head', {y: 500}, { duration: 1, ease: "expo.out", y: 0 });
-        gsap.fromTo('.anim-f1', {y: 500}, { duration: 1.5, ease: "expo.out", y: 0 });
-        gsap.fromTo('.anim-f2', {y: 500}, { duration: 2, ease: "expo.out", y: 0 });
-        gsap.fromTo('.anim-f3', {y: 500}, { duration: 2.5, ease: "expo.out", y: 0 });
-        gsap.fromTo('.anim-f4', {y: 500}, { duration: 3, ease: "expo.out", y: 0 });
+        gsap.fromTo('.anim-head', {y: 500}, { duration: 0.2, ease: "expo.out", y: 0 });
+        gsap.fromTo('.anim-f1', {y: 500}, { duration: 0.4, ease: "expo.out", y: 0 });
+        gsap.fromTo('.anim-f2', {y: 500}, { duration: 0.6, ease: "expo.out", y: 0 });
+        gsap.fromTo('.anim-f3', {y: 500}, { duration: 0.8, ease: "expo.out", y: 0 });
+        gsap.fromTo('.anim-f4', {y: 500}, { duration: 1, ease: "expo.out", y: 0 });
     }, [])
 
     

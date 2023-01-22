@@ -8,18 +8,14 @@ import './Support.css';
 
 const Support = (props) => {
     useLayoutEffect(() => {
-        gsap.fromTo('.anim0', {y: 500}, { duration: 1, ease: "expo.out", y: 0 });
-        gsap.fromTo('.anim1', {y: 500}, { duration: 1, ease: "expo.out", y: 0 });
-        gsap.fromTo('.anim2', {y: 500}, { duration: 2, ease: "expo.out", y: 0 });
+        gsap.fromTo('.anim0', {y: 500}, { duration: 0.2, ease: "expo.out", y: 0 });
+        gsap.fromTo('.anim1', {y: 500}, { duration: 0.4, ease: "expo.out", y: 0 });
+        gsap.fromTo('.anim2', {y: 500}, { duration: 0.6, ease: "expo.out", y: 0 });
     })
 
     return (
         <>
             <div className="container-fluid">
-                <div className="row position-sticky top-0" style={{zIndex: 1}}>
-                    <Topbar text="Support" username="UserName" where="support"/>
-                </div>
-
                 <div className="col overflow-y-auto pt-5" style={{maxHeight: '93vh'}}>
                     <div className="row d-flex justify-content-center align-items-center">
                         <h1 className="anim0" style={{textAlign: 'center'}}><span style={{'color': '#1BA39C'}}>S</span><span className="d-mode-text">upport</span></h1>

@@ -1,4 +1,3 @@
-import '../scroll-bar.css'
 import ProfileCard from '../../profile-card/profile-card';
 import PostsView from '../../posts-view/posts-view';
 import { useEffect } from "react";
@@ -10,7 +9,7 @@ const Profile = (props) => {
     const [setCommentsKey] = useOutletContext();
 
     useEffect(() => {
-        gsap.fromTo('.anim0', {y: 500}, { duration: 1.5, ease: "power4.out", y: 0 });
+        gsap.fromTo('.anim0', {y: 500}, { duration: 0.5, ease: "power4.out", y: 0 });
     }, [])
 
     return (

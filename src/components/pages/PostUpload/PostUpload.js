@@ -6,8 +6,8 @@ import { gsap } from "gsap";
 const PostUpload = (props) => {
     // animations
     useLayoutEffect(() => {
-        gsap.fromTo('.anim-text-pupload', {y: 500}, { duration: 1, ease: "expo.out", y: 0 });
-        gsap.fromTo('.anim-form-pupload', {y: 500}, { duration: 1.5, ease: "expo.out", y: 0 });
+        gsap.fromTo('.anim-text-pupload', {y: 500}, { duration: 0.2, ease: "expo.out", y: 0 });
+        gsap.fromTo('.anim-form-pupload', {y: 500}, { duration: 0.4, ease: "expo.out", y: 0 });
     }, [])
 
     return (

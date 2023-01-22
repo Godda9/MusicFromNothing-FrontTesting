@@ -12,7 +12,7 @@ const Comment = (props) => {
 
     return (
         <>
-            <div className="card-body shadow my-3" style={{borderRadius: '15px'}}>
+            <div className="d-mode-bg d-mode-text card-body shadow my-3" style={{borderRadius: '15px'}}>
                 <div className="d-flex justify-content-between">
                     <div>
                         <div className='d-flex align-items-center mb-3'>
@@ -28,9 +28,9 @@ const Comment = (props) => {
                     <div className='d-flex flex-column align-items-center'>
                         <div className="dropdown">
                             <Icon.ThreeDots className='icon-likes-dislikes-comment mx-2 mb-2 align-items-center dropdown-toggle' type="button" data-bs-toggle="dropdown" aria-expanded="false"/>
-                            <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <ul className="d-mode-bg dropdown-menu" aria-labelledby="dropdownMenu2">
                                 <li>
-                                    <button className="dropdown-item d-flex align-items-center" type="button">
+                                    <button className="d-mode-text dropdown-item d-flex align-items-center" type="button">
                                         <Icon.Tornado width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
                                         <span>Report</span>
                                     </button>

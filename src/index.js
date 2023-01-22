@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
-
-
 import Darkmode from 'darkmode-js';
 import './Darkmode.scss';
+import './scroll-bar.css';
+
+
+// DARKMODE
 new Darkmode({
   bottom: '10px', // default: '32px'
   right: 'unset', // default: '32px'
@@ -23,6 +24,7 @@ new Darkmode({
 }).showWidget();
 
 
+// APP
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
