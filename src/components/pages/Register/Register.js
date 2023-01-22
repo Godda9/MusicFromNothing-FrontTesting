@@ -1,5 +1,5 @@
 import logoImg from '../Images/logo.png';
-import './Register.css'
+import './Register.scss'
 import RegisterForm from '../../forms/register-form';
 import { useLayoutEffect } from 'react';
 import { gsap } from 'gsap';

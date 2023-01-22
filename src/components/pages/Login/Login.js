@@ -1,4 +1,4 @@
-import './Login.css';
+import './Login.scss';
 import logoImg from '../Images/logo.png';
 import LoginForm from '../../forms/login-form';
 import {gsap} from 'gsap';

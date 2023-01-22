@@ -37,7 +37,7 @@ const Comment = (props) => {
                                 </li>
                             </ul>
                         </div>
-                        <button className='p-0 m-0' style={{borderWidth: 0, backgroundColor: 'transparent'}}>
+                        <button className='p-0 m-0 d-mode-text' style={{borderWidth: 0, backgroundColor: 'transparent'}}>
                             {
                                 liked ? <Icon.HeartFill className='icon-likes-dislikes-comment' type="button" color='red' onClick={(e) => onLikesChanged(e, -1)}/> 
                                     : <Icon.Heart className='icon-likes-dislikes-comment' type="button" onClick={(e) => onLikesChanged(e, 1)}/> 

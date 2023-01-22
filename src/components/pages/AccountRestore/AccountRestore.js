@@ -1,6 +1,6 @@
 import Topbar from '../../top-bar/top-bar'
 import logoRestore from '../Images/logo_restore.png'
-import './AccountRestore.css'
+import './AccountRestore.scss'
 import AccountRestoreForm from '../../forms/account-restore-form'
 import { useLayoutEffect } from "react";
 import { gsap } from "gsap";

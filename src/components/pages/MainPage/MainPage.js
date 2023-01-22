@@ -3,7 +3,7 @@ import { useEffect} from "react";
 import { gsap } from 'gsap';
 import { useOutletContext } from "react-router-dom";
 
-import './MainPage.css'
+import './MainPage.scss'
 
 
 const MainPage = (props) => {

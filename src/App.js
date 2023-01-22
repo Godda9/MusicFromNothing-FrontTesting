@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Login, Register, NotFound404, MainPage, Chats, Profile, ProfileEdit, Battles, Support, FAQ, AccountRestore, PostUpload, Studio, Container, Track} from './components/pages/pages';
 

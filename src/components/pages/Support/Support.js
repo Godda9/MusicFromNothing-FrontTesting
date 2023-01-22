@@ -3,7 +3,7 @@ import logoSupport from '../Images/logo_support.png'
 import { useLayoutEffect } from "react";
 import { gsap } from "gsap";
 
-import './Support.css';
+import './Support.scss';
 
 const Support = (props) => {
     useLayoutEffect(() => {
