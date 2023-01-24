@@ -12,12 +12,13 @@ const FormProfileEdit = (props) => {
         <div className="d-mode-bg form-with-buttons bordered row border overflow-hidden d-flex justify-content-center align-items-center m-3 p-3 shadow-sm">
             <span className="d-mode-text fs-4 my-3">{title}</span>
             <form onSubmit={handleSubmit(onSubmit)}>
-                { title === "Password" ? <Password register={register} errors={errors}/> : null }
-                { title === "Nickname" ? <Nickname register={register} errors={errors}/> : null }
-                { title === "Email"    ? <Email    register={register} errors={errors} current={current}/> : null }
-                { title === "Phone"    ? <Phone    register={register} errors={errors} current={current}/> : null }
+                { title === "Password"    ? <Password    register={register} errors={errors}/> : null }
+                { title === "Nickname"    ? <Nickname    register={register} errors={errors}/> : null }
+                { title === "Description" ? <Description register={register} errors={errors} current={current}/> : null }
+                { title === "Email"       ? <Email       register={register} errors={errors} current={current}/> : null }
+                { title === "Phone"       ? <Phone       register={register} errors={errors} current={current}/> : null }
 
-                <button type="submit" className="btn btn-primary mt-3">Submit</button>
+                <button type="submit" className="d-mode-button btn btn-primary mt-3" style={{backgroundColor: '#1BA39C', borderColor: '#1BA39C'}}>Change {title.toLowerCase()}</button>
             </form>
         </div>
         </>
@@ -82,6 +83,27 @@ const Nickname = (props) => {
                 {errors.NewNickname && <span className="form-text text-danger">Nickname is not valid</span>}
             </div>
         </>
+    );
+}
+
+
+const Description = (props) => {
+    const {register, errors, current} = props;
+    return(
+        <div className="mb-3">
+            <label htmlFor="inputDescription" className="d-mode-text form-label"><b>New</b></label>
+            <input 
+                className="d-mode-input form-control rounded"
+                type="text"
+                placeholder="New Description"
+                {...register("NewDescription", {
+                    maxLength: 20,
+                    minLength: 4,
+                    required: true,
+                })} 
+            />
+            {errors.NewDescription && <span className="form-text text-danger">Description is not valid</span>}
+        </div>
     );
 }
 

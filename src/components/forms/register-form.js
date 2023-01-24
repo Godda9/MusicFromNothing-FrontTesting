@@ -75,7 +75,7 @@ const RegisterForm = (props) => {
                     <label className="form-check-label d-mode-text" htmlFor="exampleCheck1">Remember me</label>
                 </div>
                 
-                <button type="submit" className="btn btn-primary">Register</button>     
+                <button type="submit" className="btn btn-primary" style={{backgroundColor: '#1BA39C', borderColor: '#1BA39C'}}>Register</button>     
             </form>
             <p className="reg-link d-mode-text">Already registered? <Link to="/login">Login</Link></p>
         </>

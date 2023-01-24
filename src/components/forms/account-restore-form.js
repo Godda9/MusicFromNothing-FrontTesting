@@ -71,7 +71,7 @@ const AccountRestoreForm = (props)=> {
                         {(!errors.ConfirmPassword && passError) && <span className="form-text text-danger"> Passwords are not matching</span>}
                     </div>
                     
-                    <button disabled={passError || errors.Password || errors.ConfirmPassword} type="submit" style={{borderColor:'#1BA39C'}} className="btn btn-primary mt-3">Confirm</button>     
+                    <button disabled={passError || errors.Password || errors.ConfirmPassword} type="submit" style={{backgroundColor: '#1BA39C', borderColor: '#1BA39C'}} className="btn btn-primary mt-3">Confirm</button>     
                     
                 </form>
             </div>

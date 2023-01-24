@@ -4,6 +4,7 @@ import * as Icon from 'react-bootstrap-icons';
 import {useState, useTransition, useEffect, memo} from "react";
 
 
+
 const Rightbar = (props) => {
     const data = [
         {link: '/login', heading: "a", placeholder: "Account description0", image: 'https://secure.gravatar.com/avatar/4c2d5681a4633a173c20e74c3641e637?s=500&d=mm&r=g'},
@@ -47,7 +48,7 @@ const Rightbar = (props) => {
                 </div>
                 <button type="button" className="btn btn-primary btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <div className="offcanvas-body">
+            <div className="offcanvas-body m-0 p-0">
                 <div className="d-flex flex-column align-items-stretch flex-shrink-0 bg-white w-100 overflow-auto">
                     <div className="list-group list-group-flush border-bottom scrollarea">
                         {

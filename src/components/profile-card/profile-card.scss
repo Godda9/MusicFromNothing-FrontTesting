@@ -1,4 +1,13 @@
 .profile-card {
+    .white-border-profile-view {
+        background-color: rgb(255, 255, 255);
+        border-radius: 15px;
+        width: fit-content;
+        padding: 2px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
     .btn-primary, .btn-primary:hover {
         background-color: #1BA39C;
         border-color: #1BA39C;

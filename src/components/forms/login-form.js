@@ -1,9 +1,44 @@
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import axios from 'axios';
+import { useNavigate } from "react-router-dom";
+import { LoginRegister } from "../alerts/alerts";
+
 
 const LoginForm = (props) => {
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    const navigate = useNavigate();
+    
+    const onSubmit = data => {
+        let formData = new FormData();
+        formData.append('Email', data.Email);
+        formData.append('Password', data.Password);
+        formData.append('RememberMe', data.RememberMe);
+
+
+        // send request
+        axios.post('/auth/login', formData)
+        .then(response => {
+            if (response.data.status === 'YES') {
+                navigate('/feed');
+                LoginRegister.fire({
+                    icon: 'success',
+                    title: "Welcome, " + response.data.user,
+                })
+            } else {
+                LoginRegister.fire({
+                    icon: 'error',
+                    title: "Can't login, " + response.data.message,
+                })
+            }
+        })
+        .catch(() => {
+            LoginRegister.fire({
+                icon: 'error',
+                title: "Server error",
+            })
+        });
+    };
 
     return (
         <>
@@ -45,9 +80,10 @@ const LoginForm = (props) => {
                     <label className="form-check-label d-mode-text" htmlFor="exampleCheck1">Remember me</label>
                 </div>
                 
-                <button type="submit" className="d-mode-button btn btn-primary">Les's go</button>     
+                <button type="submit" className="d-mode-button btn btn-primary" style={{backgroundColor: '#1BA39C', borderColor: '#1BA39C'}}>Les's go</button>     
             </form>
             <p className="reg-link d-mode-text">Haven't got an account? <Link to="/register">Register</Link> a new one</p>
+            
         </>
     );
 }

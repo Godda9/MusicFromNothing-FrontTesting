@@ -19,20 +19,22 @@ const Register = () => {
 
     return (
         <>
-            <div className="container d-flex justify-content-center">
-                <div className='text-hello'>
-                    <p className='anim0'><span className='d-mode-text'>Welcome to</span></p>
-                    <h1 className='anim1'><span id="m">M</span><span className='d-mode-text'>usic</span></h1>
-                    <h1 className='anim2'><span id="f">F</span><span className='d-mode-text'>rom</span></h1>
-                    <h1 className='anim3'><span>N</span><span className='d-mode-text'>othing</span></h1>
-                </div>
+            <div className='container-fluid h-100 position-fixed d-flex justify-content-center align-items-center'>
+                <div className="register-container d-flex justify-content-center">
+                    <div className='text-hello'>
+                        <p className='anim0'><span className='d-mode-text'>Welcome to</span></p>
+                        <h1 className='anim1'><span id="m">M</span><span className='d-mode-text'>usic</span></h1>
+                        <h1 className='anim2'><span id="f">F</span><span className='d-mode-text'>rom</span></h1>
+                        <h1 className='anim3'><span>N</span><span className='d-mode-text'>othing</span></h1>
+                    </div>
 
-                <div className="logo">
-                    <img src={logoImg} alt="logo"/>
-                </div>
-                
-                <div className="login-form-all">
-                    <RegisterForm/>
+                    <div className="logo">
+                        <img src={logoImg} alt="logo"/>
+                    </div>
+                    
+                    <div className="login-form-all">
+                        <RegisterForm/>
+                    </div>
                 </div>
             </div>
         </>

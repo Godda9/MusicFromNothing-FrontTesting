@@ -127,7 +127,7 @@ const PostUploadForm = (props)=> {
                         <label className="d-mode-text form-check-label mx-2">Allow downloads</label>
                     </div>
 
-                    <button type="submit" className="btn btn-primary w-100">Confirm</button>
+                    <button type="submit" className="btn btn-primary w-100" style={{backgroundColor: '#1BA39C', borderColor: '#1BA39C'}}>Confirm</button>
                 </form>
             </div>
             

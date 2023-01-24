@@ -20,11 +20,14 @@ const ProfileEdit = (props) => {
                 <ProfileCardEdit id='0'/>
             </div>  
             <div className="row d-flex flex-wrap jusify-content-center row-cols-1 row-cols-sm-2 row-cols-md-4 g-3 m-2 mb-4" >
-                <div className="anim-f1 col overflow-auto p-0">
-                    <FormProfileEdit title="Password" />
-                </div>
                 <div className="anim-f2 col overflow-auto p-0">
                     <FormProfileEdit title="Nickname" />
+                </div>
+                <div className="anim-f4 col overflow-auto p-0">
+                    <FormProfileEdit title="Description" current="aaaaaaaa" />
+                </div> 
+                <div className="anim-f1 col overflow-auto p-0">
+                    <FormProfileEdit title="Password" />
                 </div>
                 <div className="anim-f3 col overflow-auto p-0">
                     <FormProfileEdit title="Email" current="tXXXXst@XXXX.XX" />

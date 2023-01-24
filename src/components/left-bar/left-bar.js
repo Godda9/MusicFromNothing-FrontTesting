@@ -50,7 +50,7 @@ const Leftbar = (props) => {
                     </div>
                     <button type="button" className="btn btn-primary btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div className="offcanvas-body">
+                <div className="offcanvas-body m-0 p-0">
                     <div className="list-group list-group-flush border-bottom scrollarea">
                             {
                                 visibleData.map((item, index) => {

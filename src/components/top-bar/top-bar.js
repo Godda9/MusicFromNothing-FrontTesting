@@ -3,13 +3,14 @@ import logoImg from '../pages/Images/logo.png';
 import userImg from '../pages/Images/user_logo.png';
 import { NavLink } from 'react-router-dom';
 import NavigationButton from '../navigation-button/navigation-button';
-import { memo } from "react";
+import { memo, useContext } from "react";
 
 import './top-bar.scss'
+import { contextUser } from '../Context';
 
 
 const Topbar = (props) => {
-    
+    const context = useContext(contextUser);
     const {text, username, where} = props;
     return (
         <>
@@ -72,8 +73,8 @@ const Topbar = (props) => {
                         ?
                         <div>
                             <div className="d-flex dropdown align-items-center justify-content-center mb-md-0 me-md-auto text-dark text-decoration-none special-link-right">
-                                <span className="top-bar-text fs-4 d-mode-text">{username}</span>
-                                <img src={userImg} style={{width: 2.5 + 'em', borderRadius: '50%'}} alt="userLogo" className='dropdown-toggle' type="button" data-bs-toggle="dropdown"></img>
+                                <span className="top-bar-text fs-4 d-mode-text">{context.nickname}</span>
+                                <img src={context.avatar} style={{width: 2.5 + 'em', borderRadius: '50%'}} alt="userLogo" className='dropdown-toggle' type="button" data-bs-toggle="dropdown"></img>
 
                                 <ul className="dropdown-menu d-mode-bg" aria-labelledby="dropdownMenu2">
                                     <li>

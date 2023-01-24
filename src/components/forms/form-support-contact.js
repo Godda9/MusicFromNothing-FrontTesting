@@ -54,7 +54,7 @@ const FormSupportContact = (props) => {
                         {errors.Message && <span className="form-text text-danger">Email address is not valid</span>}
                     </div>
 
-                    <button type="submit" className="btn btn-primary mt-3">Contact</button>
+                    <button type="submit" className="btn btn-primary mt-3" style={{backgroundColor: '#1BA39C', borderColor: '#1BA39C'}}>Contact</button>
                 </form>
             </div>
         </>
