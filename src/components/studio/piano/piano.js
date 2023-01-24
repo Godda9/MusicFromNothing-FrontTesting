@@ -1,4 +1,4 @@
-import './piano.scss';
+//import './piano.scss';
 
 const Piano = (props) => {
     return (
