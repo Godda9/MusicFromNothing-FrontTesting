@@ -1,6 +1,5 @@
 import * as Icon from 'react-bootstrap-icons';
 import logoImg from '../pages/Images/logo.png';
-import userImg from '../pages/Images/user_logo.png';
 import { NavLink } from 'react-router-dom';
 import NavigationButton from '../navigation-button/navigation-button';
 import { memo, useContext } from "react";
@@ -11,7 +10,7 @@ import { contextUser } from '../Context';
 
 const Topbar = (props) => {
     const context = useContext(contextUser);
-    const {text, username, where} = props;
+    const {text, where} = props;
     return (
         <>
             <header className="d-mode-bg top-bar d-flex flex-wrap justify-content-center border-bottom py-3">

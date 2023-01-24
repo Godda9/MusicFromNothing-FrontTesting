@@ -16,7 +16,7 @@ const MainPage = (props) => {
     
     return (
         <>
-            <PostsView postSize={12} setCommentsKey={setCommentsKey}/>
+            <PostsView postSize={6} setCommentsKey={setCommentsKey}/>
         </>
     );
 }

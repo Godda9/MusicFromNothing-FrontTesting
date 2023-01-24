@@ -15,7 +15,7 @@ const Profile = (props) => {
     return (
         <>
             <ProfileCard id='0'/>
-            <PostsView postSize={12} setCommentsKey={setCommentsKey}/>
+            <PostsView postSize={6} setCommentsKey={setCommentsKey}/>
         </>
     );
 }

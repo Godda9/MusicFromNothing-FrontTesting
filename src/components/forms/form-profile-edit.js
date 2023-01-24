@@ -88,7 +88,7 @@ const Nickname = (props) => {
 
 
 const Description = (props) => {
-    const {register, errors, current} = props;
+    const {register, errors} = props;
     return(
         <div className="mb-3">
             <label htmlFor="inputDescription" className="d-mode-text form-label"><b>New</b></label>

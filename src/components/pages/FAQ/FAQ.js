@@ -1,4 +1,3 @@
-import Topbar from "../../top-bar/top-bar";
 import { useLayoutEffect } from "react";
 import { gsap } from "gsap";
 
