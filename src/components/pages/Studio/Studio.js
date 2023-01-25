@@ -1,6 +1,7 @@
 import Drumpad from "../../studio/drumpad/drumpad";
 import Piano from "../../studio/piano/piano";
 import Guitar from "../../studio/guitar/guitar";
+import Chart from "../../studio/chart/chart";
 import * as Icon from 'react-bootstrap-icons';
 
 
@@ -17,9 +18,9 @@ const Studio = (props) => {
                         return (
                             <div className="row">
                                 <div className="col col-lg-2">
-                                    <div className="row">
-                                        abc
-                                    </div>
+                                    <Chart temp={0}/>
+                                    <Chart temp={1}/>
+                                    <Chart temp={2}/>
                                 </div>
             
                                 <div className="col">

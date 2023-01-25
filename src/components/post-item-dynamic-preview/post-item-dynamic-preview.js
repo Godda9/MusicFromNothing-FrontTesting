@@ -28,7 +28,7 @@ const PostItemDynamicPreview = (props) => {
                             <div className='d-flex'>
                                 <Skeleton.SkeletonThemeProvider>
                                     <div className="dropdown">
-                                        <Skeleton width="6vh" height="180px" borderRadius="0"/>
+                                        <Skeleton width="60px" height="180px" borderRadius="0"/>
                                     </div>
                                 </Skeleton.SkeletonThemeProvider>
                             </div>

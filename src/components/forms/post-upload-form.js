@@ -131,7 +131,7 @@ const PostUploadForm = (props)=> {
                 </form>
             </div>
             
-            <div className="post-upload d-flex justify-content-center">
+            <div className="col-md-8 post-upload ">
                 <PostItemDynamicPreview 
                     user="UserName"
                     title={title}
