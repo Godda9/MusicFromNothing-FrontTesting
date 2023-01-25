@@ -2,7 +2,7 @@ import './drumpad.scss'
 
 const Drumpad = (props) => {
     return (
-        <div className="d-flex flex-column justify-content-center align-items-center p-2">
+        <div className="d-flex flex-column justify-content-center align-items-center">
             <div className="d-flex flex-row">
                 <div className="box pad-9" type="button">P-9</div>
                 <div className="box pad-10" type="button">P-10</div>
