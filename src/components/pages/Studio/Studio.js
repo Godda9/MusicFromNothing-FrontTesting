@@ -18,14 +18,16 @@ const Studio = (props) => {
                     } else {
                         return (
                             <div className="row">
-                                <div className="col col-lg-2">
+                                <div className="col col-lg-2 overflow-auto" style={{maxHeight: '85vh'}}>
                                     <Chart temp={0}/>
                                     <Chart temp={1}/>
                                     <Chart temp={2}/>
+                                    <Chart temp={3}/>
+                                    <Chart temp={4}/>
                                 </div>
             
                                 <div className="col">
-                                    <div className="row border border-dark" style={{minHeight: '50vh'}}>
+                                    <div className="row border border-dark d-flex justify-content-center align-items-center" style={{minHeight: '50vh'}}>
                                         MAIN VIEW
                                     </div>
                                     <div className="row border d-flex justify-content-center align-items-center p-2">
