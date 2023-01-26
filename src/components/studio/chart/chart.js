@@ -7,7 +7,7 @@ import * as Icon from 'react-bootstrap-icons';
 
 const Chart = (props) => {
     const {temp} = props;
-    const [startPoint, setStartPoint] = useState(0);
+    const [startPoint, setStartPoint] = useState(null);
     const [endPoint, setEndPoint] = useState(null);
 
 
@@ -28,23 +28,18 @@ const Chart = (props) => {
 
         surfer.load(file);
         surfer.on('finish', () => {
-            surfer.seekTo(0);
-            surfer.play();
+            surfer.play(+startPoint, +endPoint);
         });
 
         surfer.on('ready', () => {
             document.querySelector('#audiowave' + temp)
                     .querySelector('.toggle-chart-play').classList.remove('disabled');
-            
-            console.log(endPoint);
-            surfer.seekTo(startPoint);
-            endPoint ? surfer.setPlayEnd(endPoint / 100) : surfer.setPlayEnd(surfer.getDuration());
+            surfer.seekAndCenter(startPoint / surfer.getDuration());
         })
 
         return () => {
             surfer.destroy();
         }
-        
     })
 
     const toggleButtonStyles = useCallback((e) => {
@@ -54,7 +49,12 @@ const Chart = (props) => {
 
     const onPlayPause = (e) => {
         if (e.target.innerHTML === 'Play') {
-            surfer.play();
+            if (startPoint && endPoint) {
+                surfer.play(+startPoint, +endPoint);
+            } else {
+                surfer.play();
+            }
+            
             e.target.innerHTML = 'Pause';
             toggleButtonStyles(e);
         } else {
