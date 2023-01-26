@@ -45,11 +45,11 @@ const Chart = (props) => {
     const toggleButtonStyles = useCallback((e) => {
         e.target.classList.toggle('btn-outline-primary');
         e.target.classList.toggle('btn-outline-danger');
-    });
+    }, []);
 
     const onPlayPause = (e) => {
         if (e.target.innerHTML === 'Play') {
-            if (startPoint && endPoint) {
+            if (startPoint || endPoint) {
                 surfer.play(+startPoint, +endPoint);
             } else {
                 surfer.play();
