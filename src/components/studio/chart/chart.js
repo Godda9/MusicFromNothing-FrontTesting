@@ -1,15 +1,19 @@
 import './chart.scss';
 import file from './audio.mp3';
 import WaveSurfer from 'wavesurfer.js';
-import { useCallback, useEffect } from 'react';
+import { useCallback, useEffect, useState } from 'react';
+import * as Icon from 'react-bootstrap-icons';
+
 
 const Chart = (props) => {
     const {temp} = props;
+    const [startPoint, setStartPoint] = useState(0);
+    const [endPoint, setEndPoint] = useState(null);
+
+
     let surfer = null;
 
-
     // stop at (like cut and parse)
-
 
     useEffect(() => {
         surfer = WaveSurfer.create({
@@ -31,6 +35,10 @@ const Chart = (props) => {
         surfer.on('ready', () => {
             document.querySelector('#audiowave' + temp)
                     .querySelector('.toggle-chart-play').classList.remove('disabled');
+            
+            console.log(endPoint);
+            surfer.seekTo(startPoint);
+            endPoint ? surfer.setPlayEnd(endPoint / 100) : surfer.setPlayEnd(surfer.getDuration());
         })
 
         return () => {
@@ -59,6 +67,18 @@ const Chart = (props) => {
     return (
         <div className='d-mode-bg d-mode-text chart shadow' id={"audiowave" + temp}>
             <button className='toggle-chart-play btn btn-outline-primary w-100 disabled' onClick={onPlayPause}>Play</button>
+            <div className='d-flex justify-content-between align-items-center'>
+                <input className="form-control rounded d-mode-input w-25 my-1" 
+                        type="text" 
+                        placeholder='St-p' 
+                        onChange={(e) => setStartPoint(e.target.value)}>
+                </input>
+                <input className="form-control rounded d-mode-input w-25 my-1" 
+                        type="text" 
+                        placeholder='En-p' 
+                        onChange={(e) => setEndPoint(e.target.value)}>
+                </input>
+            </div>
         </div>
     );
 }

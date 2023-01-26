@@ -10,7 +10,8 @@ const Studio = (props) => {
         <div className="container-fluid position-fixed">
             {
                 function page() {
-                    if (window.innerWidth < 1745 || window.innerHeight < 880) {
+                    if (false) {
+                    //if (window.innerWidth < 1745 || window.innerHeight < 880) {
                         return (
                             "PLS USE HUGE SCREEN"
                         );
