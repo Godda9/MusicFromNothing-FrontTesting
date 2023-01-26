@@ -7,7 +7,7 @@ import { useCallback, useEffect } from 'react';
 
 
 const Chart = (props) => {
-    const {temp} = props;
+    const {temp, getTimeCodes} = props;
 
     let surfer = null;
 
@@ -61,7 +61,6 @@ const Chart = (props) => {
 
     const onPlayPause = (e) => {
         if (e.target.innerHTML === 'Play') {
-            
             surfer.regions.list["deck" + temp].play();
             
             e.target.innerHTML = 'Stop';
@@ -73,10 +72,18 @@ const Chart = (props) => {
         }   
     }
 
+
+    const onDragStart = (e) => {
+        e.dataTransfer.setData('text/plain', e.target.id);
+    }
+
+    const onDragEnd = (e) => getTimeCodes(surfer.regions.list["deck" + temp]);
+
+    
     return (
-        <div className='d-mode-bg d-mode-text chart shadow' id={"audiowave" + temp}>
+        <div className='d-mode-bg d-mode-text chart shadow' id={"audiowave" + temp} draggable={true} onDragStart={(e) => onDragStart(e)} onDragEnd={(e) => onDragEnd(e)}>
             <button className='toggle-chart-play btn btn-outline-primary w-100 disabled' onClick={onPlayPause}>Play</button>
-            <div className='m-0 p-0' id={'timeline' + temp}></div>
+            <div className='timeline m-0 p-0' id={'timeline' + temp}></div>
         </div>
     );
 }

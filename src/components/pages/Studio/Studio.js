@@ -2,10 +2,42 @@ import Drumpad from "../../studio/drumpad/drumpad";
 import Piano from "../../studio/piano/piano";
 import Guitar from "../../studio/guitar/guitar";
 import Chart from "../../studio/chart/chart";
-import * as Icon from 'react-bootstrap-icons';
+import { useEffect } from "react";
 
 
 const Studio = (props) => {
+
+    // drag / drop
+    const onDragOver = (e) => e.preventDefault();
+    const onDrop = (e) => {
+        const id = e.dataTransfer.getData('text');
+        const draggableElement = document.getElementById(id);
+        const dropzone = e.target;
+        dropzone.appendChild(draggableElement);
+        e.dataTransfer.clearData();
+    }
+
+    const getTimeCodes = (object) => {
+        console.log(object.start, object.end);
+    }
+
+    useEffect(() => {
+        const container = document.querySelector('.main-view');
+        for (let i = 0; i < 20; i++) {
+            const elem = document.createElement('div');
+            elem.style.borderBottom = '1px solid black';
+            elem.style.minHeight = '50px';
+            elem.style.padding = 0;
+            //elem.style.paddingLeft = '500px';
+            elem.classList.add('d-mode-bg');
+            elem.classList.add('d-mode-light-border');
+            
+            elem.ondrop = onDrop;
+            elem.ondragover = onDragOver;
+            container.appendChild(elem);
+        }
+    });
+
     return (
         <div className="container-fluid position-fixed">
             {
@@ -19,7 +51,7 @@ const Studio = (props) => {
                         return (
                             <div className="row">
                                 <div className="col col-lg-2 overflow-auto" style={{maxHeight: '85vh'}}>
-                                    <Chart temp={0}/>
+                                    <Chart temp={0} getTimeCodes={(object) => getTimeCodes(object)}/>
                                     <Chart temp={1}/>
                                     <Chart temp={2}/>
                                     <Chart temp={3}/>
@@ -27,8 +59,10 @@ const Studio = (props) => {
                                 </div>
             
                                 <div className="col">
-                                    <div className="row border border-dark d-flex justify-content-center align-items-center" style={{minHeight: '50vh'}}>
-                                        MAIN VIEW
+                                    <div 
+                                        className="main-view row border border-dark d-flex justify-content-center align-items-center overflow-auto" 
+                                        style={{minHeight: '50vh', maxHeight: '50vh'}}
+                                    >
                                     </div>
                                     <div className="row border d-flex justify-content-center align-items-center p-2">
                                         <div className="col">
