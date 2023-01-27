@@ -12,7 +12,7 @@
 }
 .piano-keys .black {
   z-index: 2;
-  width: 44px;
+  width: 43px;
   height: 130px;
   margin: 0 -22px 0 -22px;
   border-radius: 0 0 5px 5px;
@@ -24,8 +24,8 @@
 }
 .piano-keys .white {
   height: 220px;
-  width: 70px;
-  border-radius: 8px;
+  width: 61px;
+  //border-radius: 8px;
   border: 1px solid #000;
   background: linear-gradient(#fff 96%, #eee 4%);
 }

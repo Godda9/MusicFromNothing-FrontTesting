@@ -19,15 +19,15 @@ const Drumpad = (props) => {
 
     const padPlay = (value) => {
         switch (value) {
-            case 'pad1' : player = new Audio(audio1); break;
-            case 'pad2' : player = new Audio(audio2); break;
-            case 'pad3' : player = new Audio(audio3); break;
-            case 'pad4' : player = new Audio(audio4); break;
-            case 'pad5' : player = new Audio(audio5); break;
-            case 'pad6' : player = new Audio(audio6); break;
-            case 'pad7' : player = new Audio(audio7); break;
-            case 'pad8' : player = new Audio(audio8); break;
-            case 'pad9' : player = new Audio(audio9); break;
+            case 'pad1' : player = new Audio(audio1);  break;
+            case 'pad2' : player = new Audio(audio2);  break;
+            case 'pad3' : player = new Audio(audio3);  break;
+            case 'pad4' : player = new Audio(audio4);  break;
+            case 'pad5' : player = new Audio(audio5);  break;
+            case 'pad6' : player = new Audio(audio6);  break;
+            case 'pad7' : player = new Audio(audio7);  break;
+            case 'pad8' : player = new Audio(audio8);  break;
+            case 'pad9' : player = new Audio(audio9);  break;
             case 'pad10': player = new Audio(audio10); break;
             case 'pad11': player = new Audio(audio11); break;
             case 'pad12': player = new Audio(audio12); break;
