@@ -3,9 +3,13 @@ import Piano from "../../studio/piano/piano";
 import Guitar from "../../studio/guitar/guitar";
 import Chart from "../../studio/chart/chart";
 import { useEffect } from "react";
+import WaveSurfer from "wavesurfer.js";
+import MicrophonePlugin from "wavesurfer.js/src/plugin/microphone";
 
+import './Studio.scss';
 
 const Studio = (props) => {
+    let surfer = null;
 
     // drag / drop
     const onDragOver = (e) => e.preventDefault();
@@ -36,7 +40,56 @@ const Studio = (props) => {
             elem.ondragover = onDragOver;
             container.appendChild(elem);
         }
+
+
+        // wavesurfer
+        surfer = WaveSurfer.create({
+            container: '#microphone-out',
+            waveColor: 'black',
+            interact: false,
+            cursorWidth: 0,
+            plugins: [
+                MicrophonePlugin.create()
+            ],
+        });
+
+        surfer.microphone.on('deviceReady', function(stream) {
+            console.log('Device ready!', stream);
+
+            const audioChunks = [];
+            const mediaRecorder = new MediaRecorder(stream);
+            mediaRecorder.start();
+            mediaRecorder.addEventListener('dataavailable', event=>{
+                audioChunks.push(event.data);              
+            })
+
+            mediaRecorder.addEventListener("stop", () => {
+                const audioBlob = new Blob(audioChunks);
+                const audioUrl = URL.createObjectURL(audioBlob);
+                const audio = new Audio(audioUrl);
+                audio.play();
+            });
+        });
+
+        surfer.microphone.on('deviceError', function(code) {
+            console.warn('Device error: ' + code);
+        });
     });
+
+    const startRecording = (e) => {
+        let elem = e.target;
+        if (elem.innerHTML === 'Start recording') {
+            elem.innerHTML = 'Stop recording';
+            elem.style.backgroundColor = 'red';
+            elem.style.borderColor = 'red';
+            surfer.microphone.start();
+        } else {
+            elem.innerHTML = 'Start recording'
+            elem.style.backgroundColor = ''
+            elem.style.borderColor = '';
+            surfer.microphone.stop();
+        }
+    }
 
     return (
         <div className="container-fluid position-fixed">
@@ -60,7 +113,7 @@ const Studio = (props) => {
             
                                 <div className="col">
                                     <div 
-                                        className="main-view row border border-dark d-flex justify-content-center align-items-center overflow-auto" 
+                                        className="main-view row border d-flex justify-content-center align-items-center overflow-auto" 
                                         style={{minHeight: '50vh', maxHeight: '50vh'}}
                                     >
                                     </div>
@@ -72,10 +125,12 @@ const Studio = (props) => {
                                             <Drumpad/>
                                         </div>
                                     </div>
-                                    <div className="row" style={{minHeight: '8.4vh'}}>
-                                        <div className="col border border-dark d-flex justify-content-center align-items-center">RECORDING VISUALIZER</div>
-                                        <div className="col border border-dark col-lg-2 d-flex justify-content-center align-items-center">
-                                            rec btns
+                                    <div className="row" style={{maxHeight: '8.4vh'}}>
+                                        <div className="col border d-flex justify-content-center" id='microphone-out' style={{maxHeight: '8.4vh'}}></div>
+                                        <div className="studio-btns-start-stop col border col-lg-2 d-flex justify-content-center align-items-center">
+                                            <div className="d-mode-text w-100 navigation-button nav-link btn btn-primary" onClick={(e) => startRecording(e)}>
+                                                Start recording
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
