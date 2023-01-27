@@ -2,13 +2,15 @@ import Drumpad from "../../studio/drumpad/drumpad";
 import Piano from "../../studio/piano/piano";
 import Guitar from "../../studio/guitar/guitar";
 import Chart from "../../studio/chart/chart";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import WaveSurfer from "wavesurfer.js";
 import MicrophonePlugin from "wavesurfer.js/src/plugin/microphone";
 
 import './Studio.scss';
 
 const Studio = (props) => {
+    let isRecording = false;
+    let recordingStartedAt = null;
     let surfer = null;
 
     // drag / drop
@@ -21,6 +23,7 @@ const Studio = (props) => {
         e.dataTransfer.clearData();
     }
 
+    // extract timecodes on drop main view
     const getTimeCodes = (object) => {
         // test code
         console.log(object)
@@ -28,6 +31,7 @@ const Studio = (props) => {
         console.log(object.start, object.end);
     }
 
+    // on load
     useEffect(() => {
         const container = document.querySelector('.main-view');
         for (let i = 0; i < 20; i++) {
@@ -43,7 +47,6 @@ const Studio = (props) => {
             elem.ondragover = onDragOver;
             container.appendChild(elem);
         }
-
 
         // wavesurfer
         surfer = WaveSurfer.create({
@@ -79,6 +82,7 @@ const Studio = (props) => {
         });
     });
 
+    // start / stop recording
     const startRecording = (e) => {
         let elem = e.target;
         if (elem.innerHTML === 'Start recording') {
@@ -86,11 +90,22 @@ const Studio = (props) => {
             elem.style.backgroundColor = 'red';
             elem.style.borderColor = 'red';
             surfer.microphone.start();
+            isRecording = true;
+            recordingStartedAt = new Date();
         } else {
             elem.innerHTML = 'Start recording'
             elem.style.backgroundColor = ''
             elem.style.borderColor = '';
             surfer.microphone.stop();
+            isRecording = false;
+            recordingStartedAt = null;
+        }
+    }
+
+    // instrument btn handler
+    const instrumentHandler = (btn) => {
+        if (isRecording) {
+            console.log(btn, 'PICK: ' + (new Date() - recordingStartedAt));
         }
     }
 
@@ -122,10 +137,10 @@ const Studio = (props) => {
                                     </div>
                                     <div className="row border d-flex justify-content-center align-items-center p-2">
                                         <div className="col">
-                                            <Piano/>
+                                            <Piano btnPressHandler={(btn) => instrumentHandler(btn)}/>
                                         </div>
                                         <div className="col-md-4">
-                                            <Drumpad/>
+                                            <Drumpad btnPressHandler={(btn) => instrumentHandler(btn)}/>
                                         </div>
                                     </div>
                                     <div className="row" style={{maxHeight: '8.4vh'}}>
@@ -143,7 +158,6 @@ const Studio = (props) => {
                                         <Guitar/>
                                     </div>
                                 </div>
-            
                             </div>
                         );
                     }
