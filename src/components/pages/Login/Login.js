@@ -28,9 +28,9 @@ const Login = () => {
                         <h1 className='anim3'><span>N</span><span className='d-mode-text'>othing</span></h1>
                     </div>
 
-                    <div className="logo"><img src={logoImg} alt="logo" /></div>
+                    <div className="logo d-flex justify-content-center"><img src={logoImg} alt="logo" /></div>
                     
-                    <div className="login-form-all">
+                    <div className="login-form-all d-mode-bg bordered border py-4">
                         <LoginForm/>
                     </div>
                 </div>          

@@ -14,8 +14,12 @@ const Profile = (props) => {
 
     return (
         <>
-            <ProfileCard id='0'/>
-            <PostsView postSize={6} setCommentsKey={setCommentsKey}/>
+            <div className='mt-2'>
+                <ProfileCard id='0'/>
+            </div>
+            <div className="d-mode-bg bordered border p-2 m-3">
+                <PostsView postSize={6} setCommentsKey={setCommentsKey}/>
+            </div>
         </>
     );
 }

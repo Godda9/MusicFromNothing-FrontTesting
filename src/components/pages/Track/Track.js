@@ -39,7 +39,9 @@ const Track = (props) => {
                 <div className="row d-flex justify-content-center align-items-center mt-5">
                     <h2 className="anim-text-pupload" style={{textAlign: 'center'}}><span style={{'color': '#1BA39C'}}>M</span><span className="d-mode-text">ore from UserName:</span></h2>
                 </div>
-                <PostsView postSize={4} setCommentsKey={setCommentsKey}/>
+                <div className="d-mode-bg bordered border">
+                    <PostsView postSize={4} setCommentsKey={setCommentsKey}/>
+                </div>
             </div>
                 
         </>
