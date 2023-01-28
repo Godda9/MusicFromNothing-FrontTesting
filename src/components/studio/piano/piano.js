@@ -15,16 +15,27 @@ const Piano = (props) => {
                 clickedKey.classList.remove("active");
             }, 150);
         }
+
+        // collect btns and bind click
         pianoKeys.forEach(key => {
-            allKeys.push(key.dataset.key); // adding data-key value to the allKeys array
-            // calling playTune function with passing data-key value as an argument
+            allKeys.push(key.dataset.key);
             key.addEventListener("click", () => playTune(key.dataset.key));
         });
+
+        // bind keydown
         const pressedKey = (e) => {
-            // if the pressed key is in the allKeys array, only call the playTune function
             if(allKeys.includes(e.key)) playTune(e.key);
         }
         document.addEventListener("keydown", pressedKey);
+
+        // clear btn handlers
+        return () => {
+            pianoKeys.forEach(key => {
+                allKeys.push(key.dataset.key);
+                key.addEventListener("click", () => playTune(key.dataset.key));
+            });
+            document.removeEventListener("keydown", null);
+        }
     })
 
 
@@ -34,7 +45,6 @@ const Piano = (props) => {
                 <li className="key white" data-key="a"><span>a</span></li>
                 <li className="key black" data-key="w"><span>w</span></li>
                 <li className="key white" data-key="s"><span>s</span></li>
-
                 <li className="key white" data-key="d"><span>d</span></li>
                 <li className="key black" data-key="r"><span>r</span></li>
                 <li className="key white" data-key="f"><span>f</span></li>
