@@ -11,7 +11,7 @@ const Track = (props) => {
     const [setCommentsKey] = useOutletContext();
 
     useEffect(() => {
-        gsap.fromTo('.anim0', {y: 500}, { duration: 1.5, ease: "power4.out", y: 0 });
+        gsap.fromTo('.anim0', {y: 500}, { duration: 0.3, ease: "power4.out", y: 0 });
     }, [])
 
     return (
@@ -20,7 +20,7 @@ const Track = (props) => {
                 <div className="row d-flex justify-content-center align-items-center mt-5">
                     <h2 className="anim-text-pupload fs-1" style={{textAlign: 'center'}}><span style={{'color': '#1BA39C'}}>T</span><span className="d-mode-text">rack title</span></h2>
                 </div>
-                <div className="d-mode-bg bordered row g-0 border row-cols-md-2 d-flex justify-content-center align-items-center pt-4 px-5 pb-4">
+                <div className="d-mode-bg bordered row g-0 border row-cols-md-2 d-flex justify-content-center align-items-center pt-4 px-2 pb-4">
                     <PostItem 
                         id="1111"
                         user="UserName" 
@@ -39,7 +39,7 @@ const Track = (props) => {
                 <div className="row d-flex justify-content-center align-items-center mt-5">
                     <h2 className="anim-text-pupload" style={{textAlign: 'center'}}><span style={{'color': '#1BA39C'}}>M</span><span className="d-mode-text">ore from UserName:</span></h2>
                 </div>
-                <div className="d-mode-bg bordered border">
+                <div className="d-mode-bg bordered border px-2">
                     <PostsView postSize={4} setCommentsKey={setCommentsKey}/>
                 </div>
             </div>

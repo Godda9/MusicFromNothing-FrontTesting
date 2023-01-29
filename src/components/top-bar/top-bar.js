@@ -89,7 +89,7 @@ const Topbar = (props) => {
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink className="d-mode-text dropdown-item d-flex align-items-center" type="button" to='/saved-posts'>
+                                        <NavLink className="d-mode-text dropdown-item d-flex align-items-center" type="button" to='/saved'>
                                             <Icon.BookmarksFill width='1.3em' height='1.3em' style={{paddingRight: '0.3em'}}/>
                                             <span>Saved Posts</span>
                                         </NavLink>

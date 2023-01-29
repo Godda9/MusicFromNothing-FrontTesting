@@ -9,15 +9,15 @@ const Profile = (props) => {
     const [setCommentsKey] = useOutletContext();
 
     useEffect(() => {
-        gsap.fromTo('.anim0', {y: 500}, { duration: 0.5, ease: "power4.out", y: 0 });
-    }, [])
+        gsap.fromTo('.anim0', {y: 500}, { duration: 0.3, ease: "power4.out", y: 0 });
+    }, []);
 
     return (
         <>
             <div className='mt-2'>
                 <ProfileCard id='0'/>
             </div>
-            <div className="d-mode-bg bordered border p-2 m-3">
+            <div className="d-mode-bg bordered border px-2 m-3">
                 <PostsView postSize={6} setCommentsKey={setCommentsKey}/>
             </div>
         </>

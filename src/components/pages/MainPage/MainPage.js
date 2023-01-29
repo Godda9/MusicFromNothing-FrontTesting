@@ -16,7 +16,7 @@ const MainPage = (props) => {
     
     return (
         <>
-            <div className="d-mode-bg bordered border p-2 m-3 mt-4">
+            <div className="d-mode-bg bordered border px-2 m-3 mt-4">
                 <PostsView postSize={6} setCommentsKey={setCommentsKey}/>
             </div>
         </>
