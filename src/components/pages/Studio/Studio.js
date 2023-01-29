@@ -1,53 +1,22 @@
 import Drumpad from "../../studio/drumpad/drumpad";
 import Piano from "../../studio/piano/piano";
 import Guitar from "../../studio/guitar/guitar";
-import Chart from "../../studio/chart/chart";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import WaveSurfer from "wavesurfer.js";
 import MicrophonePlugin from "wavesurfer.js/src/plugin/microphone";
 
 import './Studio.scss';
+import View from "../../studio/view/view";
+import ChartContainer from "../../studio/chart-container/chart-contaier";
+
 
 const Studio = (props) => {
     let isRecording = false;
     let recordingStartedAt = null;
     let surfer = null;
 
-    // drag / drop
-    const onDragOver = (e) => e.preventDefault();
-    const onDrop = (e) => {
-        const id = e.dataTransfer.getData('text');
-        const draggableElement = document.getElementById(id);
-        const dropzone = e.target;
-        dropzone.appendChild(draggableElement);
-        e.dataTransfer.clearData();
-    }
-
-    // extract timecodes on drop main view
-    const getTimeCodes = (object) => {
-        // test code
-        console.log(object)
-        object.play();
-        console.log(object.start, object.end);
-    }
-
     // on load
     useEffect(() => {
-        const container = document.querySelector('.main-view');
-        for (let i = 0; i < 20; i++) {
-            const elem = document.createElement('div');
-            elem.style.borderBottom = '1px solid black';
-            elem.style.minHeight = '50px';
-            elem.style.padding = 0;
-            //elem.style.paddingLeft = '500px';
-            elem.classList.add('d-mode-bg');
-            elem.classList.add('d-mode-light-border');
-            
-            elem.ondrop = onDrop;
-            elem.ondragover = onDragOver;
-            container.appendChild(elem);
-        }
-
         // wavesurfer
         surfer = WaveSurfer.create({
             container: '#microphone-out',
@@ -122,19 +91,10 @@ const Studio = (props) => {
                         return (
                             <div className="row">
                                 <div className="col col-lg-2 overflow-auto" style={{maxHeight: '85vh'}}>
-                                    <Chart temp={0} getTimeCodes={(object) => getTimeCodes(object)}/>
-                                    <Chart temp={1} getTimeCodes={(object) => getTimeCodes(object)}/>
-                                    <Chart temp={2} getTimeCodes={(object) => getTimeCodes(object)}/>
-                                    <Chart temp={3} getTimeCodes={(object) => getTimeCodes(object)}/>
-                                    <Chart temp={4} getTimeCodes={(object) => getTimeCodes(object)}/>
+                                    <ChartContainer/>
                                 </div>
-            
                                 <div className="col">
-                                    <div 
-                                        className="main-view row border d-flex justify-content-center align-items-center overflow-auto" 
-                                        style={{minHeight: '50vh', maxHeight: '50vh'}}
-                                    >
-                                    </div>
+                                    <View/>
                                     <div className="row border d-flex justify-content-center align-items-center p-2">
                                         <div className="col">
                                             <Piano btnPressHandler={(btn) => instrumentHandler(btn)}/>
@@ -155,7 +115,7 @@ const Studio = (props) => {
             
                                 <div className="col col-lg-2">
                                     <div className="row">
-                                        <Guitar/>
+                                        <Guitar vlineMoveHandler={(vline) => instrumentHandler(vline)}/>
                                     </div>
                                 </div>
                             </div>
